@@ -3,248 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work Assistant</title>
+  <title>Work Assistant - Claude Code</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="grid-bg"></div>
 
   <div class="app">
-    <!-- Sidebar -->
-    <aside class="sidebar">
+    <!-- Header -->
+    <header class="header">
       <div class="logo">
         <div class="logo-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2a9 9 0 0 1 9 9c0 3.5-2 6.5-5 8l-4 3-4-3c-3-1.5-5-4.5-5-8a9 9 0 0 1 9-9z"/>
-            <circle cx="12" cy="10" r="3"/>
+            <polyline points="4 17 10 11 4 5"/>
+            <line x1="12" y1="19" x2="20" y2="19"/>
           </svg>
         </div>
         <div class="logo-text">
-          <h1>Assistant</h1>
-          <span>Claude Powered</span>
+          <h1>Work Assistant</h1>
+          <span>Claude Code Terminal</span>
         </div>
       </div>
-
-      <nav class="nav">
-        <button class="nav-item active" data-mode="chat">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      <div class="header-controls">
+        <button id="startTerminal" class="btn-terminal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <polygon points="5 3 19 12 5 21 5 3"/>
           </svg>
-          Chat
+          Start Claude Code
         </button>
-        <button class="nav-item" data-mode="ideas">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+        <button id="stopTerminal" class="btn-terminal btn-stop" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <rect x="6" y="6" width="12" height="12"/>
           </svg>
-          Ideas
-        </button>
-      </nav>
-
-      <div class="sidebar-footer">
-        <button id="clearChat" class="btn-secondary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
-          </svg>
-          Clear Chat
+          Stop
         </button>
       </div>
-    </aside>
+    </header>
 
-    <!-- Main Content -->
-    <main class="main">
-      <!-- Chat Mode -->
-      <div id="chatMode" class="mode active">
-        <div class="chat-container">
-          <div id="messages" class="messages">
-            <div class="message assistant">
-              <div class="message-content">
-                <p>Hey! I'm your Work Assistant, powered by Claude. I know all about your role on the R&D Tax Credit Data Team.</p>
-                <p>I can help you with:</p>
-                <ul>
-                  <li>Generating ideas for internal tools and automations</li>
-                  <li>Improving your Alteryx workflows (WF1-4)</li>
-                  <li>Drafting technical specs for Power Automate/Power Apps</li>
-                  <li>Writing status emails for Engagement Teams</li>
-                  <li>Challenging inefficient processes</li>
-                </ul>
-                <p>What would you like to work on today?</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="input-area">
-            <textarea id="userInput" placeholder="Ask me anything about your work..." rows="1"></textarea>
-            <button id="sendBtn" class="btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ideas Mode -->
-      <div id="ideasMode" class="mode">
-        <div class="ideas-header">
-          <h2>Tool Ideas</h2>
-          <p>Pre-seeded ideas based on your role. Click any idea to discuss with the assistant.</p>
-        </div>
-        <div id="ideasGrid" class="ideas-grid"></div>
+    <!-- Terminal -->
+    <main class="terminal-wrapper">
+      <div id="terminal"></div>
+      <div id="terminalPlaceholder" class="terminal-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64">
+          <polyline points="4 17 10 11 4 5"/>
+          <line x1="12" y1="19" x2="20" y2="19"/>
+        </svg>
+        <h2>Claude Code Terminal</h2>
+        <p>Click "Start Claude Code" to launch an interactive AI coding assistant</p>
+        <span>Uses your Claude Code subscription - no additional API costs</span>
       </div>
     </main>
   </div>
 
+  <!-- Terminal Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xterm-addon-web-links@0.9.0/lib/xterm-addon-web-links.min.js"></script>
   <script>
-    // State
-    let currentMode = 'chat';
+    // Terminal state
+    let term = null;
+    let terminalWs = null;
+    let terminalRunning = false;
+    const fitAddon = new FitAddon.FitAddon();
 
-    // DOM Elements
-    const messagesEl = document.getElementById('messages');
-    const userInput = document.getElementById('userInput');
-    const sendBtn = document.getElementById('sendBtn');
-    const clearBtn = document.getElementById('clearChat');
-    const navItems = document.querySelectorAll('.nav-item');
-    const modes = document.querySelectorAll('.mode');
-    const ideasGrid = document.getElementById('ideasGrid');
+    // DOM elements
+    const terminalEl = document.getElementById('terminal');
+    const terminalPlaceholder = document.getElementById('terminalPlaceholder');
+    const startBtn = document.getElementById('startTerminal');
+    const stopBtn = document.getElementById('stopTerminal');
+    const ASSISTANT_DIR = 'C:\\Users\\kapla\\OneDrive\\Desktop\\Claude HQ\\Applications\\Assistant';
 
-    // Auto-resize textarea
-    userInput.addEventListener('input', () => {
-      userInput.style.height = 'auto';
-      userInput.style.height = Math.min(userInput.scrollHeight, 150) + 'px';
-    });
+    // Initialize xterm
+    function initTerminal() {
+      if (term) return;
 
-    // Send message on Enter (Shift+Enter for new line)
-    userInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        sendMessage();
-      }
-    });
-
-    sendBtn.addEventListener('click', sendMessage);
-
-    // Clear chat
-    clearBtn.addEventListener('click', async () => {
-      await fetch('/api/chat/clear', { method: 'POST' });
-      messagesEl.innerHTML = `
-        <div class="message assistant">
-          <div class="message-content">
-            <p>Chat cleared. How can I help you?</p>
-          </div>
-        </div>
-      `;
-    });
-
-    // Navigation
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const mode = item.dataset.mode;
-        setMode(mode);
-      });
-    });
-
-    function setMode(mode) {
-      currentMode = mode;
-      navItems.forEach(item => {
-        item.classList.toggle('active', item.dataset.mode === mode);
-      });
-      modes.forEach(m => {
-        m.classList.toggle('active', m.id === mode + 'Mode');
+      term = new Terminal({
+        cursorBlink: true,
+        fontSize: 15,
+        fontFamily: "'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace",
+        theme: {
+          background: '#0a0a0f',
+          foreground: '#e0e0e0',
+          cursor: '#00b4d8',
+          cursorAccent: '#0a0a0f',
+          selectionBackground: 'rgba(0, 180, 216, 0.3)',
+          black: '#1a1a24',
+          red: '#ef4444',
+          green: '#10b981',
+          yellow: '#f59e0b',
+          blue: '#3b82f6',
+          magenta: '#a855f7',
+          cyan: '#00b4d8',
+          white: '#e0e0e0',
+          brightBlack: '#4a4a5a',
+          brightRed: '#f87171',
+          brightGreen: '#34d399',
+          brightYellow: '#fbbf24',
+          brightBlue: '#60a5fa',
+          brightMagenta: '#c084fc',
+          brightCyan: '#22d3ee',
+          brightWhite: '#ffffff'
+        },
+        allowProposedApi: true
       });
 
-      if (mode === 'ideas') {
-        loadIdeas();
-      }
-    }
+      term.loadAddon(fitAddon);
+      term.loadAddon(new WebLinksAddon.WebLinksAddon());
+      term.open(terminalEl);
+      fitAddon.fit();
 
-    // Send message
-    async function sendMessage() {
-      const message = userInput.value.trim();
-      if (!message) return;
-
-      // Add user message
-      addMessage(message, 'user');
-      userInput.value = '';
-      userInput.style.height = 'auto';
-
-      // Show typing indicator
-      const typingEl = document.createElement('div');
-      typingEl.className = 'message assistant typing';
-      typingEl.innerHTML = '<div class="message-content"><span class="dots">...</span></div>';
-      messagesEl.appendChild(typingEl);
-      messagesEl.scrollTop = messagesEl.scrollHeight;
-
-      try {
-        const response = await fetch('/api/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message })
-        });
-
-        const data = await response.json();
-        typingEl.remove();
-
-        if (data.error) {
-          addMessage('Error: ' + data.error, 'assistant error');
-        } else {
-          addMessage(data.message, 'assistant');
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        if (terminalRunning) {
+          fitAddon.fit();
+          if (terminalWs && terminalWs.readyState === WebSocket.OPEN) {
+            terminalWs.send(JSON.stringify({
+              type: 'resize',
+              cols: term.cols,
+              rows: term.rows
+            }));
+          }
         }
-      } catch (error) {
-        typingEl.remove();
-        addMessage('Failed to connect to the assistant. Make sure your API key is configured.', 'assistant error');
+      });
+
+      // Handle terminal input
+      term.onData((data) => {
+        if (terminalWs && terminalWs.readyState === WebSocket.OPEN) {
+          terminalWs.send(JSON.stringify({ type: 'input', data }));
+        }
+      });
+    }
+
+    // Start terminal
+    function startTerminalSession() {
+      initTerminal();
+
+      const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      terminalWs = new WebSocket(`${wsProtocol}//${window.location.host}`);
+
+      terminalWs.onopen = () => {
+        term.clear();
+        terminalPlaceholder.style.display = 'none';
+        terminalEl.style.display = 'block';
+        fitAddon.fit();
+
+        terminalWs.send(JSON.stringify({
+          type: 'start',
+          workingDir: ASSISTANT_DIR
+        }));
+
+        // Send initial resize
+        setTimeout(() => {
+          fitAddon.fit();
+          terminalWs.send(JSON.stringify({
+            type: 'resize',
+            cols: term.cols,
+            rows: term.rows
+          }));
+          term.focus();
+        }, 100);
+      };
+
+      terminalWs.onmessage = (event) => {
+        try {
+          const msg = JSON.parse(event.data);
+          if (msg.type === 'output') {
+            term.write(msg.data);
+          } else if (msg.type === 'exit') {
+            term.write('\r\n\x1b[33m[Session ended]\x1b[0m\r\n');
+            stopTerminalSession();
+          } else if (msg.type === 'started') {
+            terminalRunning = true;
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+          }
+        } catch (e) {
+          console.error('Terminal message error:', e);
+        }
+      };
+
+      terminalWs.onclose = () => {
+        stopTerminalSession();
+      };
+
+      terminalWs.onerror = (error) => {
+        console.error('Terminal WebSocket error:', error);
+        term.write('\r\n\x1b[31m[Connection error]\x1b[0m\r\n');
+        stopTerminalSession();
+      };
+    }
+
+    // Stop terminal
+    function stopTerminalSession() {
+      terminalRunning = false;
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+
+      if (terminalWs) {
+        terminalWs.close();
+        terminalWs = null;
       }
     }
 
-    function addMessage(content, type) {
-      const messageEl = document.createElement('div');
-      messageEl.className = `message ${type}`;
-
-      // Convert markdown-like formatting
-      const formatted = content
-        .replace(/\n/g, '<br>')
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em>$1</em>')
-        .replace(/`(.*?)`/g, '<code>$1</code>');
-
-      messageEl.innerHTML = `<div class="message-content">${formatted}</div>`;
-      messagesEl.appendChild(messageEl);
-      messagesEl.scrollTop = messagesEl.scrollHeight;
-    }
-
-    // Load ideas
-    async function loadIdeas() {
-      try {
-        const response = await fetch('/api/ideas');
-        const data = await response.json();
-
-        ideasGrid.innerHTML = data.ideas.map(idea => `
-          <div class="idea-card" data-id="${idea.id}">
-            <div class="idea-header">
-              <span class="idea-category">${idea.category}</span>
-              <span class="idea-priority priority-${idea.priority}">${idea.priority}</span>
-            </div>
-            <h3>${idea.title}</h3>
-            <p>${idea.description}</p>
-            <button class="btn-discuss" onclick="discussIdea(${idea.id}, '${idea.title.replace(/'/g, "\\'")}')">
-              Discuss with Assistant
-            </button>
-          </div>
-        `).join('');
-      } catch (error) {
-        ideasGrid.innerHTML = '<p class="error">Failed to load ideas</p>';
+    // Event listeners
+    startBtn.addEventListener('click', startTerminalSession);
+    stopBtn.addEventListener('click', () => {
+      if (terminalWs && terminalWs.readyState === WebSocket.OPEN) {
+        // Send Ctrl+C then exit
+        terminalWs.send(JSON.stringify({ type: 'input', data: '\x03' }));
+        setTimeout(() => {
+          terminalWs.send(JSON.stringify({ type: 'input', data: 'exit\r' }));
+        }, 100);
       }
-    }
-
-    // Discuss idea
-    function discussIdea(id, title) {
-      setMode('chat');
-      userInput.value = `Let's discuss the "${title}" idea. Can you help me think through how to build this? What would be the MVP and what technologies would work best given my constraints?`;
-      userInput.focus();
-    }
-
-    // Initial load
-    loadIdeas();
+      stopTerminalSession();
+    });
   </script>
 </body>
 </html>
