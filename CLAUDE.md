@@ -10,7 +10,7 @@ Command Center for managing multiple Node.js application servers.
 - `Applications/` - Individual application servers
   - `Assistant/` - Claude Code Terminal & Ideas Manager (port 3333)
   - `ChromeBot/` - Browser Session Manager (port 5555)
-  - `NewsMonitor/` - Polymarket Auto-Trader (port 2222)
+  - `PolymarketBot/` - AI-Powered Auto-Trader (port 2222)
   - `Portfolio/` - Personal Finance Manager (port 4444)
   - `Ram Monitor/` - System Memory Monitor (port 9999)
   - `RemoteConnect/` - Cellular Device Manager (port 7777)
