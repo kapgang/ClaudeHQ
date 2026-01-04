@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
 const dataStore = require('./dataStore');
 
 class NewsService {
@@ -117,7 +117,7 @@ class NewsService {
 
       if (!this.seenArticles.has(hash)) {
         const processedArticle = {
-          id: uuidv4(),
+          id: crypto.randomUUID(),
           title: article.title,
           description: article.description || article.content || '',
           url: article.url,

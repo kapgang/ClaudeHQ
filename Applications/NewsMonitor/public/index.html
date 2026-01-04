@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Monitor - Polymarket Auto-Trader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1>News Monitor</h1>
+        <span class="subtitle">Polymarket Auto-Trader</span>
+      </div>
+      <div class="header-right">
+        <div class="status-indicators">
+          <span class="status news-status" id="news-status">News: Inactive</span>
+          <span class="status limits-status" id="limits-status">$0/$50 Daily</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <!-- Left Panel: Live News -->
+      <section class="panel news-panel">
+        <div class="panel-header">
+          <h2>Live News (24h)</h2>
+          <button class="btn-refresh" onclick="refreshNews()">Refresh</button>
+        </div>
+        <div class="news-list" id="news-list">
+          <div class="loading">Loading news...</div>
+        </div>
+      </section>
+
+      <!-- Center Panel: Active Matches -->
+      <section class="panel matches-panel">
+        <div class="panel-header">
+          <h2>Active Matches</h2>
+        </div>
+        <div class="matches-list" id="matches-list">
+          <div class="loading">Loading matches...</div>
+        </div>
+      </section>
+
+      <!-- Right Panel: Trade Queue & History -->
+      <section class="panel trades-panel">
+        <div class="panel-header">
+          <div class="tabs">
+            <button class="tab active" onclick="switchTab('queue')">Pending (<span id="queue-count">0</span>)</button>
+            <button class="tab" onclick="switchTab('history')">History</button>
+            <button class="tab" onclick="switchTab('stats')">Stats</button>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-panel active" id="queue-panel">
+            <div class="trades-list" id="queue-list">
+              <div class="loading">Loading queue...</div>
+            </div>
+          </div>
+          <div class="tab-panel" id="history-panel">
+            <div class="trades-list" id="history-list">
+              <div class="loading">Loading history...</div>
+            </div>
+          </div>
+          <div class="tab-panel" id="stats-panel">
+            <div class="stats-container" id="stats-container">
+              <div class="loading">Loading stats...</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Settings Panel (Collapsible) -->
+    <div class="settings-panel" id="settings-panel">
+      <button class="toggle-settings" onclick="toggleSettings()">⚙️ Settings</button>
+      <div class="settings-content">
+        <h3>Configuration</h3>
+
+        <div class="settings-section">
+          <h4>NewsAPI</h4>
+          <label>API Key: <input type="text" id="newsapi-key" placeholder="Enter API key"></label>
+          <label>Sources: <input type="text" id="newsapi-sources" placeholder="reuters,bloomberg,techcrunch"></label>
+          <label>Keywords: <input type="text" id="newsapi-keywords" placeholder="election,sports,technology"></label>
+          <label><input type="checkbox" id="newsapi-enabled"> Enabled</label>
+        </div>
+
+        <div class="settings-section">
+          <h4>Polymarket</h4>
+          <label>API Key: <input type="text" id="polymarket-key" placeholder="Enter API key"></label>
+          <label><input type="checkbox" id="polymarket-testmode" checked> Test Mode (Paper Trading)</label>
+          <label><input type="checkbox" id="polymarket-enabled"> Enabled</label>
+        </div>
+
+        <div class="settings-section">
+          <h4>Claude AI</h4>
+          <label>API Key: <input type="text" id="claude-key" placeholder="Enter Anthropic API key"></label>
+          <label>Confidence Threshold: <input type="number" id="claude-threshold" value="70" min="0" max="100"></label>
+          <label><input type="checkbox" id="claude-enabled"> Enabled</label>
+        </div>
+
+        <div class="settings-section">
+          <h4>Trading Limits</h4>
+          <label>Daily Max USD: $<input type="number" id="limits-daily-usd" value="50" min="1" max="1000"></label>
+          <label>Daily Max Trades: <input type="number" id="limits-daily-trades" value="10" min="1" max="100"></label>
+          <label>Max Per Trade: $<input type="number" id="limits-per-trade" value="10" min="1" max="100"></label>
+          <label>Min Confidence: <input type="number" id="limits-min-confidence" value="70" min="0" max="100">%</label>
+        </div>
+
+        <div class="settings-actions">
+          <button class="btn-primary" onclick="saveSettings()">Save Settings</button>
+          <button class="btn-secondary" onclick="testConnections()">Test Connections</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
