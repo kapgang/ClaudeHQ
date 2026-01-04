@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChromeBot - Browser Session Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #16161f;
+      --bg-hover: #1e1e2a;
+      --border: #2a2a3a;
+      --text-primary: #ffffff;
+      --text-secondary: #8888aa;
+      --text-muted: #555566;
+      --accent-cyan: #00d4ff;
+      --accent-purple: #a855f7;
+      --accent-green: #22c55e;
+      --accent-orange: #ff6b35;
+      --accent-red: #ef4444;
+      --accent-yellow: #eab308;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+    }
+
+    .grid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .logo-text h1 {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-text span {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 25px;
+      background: var(--bg-secondary);
+      padding: 5px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .tab {
+      flex: 1;
+      padding: 12px 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .tab:hover {
+      color: var(--text-primary);
+      background: var(--bg-hover);
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      color: white;
+    }
+
+    .tab-icon {
+      font-size: 18px;
+    }
+
+    /* Tab Content */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Forms */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent-purple);
+    }
+
+    .form-group input::placeholder {
+      color: var(--text-muted);
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      color: white;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-success {
+      background: var(--accent-green);
+      color: white;
+    }
+
+    .btn-danger {
+      background: var(--accent-red);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-purple);
+    }
+
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    tr:hover {
+      background: var(--bg-hover);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .status-badge.running {
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--accent-green);
+    }
+
+    .status-badge.stopped {
+      background: rgba(136, 136, 170, 0.15);
+      color: var(--text-secondary);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .status-badge.running .status-dot {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+    }
+
+    .text-secondary {
+      color: var(--text-secondary);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+      opacity: 0.5;
+    }
+
+    /* Toast */
+    .toast-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .toast {
+      padding: 15px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-top: 10px;
+      animation: slideIn 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toast.success { border-color: var(--accent-green); }
+    .toast.error { border-color: var(--accent-red); }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+      width: 100%;
+      max-width: 500px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* Loading */
+    .loading {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" fill="white"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>ChromeBot</h1>
+          <span>Browser Session Manager</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="sessions">
+        <span class="tab-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </span>
+        Sessions
+      </button>
+      <button class="tab" data-tab="accounts">
+        <span class="tab-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </span>
+        Accounts
+      </button>
+      <button class="tab" data-tab="proxies">
+        <span class="tab-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </span>
+        Proxies
+      </button>
+      <button class="tab" data-tab="fingerprints">
+        <span class="tab-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94 1.7 0 3.08 1.32 3.08 2.94 0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z"/>
+          </svg>
+        </span>
+        Fingerprints
+      </button>
+    </nav>
+
+    <!-- Sessions Tab -->
+    <div id="sessions" class="tab-content active">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Create New Session</h2>
+        </div>
+        <form id="session-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Session Name</label>
+              <input type="text" id="session-name" placeholder="My Session" required>
+            </div>
+            <div class="form-group">
+              <label>Google Account</label>
+              <select id="session-account">
+                <option value="">None</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Proxy</label>
+              <select id="session-proxy">
+                <option value="">None</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Fingerprint</label>
+              <select id="session-fingerprint">
+                <option value="">Default</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Session</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Active Sessions</h2>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Account</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="sessions-table">
+            </tbody>
+          </table>
+        </div>
+        <div id="sessions-empty" class="empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </div>
+          <p>No sessions yet. Create one above!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accounts Tab -->
+    <div id="accounts" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Add Google Account</h2>
+        </div>
+        <form id="account-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Display Name</label>
+              <input type="text" id="account-name" placeholder="Personal Account">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="account-email" placeholder="email@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="account-password" placeholder="Password (optional)">
+            </div>
+            <div class="form-group">
+              <label>Task Type</label>
+              <select id="account-tasktype" onchange="toggleTaskFields()">
+                <option value="none">None</option>
+              </select>
+            </div>
+          </div>
+          <div id="task-fields" style="display: none; margin-bottom: 20px;">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>To (Recipient)</label>
+                <input type="email" id="task-to" placeholder="recipient@example.com">
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <input type="text" id="task-subject" placeholder="Email subject">
+              </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+              <label>Email Body</label>
+              <textarea id="task-body" rows="4" style="width: 100%; padding: 10px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-family: inherit; resize: vertical;" placeholder="Email message..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Account</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Saved Accounts</h2>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Task</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="accounts-table">
+            </tbody>
+          </table>
+        </div>
+        <div id="accounts-empty" class="empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <p>No accounts saved. Add one above!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proxies Tab -->
+    <div id="proxies" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Add Proxy</h2>
+        </div>
+        <form id="proxy-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" id="proxy-name" placeholder="US Proxy 1">
+            </div>
+            <div class="form-group">
+              <label>Type</label>
+              <select id="proxy-type">
+                <option value="http">HTTP/HTTPS</option>
+                <option value="socks5">SOCKS5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Host</label>
+              <input type="text" id="proxy-host" placeholder="proxy.example.com" required>
+            </div>
+            <div class="form-group">
+              <label>Port</label>
+              <input type="number" id="proxy-port" placeholder="8080" required>
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" id="proxy-username" placeholder="Optional">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="proxy-password" placeholder="Optional">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Proxy</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Saved Proxies</h2>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Address</th>
+                <th>Auth</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="proxies-table">
+            </tbody>
+          </table>
+        </div>
+        <div id="proxies-empty" class="empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/>
+            </svg>
+          </div>
+          <p>No proxies configured. Add one above!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fingerprints Tab -->
+    <div id="fingerprints" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Create Fingerprint</h2>
+        </div>
+        <form id="fingerprint-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Profile Name</label>
+              <input type="text" id="fp-name" placeholder="Custom Profile" required>
+            </div>
+            <div class="form-group">
+              <label>Platform</label>
+              <select id="fp-platform">
+                <option value="Win32">Windows</option>
+                <option value="MacIntel">macOS</option>
+                <option value="Linux x86_64">Linux</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Viewport Width</label>
+              <input type="number" id="fp-width" value="1920">
+            </div>
+            <div class="form-group">
+              <label>Viewport Height</label>
+              <input type="number" id="fp-height" value="1080">
+            </div>
+            <div class="form-group">
+              <label>Language</label>
+              <select id="fp-language">
+                <option value="en-US">English (US)</option>
+                <option value="en-GB">English (UK)</option>
+                <option value="es-ES">Spanish</option>
+                <option value="fr-FR">French</option>
+                <option value="de-DE">German</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Timezone</label>
+              <select id="fp-timezone">
+                <option value="America/New_York">Eastern Time (US)</option>
+                <option value="America/Chicago">Central Time (US)</option>
+                <option value="America/Denver">Mountain Time (US)</option>
+                <option value="America/Los_Angeles">Pacific Time (US)</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Paris">Paris</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label>User Agent</label>
+            <input type="text" id="fp-useragent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" style="width: 100%;">
+          </div>
+          <button type="submit" class="btn btn-primary">Create Fingerprint</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Saved Fingerprints</h2>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Platform</th>
+                <th>Viewport</th>
+                <th>Language</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="fingerprints-table">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script>
+    // State
+    let accounts = [];
+    let proxies = [];
+    let fingerprints = [];
+    let sessions = [];
+    let accountTasks = [];
+
+    // Toast notifications
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.textContent = message;
+      container.appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Fetch all data
+    async function fetchData() {
+      try {
+        const [sessionsRes, accountsRes, proxiesRes, fingerprintsRes, accountTasksRes] = await Promise.all([
+          fetch('/api/sessions'),
+          fetch('/api/accounts'),
+          fetch('/api/proxies'),
+          fetch('/api/fingerprints'),
+          fetch('/api/accounttasks')
+        ]);
+
+        sessions = (await sessionsRes.json()).sessions;
+        accounts = (await accountsRes.json()).accounts;
+        proxies = (await proxiesRes.json()).proxies;
+        fingerprints = (await fingerprintsRes.json()).fingerprints;
+        accountTasks = (await accountTasksRes.json()).accountTasks;
+
+        renderAll();
+      } catch (error) {
+        showToast('Failed to load data', 'error');
+      }
+    }
+
+    // Render all tables
+    function renderAll() {
+      renderSessions();
+      renderAccounts();
+      renderProxies();
+      renderFingerprints();
+      updateDropdowns();
+    }
+
+    // Update form dropdowns (preserves current selection)
+    function updateDropdowns() {
+      const accountSelect = document.getElementById('session-account');
+      const proxySelect = document.getElementById('session-proxy');
+      const fingerprintSelect = document.getElementById('session-fingerprint');
+      const accountTaskSelect = document.getElementById('account-tasktype');
+
+      // Save current selections
+      const currentAccount = accountSelect.value;
+      const currentProxy = proxySelect.value;
+      const currentFingerprint = fingerprintSelect.value;
+      const currentTaskType = accountTaskSelect.value;
+
+      accountSelect.innerHTML = '<option value="">None</option>' +
+        accounts.map(a => `<option value="${a.id}">${a.name} (${a.email})${a.taskType && a.taskType !== 'none' ? ' [Has Task]' : ''}</option>`).join('');
+
+      proxySelect.innerHTML = '<option value="">None</option>' +
+        proxies.map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+
+      fingerprintSelect.innerHTML = '<option value="">Default</option>' +
+        fingerprints.map(f => `<option value="${f.id}">${f.name}</option>`).join('');
+
+      accountTaskSelect.innerHTML = accountTasks.map(t =>
+        `<option value="${t.id}">${t.name}</option>`
+      ).join('');
+
+      // Restore selections
+      accountSelect.value = currentAccount;
+      proxySelect.value = currentProxy;
+      fingerprintSelect.value = currentFingerprint;
+      accountTaskSelect.value = currentTaskType;
+    }
+
+    // Toggle task parameter fields based on selected task type
+    function toggleTaskFields() {
+      const taskType = document.getElementById('account-tasktype').value;
+      const fieldsDiv = document.getElementById('task-fields');
+      fieldsDiv.style.display = (taskType === 'gmail_send') ? 'block' : 'none';
+    }
+
+    // Render sessions
+    function renderSessions() {
+      const tbody = document.getElementById('sessions-table');
+      const empty = document.getElementById('sessions-empty');
+
+      if (sessions.length === 0) {
+        tbody.innerHTML = '';
+        empty.style.display = 'block';
+        return;
+      }
+
+      empty.style.display = 'none';
+      tbody.innerHTML = sessions.map(s => `
+        <tr>
+          <td><strong>${s.name}</strong></td>
+          <td class="text-secondary">${s.account ? s.account.email + (s.account.taskType && s.account.taskType !== 'none' ? ' <span style="color: var(--accent-purple);">[Task]</span>' : '') : '-'}</td>
+          <td>
+            <span class="status-badge ${s.isRunning ? 'running' : 'stopped'}">
+              <span class="status-dot"></span>
+              ${s.isRunning ? 'Running' : 'Stopped'}
+            </span>
+          </td>
+          <td class="actions">
+            ${s.isRunning
+              ? `<button class="btn btn-danger btn-sm" onclick="stopSession('${s.id}')">Stop</button>`
+              : `<button class="btn btn-success btn-sm" onclick="launchSession('${s.id}')">Launch</button>`
+            }
+            <button class="btn btn-secondary btn-sm" onclick="deleteSession('${s.id}')">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // Render accounts
+    function renderAccounts() {
+      const tbody = document.getElementById('accounts-table');
+      const empty = document.getElementById('accounts-empty');
+
+      if (accounts.length === 0) {
+        tbody.innerHTML = '';
+        empty.style.display = 'block';
+        return;
+      }
+
+      empty.style.display = 'none';
+      tbody.innerHTML = accounts.map(a => {
+        const task = accountTasks.find(t => t.id === a.taskType);
+        const taskDisplay = task && task.id !== 'none' ? task.name : '<span class="text-muted">None</span>';
+        const taskParams = a.taskParams || {};
+        const taskInfo = a.taskType === 'gmail_send' && taskParams.to ? ` → ${taskParams.to}` : '';
+
+        return `
+          <tr>
+            <td><strong>${a.name}</strong></td>
+            <td class="mono">${a.email}</td>
+            <td>${taskDisplay}${taskInfo}</td>
+            <td class="actions">
+              <button class="btn btn-danger btn-sm" onclick="deleteAccount('${a.id}')">Delete</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Render proxies
+    function renderProxies() {
+      const tbody = document.getElementById('proxies-table');
+      const empty = document.getElementById('proxies-empty');
+
+      if (proxies.length === 0) {
+        tbody.innerHTML = '';
+        empty.style.display = 'block';
+        return;
+      }
+
+      empty.style.display = 'none';
+      tbody.innerHTML = proxies.map(p => `
+        <tr>
+          <td><strong>${p.name}</strong></td>
+          <td class="mono">${p.type.toUpperCase()}</td>
+          <td class="mono">${p.host}:${p.port}</td>
+          <td class="text-secondary">${p.username ? 'Yes' : 'No'}</td>
+          <td class="actions">
+            <button class="btn btn-secondary btn-sm" onclick="testProxy('${p.id}')">Test</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteProxy('${p.id}')">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // Render fingerprints
+    function renderFingerprints() {
+      const tbody = document.getElementById('fingerprints-table');
+      tbody.innerHTML = fingerprints.map(f => `
+        <tr>
+          <td><strong>${f.name}</strong> ${f.isPreset ? '<span class="text-muted">(Preset)</span>' : ''}</td>
+          <td class="mono">${f.platform}</td>
+          <td class="mono">${f.viewport.width}x${f.viewport.height}</td>
+          <td class="mono">${f.language}</td>
+          <td class="actions">
+            ${!f.isPreset ? `<button class="btn btn-danger btn-sm" onclick="deleteFingerprint('${f.id}')">Delete</button>` : ''}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // Session actions
+    async function launchSession(id) {
+      try {
+        const res = await fetch(`/api/sessions/${id}/launch`, { method: 'POST' });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message, 'success');
+          fetchData();
+        } else {
+          showToast(data.error, 'error');
+        }
+      } catch (error) {
+        showToast('Failed to launch session', 'error');
+      }
+    }
+
+    async function stopSession(id) {
+      try {
+        const res = await fetch(`/api/sessions/${id}/stop`, { method: 'POST' });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message, 'success');
+          fetchData();
+        } else {
+          showToast(data.error, 'error');
+        }
+      } catch (error) {
+        showToast('Failed to stop session', 'error');
+      }
+    }
+
+    async function deleteSession(id) {
+      if (!confirm('Delete this session and all its data?')) return;
+      try {
+        await fetch(`/api/sessions/${id}`, { method: 'DELETE' });
+        showToast('Session deleted', 'success');
+        fetchData();
+      } catch (error) {
+        showToast('Failed to delete session', 'error');
+      }
+    }
+
+    // Account actions
+    async function deleteAccount(id) {
+      if (!confirm('Delete this account?')) return;
+      try {
+        await fetch(`/api/accounts/${id}`, { method: 'DELETE' });
+        showToast('Account deleted', 'success');
+        fetchData();
+      } catch (error) {
+        showToast('Failed to delete account', 'error');
+      }
+    }
+
+    // Proxy actions
+    async function testProxy(id) {
+      showToast('Testing proxy...', 'info');
+      try {
+        const res = await fetch(`/api/proxies/${id}/test`, { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+          showToast(data.message, 'success');
+        } else {
+          showToast(`Proxy test failed: ${data.error}`, 'error');
+        }
+      } catch (error) {
+        showToast('Failed to test proxy', 'error');
+      }
+    }
+
+    async function deleteProxy(id) {
+      if (!confirm('Delete this proxy?')) return;
+      try {
+        await fetch(`/api/proxies/${id}`, { method: 'DELETE' });
+        showToast('Proxy deleted', 'success');
+        fetchData();
+      } catch (error) {
+        showToast('Failed to delete proxy', 'error');
+      }
+    }
+
+    // Fingerprint actions
+    async function deleteFingerprint(id) {
+      if (!confirm('Delete this fingerprint?')) return;
+      try {
+        await fetch(`/api/fingerprints/${id}`, { method: 'DELETE' });
+        showToast('Fingerprint deleted', 'success');
+        fetchData();
+      } catch (error) {
+        showToast('Failed to delete fingerprint', 'error');
+      }
+    }
+
+    // Form handlers
+    document.getElementById('session-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        const res = await fetch('/api/sessions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('session-name').value,
+            accountId: document.getElementById('session-account').value || null,
+            proxyId: document.getElementById('session-proxy').value || null,
+            fingerprintId: document.getElementById('session-fingerprint').value || null
+          })
+        });
+        if (res.ok) {
+          showToast('Session created!', 'success');
+          e.target.reset();
+          fetchData();
+        }
+      } catch (error) {
+        showToast('Failed to create session', 'error');
+      }
+    });
+
+    document.getElementById('account-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        const taskType = document.getElementById('account-tasktype').value;
+        const taskParams = {};
+
+        if (taskType === 'gmail_send') {
+          taskParams.to = document.getElementById('task-to').value;
+          taskParams.subject = document.getElementById('task-subject').value;
+          taskParams.body = document.getElementById('task-body').value;
+        }
+
+        const res = await fetch('/api/accounts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('account-name').value,
+            email: document.getElementById('account-email').value,
+            password: document.getElementById('account-password').value,
+            taskType,
+            taskParams
+          })
+        });
+        if (res.ok) {
+          showToast('Account added!', 'success');
+          e.target.reset();
+          document.getElementById('task-fields').style.display = 'none';
+          fetchData();
+        }
+      } catch (error) {
+        showToast('Failed to add account', 'error');
+      }
+    });
+
+    document.getElementById('proxy-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        const res = await fetch('/api/proxies', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('proxy-name').value,
+            type: document.getElementById('proxy-type').value,
+            host: document.getElementById('proxy-host').value,
+            port: document.getElementById('proxy-port').value,
+            username: document.getElementById('proxy-username').value,
+            password: document.getElementById('proxy-password').value
+          })
+        });
+        if (res.ok) {
+          showToast('Proxy added!', 'success');
+          e.target.reset();
+          fetchData();
+        }
+      } catch (error) {
+        showToast('Failed to add proxy', 'error');
+      }
+    });
+
+    document.getElementById('fingerprint-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        const res = await fetch('/api/fingerprints', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('fp-name').value,
+            userAgent: document.getElementById('fp-useragent').value,
+            viewport: {
+              width: parseInt(document.getElementById('fp-width').value),
+              height: parseInt(document.getElementById('fp-height').value)
+            },
+            language: document.getElementById('fp-language').value,
+            timezone: document.getElementById('fp-timezone').value,
+            platform: document.getElementById('fp-platform').value
+          })
+        });
+        if (res.ok) {
+          showToast('Fingerprint created!', 'success');
+          e.target.reset();
+          fetchData();
+        }
+      } catch (error) {
+        showToast('Failed to create fingerprint', 'error');
+      }
+    });
+
+    // Initial load and polling
+    fetchData();
+    setInterval(fetchData, 5000);
+  </script>
+</body>
+</html>

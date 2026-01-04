@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(node server.js:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd //c \"taskkill /PID 22828 /F\")",
+      "Bash(cmd //c \"taskkill /F /PID 12392\")",
+      "Bash(curl:*)",
+      "Bash(cmd //c \"taskkill /F /PID 9736\")"
+    ]
+  }
+}

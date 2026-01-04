@@ -1,0 +1,15 @@
+{
+  "name": "ram-monitor",
+  "version": "1.0.0",
+  "description": "RAM Monitor - Track product links on NewEgg, BestBuy, and Amazon",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["monitor", "ram", "newegg", "bestbuy", "amazon"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

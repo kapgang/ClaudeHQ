@@ -1,0 +1,22 @@
+{
+  "name": "claude-hq",
+  "version": "1.0.0",
+  "description": "Command Center HQ - Development App Launcher & Monitor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hq",
+    "dashboard",
+    "development",
+    "launcher"
+  ],
+  "author": "Claude",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.1",
+    "os-utils": "^0.0.14",
+    "systeminformation": "^5.21.0"
+  }
+}

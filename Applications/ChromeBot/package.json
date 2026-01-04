@@ -1,0 +1,24 @@
+{
+  "name": "chromebot",
+  "version": "1.0.0",
+  "description": "Chrome Browser Session Manager with Profiles, Proxies & Fingerprints",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chrome",
+    "puppeteer",
+    "browser",
+    "automation"
+  ],
+  "author": "Claude",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.1",
+    "puppeteer": "^21.6.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "uuid": "^9.0.0"
+  }
+}

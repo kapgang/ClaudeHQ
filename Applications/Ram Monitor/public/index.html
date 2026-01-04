@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM Monitor - Product Link Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖥️ RAM Monitor</h1>
+            <p class="subtitle">Monitor product links on NewEgg, BestBuy, and Amazon</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="newegg">NewEgg</button>
+            <button class="tab-button" data-tab="bestbuy">BestBuy</button>
+            <button class="tab-button" data-tab="amazon">Amazon</button>
+        </div>
+
+        <!-- NewEgg Section -->
+        <div class="tab-content active" id="newegg">
+            <div class="section-header">
+                <h2>NewEgg Product Monitor</h2>
+                <button class="add-link-btn" data-site="newegg">+ Add Link</button>
+            </div>
+            <div class="links-container" id="newegg-links">
+                <div class="empty-state">
+                    <p>No links added yet. Click "+ Add Link" to start monitoring.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BestBuy Section -->
+        <div class="tab-content" id="bestbuy">
+            <div class="section-header">
+                <h2>BestBuy Product Monitor</h2>
+                <button class="add-link-btn" data-site="bestbuy">+ Add Link</button>
+            </div>
+            <div class="links-container" id="bestbuy-links">
+                <div class="empty-state">
+                    <p>No links added yet. Click "+ Add Link" to start monitoring.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amazon Section -->
+        <div class="tab-content" id="amazon">
+            <div class="section-header">
+                <h2>Amazon Product Monitor</h2>
+                <button class="add-link-btn" data-site="amazon">+ Add Link</button>
+            </div>
+            <div class="links-container" id="amazon-links">
+                <div class="empty-state">
+                    <p>No links added yet. Click "+ Add Link" to start monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding links -->
+    <div class="modal" id="link-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Product Link</h2>
+            <form id="link-form">
+                <div class="form-group">
+                    <label for="link-url">Product URL:</label>
+                    <input type="url" id="link-url" placeholder="https://..." required>
+                </div>
+                <div class="form-group">
+                    <label for="link-name">Product Name (optional):</label>
+                    <input type="text" id="link-name" placeholder="e.g., Corsair Vengeance 32GB">
+                </div>
+                <div class="form-group">
+                    <label for="link-price">Target Price (optional):</label>
+                    <input type="number" id="link-price" placeholder="0.00" step="0.01">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-submit">Add Link</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

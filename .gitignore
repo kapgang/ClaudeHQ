@@ -1,0 +1,16 @@
+node_modules/
+*.log
+.env
+.DS_Store
+Thumbs.db
+nul
+
+# Chrome browser profiles (contain user data)
+Applications/ChromeBot/profiles/
+
+# Local settings
+.claude/settings.local.json
+
+# Data files that may contain sensitive info
+Applications/Portfolio/data/
+Applications/ChromeBot/data/

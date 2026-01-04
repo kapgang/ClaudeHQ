@@ -1,0 +1,1802 @@
+[
+  {
+    "timestamp": "2025-12-16T03:23:02.845Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:22:01.965Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:21:02.845Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:20:01.984Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:19:01.990Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:18:01.981Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:17:02.182Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:16:01.923Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:15:02.855Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 156.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:14:01.975Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:13:02.937Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 156.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:12:01.980Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:11:01.877Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:10:02.123Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:09:01.933Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:08:01.899Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:07:01.887Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:06:01.903Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:05:01.946Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:04:01.932Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:03:02.800Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 156.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:01:48.850Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:01:19.707Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:00:48.906Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T03:00:18.866Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:59:48.860Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:59:18.909Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:58:49.785Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 156.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:58:18.928Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:57:48.859Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:57:18.936Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:56:21.898Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:55:49.779Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:55:20.786Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:54:49.813Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:54:12.912Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:53:42.869Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:53:12.908Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:52:42.865Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:52:13.715Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:51:42.849Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:51:12.856Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:50:43.689Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:50:13.760Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 109.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-16T02:49:42.971Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:51:01.307Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:50:01.343Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:49:01.357Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:48:02.308Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:47:01.310Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:46:01.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:45:01.407Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:44:01.304Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:43:01.333Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:42:01.383Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:41:01.315Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:40:01.345Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:39:01.318Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:38:01.328Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:37:01.428Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:36:01.307Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:35:01.293Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:34:01.297Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:33:01.321Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:32:01.320Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:31:01.458Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:30:01.332Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:29:01.345Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:28:01.297Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:27:01.353Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:26:01.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:25:01.330Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:24:01.284Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:23:01.327Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:22:01.336Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:21:01.330Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:20:02.258Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:19:01.304Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:18:01.457Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:17:01.408Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:16:02.198Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:15:01.314Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:14:01.284Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:13:01.330Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:12:01.313Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:11:02.178Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:10:01.322Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:09:01.303Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:08:01.324Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:07:01.359Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:06:02.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:05:01.331Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:04:01.305Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:03:01.327Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:02:01.330Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:01:01.277Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T20:00:01.294Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:59:01.314Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:58:01.397Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:57:01.350Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:56:01.287Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:55:01.335Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:54:01.345Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:53:01.317Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:52:01.341Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:51:01.301Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:50:01.329Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:49:01.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:48:01.400Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:47:01.355Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:46:02.164Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:45:01.360Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:44:01.316Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:43:01.295Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:42:01.376Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:41:01.286Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:40:01.369Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:39:01.316Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:38:02.157Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:37:01.349Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:36:02.165Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:35:01.337Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:34:02.060Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:33:01.305Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:32:02.256Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:31:01.327Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:30:01.311Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:29:01.332Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:28:01.392Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:27:01.386Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:26:01.314Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:25:01.316Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:24:01.438Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:23:01.300Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:22:01.399Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:21:01.318Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:20:01.332Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:19:02.308Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:18:01.308Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:17:01.326Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:16:01.313Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:15:02.257Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:14:01.305Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:13:01.307Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:12:01.325Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:11:01.363Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:10:02.121Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:09:01.340Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:08:02.204Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:07:01.345Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:06:01.298Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:05:01.368Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:04:01.284Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:03:01.279Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:02:01.342Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:01:02.159Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T19:00:01.467Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:59:01.324Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:58:01.384Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:57:01.360Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:56:01.302Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:55:01.418Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:54:02.277Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:53:01.351Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:52:01.374Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:51:01.298Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:50:01.322Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:49:02.317Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:48:01.375Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:47:01.328Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:46:01.323Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:45:01.312Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:44:02.174Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:43:01.300Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:42:02.146Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:41:02.062Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:40:02.338Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:39:01.320Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:38:01.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:37:01.311Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:36:01.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:35:01.305Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:34:01.332Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:33:01.315Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:32:02.286Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "unknown",
+    "price": 194.99,
+    "title": "G.SKILL Trident Z RGB Series DDR4 RAM (XMP) 32GB (2x16GB) 3200MT/s CL16-18-18-38 1.35V Intel AMD Desktop Computer Memory U-DIMM (F4-3200C16D-32GTZR)",
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:31:01.291Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:30:01.382Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:29:01.386Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:28:01.316Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:27:01.331Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:26:01.302Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:25:01.303Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:24:01.302Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:23:01.349Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:22:01.337Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:21:01.296Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:20:01.310Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:19:01.324Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:18:01.318Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  },
+  {
+    "timestamp": "2025-12-15T18:17:01.311Z",
+    "site": "amazon",
+    "url": "https://www.amazon.com/dp/B07DMNZY56/ref=olp-opf-redir?aod=1&tag=balvin-20&th=1",
+    "status": "blocked",
+    "price": null,
+    "title": null,
+    "availability": null
+  }
+]

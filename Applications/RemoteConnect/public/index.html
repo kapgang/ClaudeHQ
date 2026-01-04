@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellular Device Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Cellular Device Manager</h1>
+            <p class="subtitle">Remote Device Connection & Management</p>
+        </header>
+
+        <main>
+            <section class="connection-panel">
+                <h2>Device Connection</h2>
+                <div class="connection-form">
+                    <div class="form-group">
+                        <label for="deviceId">Device ID / Address:</label>
+                        <input type="text" id="deviceId" placeholder="Enter device identifier or IP address">
+                    </div>
+                    <div class="form-group">
+                        <label for="connectionType">Connection Type:</label>
+                        <select id="connectionType">
+                            <option value="cellular">Cellular Network</option>
+                            <option value="wifi">WiFi</option>
+                            <option value="usb">USB</option>
+                        </select>
+                    </div>
+                    <button id="connectBtn" class="btn btn-primary">Connect to Device</button>
+                </div>
+            </section>
+
+            <section class="devices-panel">
+                <h2>Connected Devices</h2>
+                <div id="devicesList" class="devices-list">
+                    <div class="no-devices">
+                        <p>No devices connected</p>
+                        <p class="hint">Connect a device to get started</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="status-panel">
+                <h2>Server Status</h2>
+                <div class="status-indicator">
+                    <span class="status-dot active"></span>
+                    <span>Server running on localhost:7777</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
