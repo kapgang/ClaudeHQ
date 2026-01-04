@@ -1,0 +1,42 @@
+{
+  "newsApi": {
+    "apiKey": "",
+    "sources": [
+      "reuters",
+      "bloomberg",
+      "techcrunch"
+    ],
+    "keywords": [
+      "election",
+      "sports",
+      "technology"
+    ],
+    "pollingInterval": 300000,
+    "maxArticlesPerPoll": 50,
+    "enabled": false
+  },
+  "polymarket": {
+    "apiKey": "",
+    "privateKey": "",
+    "walletAddress": "",
+    "endpoint": "https://gamma-api.polymarket.com",
+    "clobEndpoint": "https://clob.polymarket.com",
+    "testMode": true,
+    "enabled": false
+  },
+  "claude": {
+    "apiKey": "",
+    "model": "claude-sonnet-4-5-20250929",
+    "maxTokens": 500,
+    "temperature": 0.3,
+    "confidenceThreshold": 70,
+    "enabled": false
+  },
+  "tradingLimits": {
+    "dailyMaxUSD": 50,
+    "dailyMaxTrades": 10,
+    "maxPerTrade": 10,
+    "minConfidence": 70,
+    "resetHour": 0
+  }
+}

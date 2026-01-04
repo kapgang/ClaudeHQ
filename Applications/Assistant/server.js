@@ -46,6 +46,10 @@ wss.on('connection', (ws) => {
 
 // Middleware
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+
+// Routes
+app.use('/api/ideas', require('./routes/ideas'));
 
 // Health check
 app.get('/api/health', (req, res) => {

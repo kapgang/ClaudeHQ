@@ -52,6 +52,16 @@ const projects = [
     script: 'server.js',
     icon: 'brain',
     color: '#00b4d8'
+  },
+  {
+    id: 'newsmonitor',
+    name: 'News Monitor',
+    description: 'Polymarket Auto-Trader',
+    path: path.join(BASE_PATH, 'NewsMonitor'),
+    port: 2222,
+    script: 'server.js',
+    icon: 'newspaper',
+    color: '#f59e0b'
   }
 ];
 

@@ -8,11 +8,12 @@ Command Center for managing multiple Node.js application servers.
 
 - `HQ/` - Main Command Center server (port 8888)
 - `Applications/` - Individual application servers
+  - `Assistant/` - Claude Code Terminal & Ideas Manager (port 3333)
   - `ChromeBot/` - Browser Session Manager (port 5555)
-  - `RemoteConnect/` - Cellular Device Manager (port 7777)
-  - `Ram Monitor/` - System Memory Monitor (port 9999)
+  - `NewsMonitor/` - Polymarket Auto-Trader (port 2222)
   - `Portfolio/` - Personal Finance Manager (port 4444)
-  - `Assistant/` - Work AI Assistant (port 3333)
+  - `Ram Monitor/` - System Memory Monitor (port 9999)
+  - `RemoteConnect/` - Cellular Device Manager (port 7777)
 
 ## Code Style
 
@@ -37,4 +38,4 @@ Command Center for managing multiple Node.js application servers.
 ## Port Restrictions
 
 - **NEVER use port 6666** - This port causes issues and should be avoided
-- Available ports in use: 3333, 4444, 5555, 7777, 8888, 9999
+- Ports in use: 2222, 3333, 4444, 5555, 7777, 8888, 9999

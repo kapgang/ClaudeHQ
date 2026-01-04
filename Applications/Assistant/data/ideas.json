@@ -1,0 +1,94 @@
+{
+  "ideas": [
+    {
+      "id": 1,
+      "title": "PBC Schema Validator",
+      "description": "Validate incoming W2/HR/Time Tracking data against expected schemas before processing. Flag missing columns, incorrect data types, and formatting issues.",
+      "category": "data-quality",
+      "priority": "high",
+      "details": "Could use JSON Schema or custom validation rules. Output a report showing which fields passed/failed. Integrate with Alteryx as a pre-processing step.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Smart Field Mapper",
+      "description": "AI-assisted tool to suggest field mappings from client column names to standard wireframe fields based on patterns and historical mappings.",
+      "category": "automation",
+      "priority": "high",
+      "details": "Train on historical mappings. Use fuzzy matching and NLP to suggest mappings. Allow user to confirm/adjust. Save new mappings for future reference.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Nuance Database",
+      "description": "Searchable log of data nuances encountered and how they were resolved. Build institutional knowledge over time.",
+      "category": "documentation",
+      "priority": "medium",
+      "details": "Store: client name, data type, issue description, resolution, date. Allow tagging and searching. Export for team training.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Status Email Composer",
+      "description": "Generate Thursday status update emails by pulling from activity log. Summarize work done, blockers, and next steps.",
+      "category": "communication",
+      "priority": "medium",
+      "details": "Log activities throughout the week. On Thursday, generate draft email with bullet points. Allow editing before sending.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Workflow Recommender",
+      "description": "Suggest which workflow approach (WF1-4) to use based on incoming data characteristics and project requirements.",
+      "category": "workflow",
+      "priority": "medium",
+      "details": "Analyze data columns, row counts, complexity. Recommend WF1 (W2), WF2 (HR), WF3 (Time), or WF4 (Consolidation). Explain reasoning.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Q/NQ Classification Helper",
+      "description": "Assist with qualifying percentage decisions by providing guidelines and historical precedents.",
+      "category": "workflow",
+      "priority": "low",
+      "details": "Reference IRS guidelines. Show similar past decisions. Flag edge cases for senior review.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Data Quality Dashboard",
+      "description": "Visual dashboard showing PBC data quality scores, common issues, and trends across projects.",
+      "category": "data-quality",
+      "priority": "medium",
+      "details": "Score each PBC file on completeness, accuracy, format. Track trends over time. Identify clients with recurring issues.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "ET Response Library",
+      "description": "Template library for common Engagement Team questions and responses. Reduce time drafting similar emails.",
+      "category": "communication",
+      "priority": "low",
+      "details": "Categorize templates: data requests, clarifications, status updates. Allow customization. Track usage.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "Process Timer",
+      "description": "Track time spent on each workflow phase. Identify bottlenecks and optimization opportunities.",
+      "category": "workflow",
+      "priority": "low",
+      "details": "Start/stop timer for each phase. Generate reports. Compare across projects. Identify slowest steps.",
+      "created": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "title": "Alteryx Documentation Generator",
+      "description": "Auto-generate documentation for Alteryx workflows. Describe inputs, transformations, outputs.",
+      "category": "documentation",
+      "priority": "medium",
+      "details": "Parse .yxmd files. Extract tool descriptions. Generate markdown or PDF documentation. Include data lineage diagrams.",
+      "created": "2025-01-01T00:00:00.000Z"
+    }
+  ]
+}

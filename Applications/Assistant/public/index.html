@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work Assistant - Claude Code</title>
+  <title>Work Assistant</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css">
   <link rel="stylesheet" href="styles.css">
@@ -12,47 +12,185 @@
   <div class="grid-bg"></div>
 
   <div class="app">
-    <!-- Header -->
-    <header class="header">
+    <!-- Sidebar -->
+    <aside class="sidebar">
       <div class="logo">
         <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a9 9 0 0 1 9 9c0 3.5-2 6.5-5 8l-4 3-4-3c-3-1.5-5-4.5-5-8a9 9 0 0 1 9-9z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>Assistant</h1>
+          <span>Work Tools</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-mode="terminal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="4 17 10 11 4 5"/>
             <line x1="12" y1="19" x2="20" y2="19"/>
           </svg>
-        </div>
-        <div class="logo-text">
-          <h1>Work Assistant</h1>
-          <span>Claude Code Terminal</span>
-        </div>
-      </div>
-      <div class="header-controls">
-        <button id="startTerminal" class="btn-terminal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-            <polygon points="5 3 19 12 5 21 5 3"/>
-          </svg>
-          Start Claude Code
+          Claude Code
         </button>
-        <button id="stopTerminal" class="btn-terminal btn-stop" disabled>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-            <rect x="6" y="6" width="12" height="12"/>
+        <button class="nav-item" data-mode="ideas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
           </svg>
-          Stop
+          Ideas
         </button>
-      </div>
-    </header>
+      </nav>
+    </aside>
 
-    <!-- Terminal -->
-    <main class="terminal-wrapper">
-      <div id="terminal"></div>
-      <div id="terminalPlaceholder" class="terminal-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64">
-          <polyline points="4 17 10 11 4 5"/>
-          <line x1="12" y1="19" x2="20" y2="19"/>
-        </svg>
-        <h2>Claude Code Terminal</h2>
-        <p>Click "Start Claude Code" to launch an interactive AI coding assistant</p>
-        <span>Uses your Claude Code subscription - no additional API costs</span>
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Terminal Mode -->
+      <div id="terminalMode" class="mode active">
+        <div class="mode-header">
+          <div class="mode-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <polyline points="4 17 10 11 4 5"/>
+              <line x1="12" y1="19" x2="20" y2="19"/>
+            </svg>
+            <h2>Claude Code Terminal</h2>
+          </div>
+          <div class="mode-controls">
+            <button id="startTerminal" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Start Claude Code
+            </button>
+            <button id="stopTerminal" class="btn-danger" disabled>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <rect x="6" y="6" width="12" height="12"/>
+              </svg>
+              Stop
+            </button>
+          </div>
+        </div>
+        <div class="terminal-container">
+          <div id="terminal"></div>
+          <div id="terminalPlaceholder" class="terminal-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64">
+              <polyline points="4 17 10 11 4 5"/>
+              <line x1="12" y1="19" x2="20" y2="19"/>
+            </svg>
+            <h2>Claude Code Terminal</h2>
+            <p>Click "Start Claude Code" to launch an interactive AI coding assistant</p>
+            <span>Uses your Claude Code subscription - no additional API costs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ideas Mode -->
+      <div id="ideasMode" class="mode">
+        <div class="mode-header">
+          <div class="mode-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+            </svg>
+            <h2>Tool Ideas</h2>
+          </div>
+          <div class="mode-controls">
+            <button id="addIdeaBtn" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              New Idea
+            </button>
+          </div>
+        </div>
+        <div id="ideasGrid" class="ideas-grid"></div>
+      </div>
+
+      <!-- Idea Detail Modal -->
+      <div id="ideaModal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="modalTitle">Idea Details</h3>
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="modalView" class="modal-view">
+              <div class="idea-meta">
+                <span id="modalCategory" class="idea-category"></span>
+                <span id="modalPriority" class="idea-priority"></span>
+              </div>
+              <p id="modalDescription" class="modal-description"></p>
+              <div class="modal-section">
+                <h4>Details & Implementation Notes</h4>
+                <p id="modalDetails"></p>
+              </div>
+              <div class="modal-actions">
+                <button class="btn-secondary" onclick="editIdea()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                  </svg>
+                  Edit
+                </button>
+                <button class="btn-danger" onclick="deleteIdea()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                  </svg>
+                  Delete
+                </button>
+                <button class="btn-primary" onclick="discussInTerminal()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <polyline points="4 17 10 11 4 5"/>
+                    <line x1="12" y1="19" x2="20" y2="19"/>
+                  </svg>
+                  Discuss in Claude Code
+                </button>
+              </div>
+            </div>
+            <form id="modalForm" class="modal-form hidden">
+              <div class="form-group">
+                <label for="formTitle">Title</label>
+                <input type="text" id="formTitle" required>
+              </div>
+              <div class="form-group">
+                <label for="formDescription">Description</label>
+                <textarea id="formDescription" rows="3" required></textarea>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formCategory">Category</label>
+                  <select id="formCategory">
+                    <option value="automation">Automation</option>
+                    <option value="data-quality">Data Quality</option>
+                    <option value="workflow">Workflow</option>
+                    <option value="communication">Communication</option>
+                    <option value="documentation">Documentation</option>
+                    <option value="general">General</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="formPriority">Priority</label>
+                  <select id="formPriority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="formDetails">Implementation Details</label>
+                <textarea id="formDetails" rows="4" placeholder="Technical notes, requirements, considerations..."></textarea>
+              </div>
+              <div class="modal-actions">
+                <button type="button" class="btn-secondary" onclick="cancelEdit()">Cancel</button>
+                <button type="submit" class="btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </main>
   </div>
@@ -62,20 +200,231 @@
   <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xterm-addon-web-links@0.9.0/lib/xterm-addon-web-links.min.js"></script>
   <script>
-    // Terminal state
+    // State
+    let currentMode = 'terminal';
+    let currentIdea = null;
+    let isEditing = false;
+    let ideas = [];
+
+    // DOM elements
+    const navItems = document.querySelectorAll('.nav-item');
+    const modes = document.querySelectorAll('.mode');
+    const ideasGrid = document.getElementById('ideasGrid');
+    const ideaModal = document.getElementById('ideaModal');
+    const modalView = document.getElementById('modalView');
+    const modalForm = document.getElementById('modalForm');
+    const addIdeaBtn = document.getElementById('addIdeaBtn');
+
+    // Navigation
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const mode = item.dataset.mode;
+        setMode(mode);
+      });
+    });
+
+    function setMode(mode) {
+      currentMode = mode;
+      navItems.forEach(item => {
+        item.classList.toggle('active', item.dataset.mode === mode);
+      });
+      modes.forEach(m => {
+        m.classList.toggle('active', m.id === mode + 'Mode');
+      });
+
+      if (mode === 'ideas') {
+        loadIdeas();
+      } else if (mode === 'terminal' && term && terminalRunning) {
+        setTimeout(() => term.focus(), 100);
+      }
+    }
+
+    // Ideas CRUD
+    async function loadIdeas() {
+      try {
+        const response = await fetch('/api/ideas');
+        const data = await response.json();
+        ideas = data.ideas;
+        renderIdeas();
+      } catch (error) {
+        console.error('Failed to load ideas:', error);
+        ideasGrid.innerHTML = '<p class="error">Failed to load ideas</p>';
+      }
+    }
+
+    function renderIdeas() {
+      ideasGrid.innerHTML = ideas.map(idea => `
+        <div class="idea-card" onclick="viewIdea(${idea.id})">
+          <div class="idea-header">
+            <span class="idea-category">${idea.category}</span>
+            <span class="idea-priority priority-${idea.priority}">${idea.priority}</span>
+          </div>
+          <h3>${escapeHtml(idea.title)}</h3>
+          <p>${escapeHtml(idea.description)}</p>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function viewIdea(id) {
+      currentIdea = ideas.find(i => i.id === id);
+      if (!currentIdea) return;
+
+      isEditing = false;
+      document.getElementById('modalTitle').textContent = currentIdea.title;
+      document.getElementById('modalCategory').textContent = currentIdea.category;
+      document.getElementById('modalCategory').className = 'idea-category';
+      document.getElementById('modalPriority').textContent = currentIdea.priority;
+      document.getElementById('modalPriority').className = `idea-priority priority-${currentIdea.priority}`;
+      document.getElementById('modalDescription').textContent = currentIdea.description;
+      document.getElementById('modalDetails').textContent = currentIdea.details || 'No additional details yet.';
+
+      modalView.classList.remove('hidden');
+      modalForm.classList.add('hidden');
+      ideaModal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      ideaModal.classList.add('hidden');
+      currentIdea = null;
+      isEditing = false;
+    }
+
+    // Close modal on backdrop click
+    document.querySelector('.modal-backdrop').addEventListener('click', closeModal);
+
+    function editIdea() {
+      if (!currentIdea) return;
+      isEditing = true;
+
+      document.getElementById('modalTitle').textContent = 'Edit Idea';
+      document.getElementById('formTitle').value = currentIdea.title;
+      document.getElementById('formDescription').value = currentIdea.description;
+      document.getElementById('formCategory').value = currentIdea.category;
+      document.getElementById('formPriority').value = currentIdea.priority;
+      document.getElementById('formDetails').value = currentIdea.details || '';
+
+      modalView.classList.add('hidden');
+      modalForm.classList.remove('hidden');
+    }
+
+    function cancelEdit() {
+      if (currentIdea) {
+        viewIdea(currentIdea.id);
+      } else {
+        closeModal();
+      }
+    }
+
+    addIdeaBtn.addEventListener('click', () => {
+      currentIdea = null;
+      isEditing = true;
+
+      document.getElementById('modalTitle').textContent = 'New Idea';
+      document.getElementById('formTitle').value = '';
+      document.getElementById('formDescription').value = '';
+      document.getElementById('formCategory').value = 'general';
+      document.getElementById('formPriority').value = 'medium';
+      document.getElementById('formDetails').value = '';
+
+      modalView.classList.add('hidden');
+      modalForm.classList.remove('hidden');
+      ideaModal.classList.remove('hidden');
+    });
+
+    modalForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const ideaData = {
+        title: document.getElementById('formTitle').value,
+        description: document.getElementById('formDescription').value,
+        category: document.getElementById('formCategory').value,
+        priority: document.getElementById('formPriority').value,
+        details: document.getElementById('formDetails').value
+      };
+
+      try {
+        let response;
+        if (currentIdea) {
+          response = await fetch(`/api/ideas/${currentIdea.id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(ideaData)
+          });
+        } else {
+          response = await fetch('/api/ideas', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(ideaData)
+          });
+        }
+
+        if (response.ok) {
+          await loadIdeas();
+          closeModal();
+        }
+      } catch (error) {
+        console.error('Failed to save idea:', error);
+      }
+    });
+
+    async function deleteIdea() {
+      if (!currentIdea) return;
+      if (!confirm(`Delete "${currentIdea.title}"?`)) return;
+
+      try {
+        const response = await fetch(`/api/ideas/${currentIdea.id}`, {
+          method: 'DELETE'
+        });
+
+        if (response.ok) {
+          await loadIdeas();
+          closeModal();
+        }
+      } catch (error) {
+        console.error('Failed to delete idea:', error);
+      }
+    }
+
+    function discussInTerminal() {
+      if (!currentIdea) return;
+      closeModal();
+      setMode('terminal');
+
+      // If terminal is running, send message about the idea
+      if (terminalRunning && terminalWs && terminalWs.readyState === WebSocket.OPEN) {
+        const prompt = `Help me plan and implement this tool idea:\n\nTitle: ${currentIdea.title}\nDescription: ${currentIdea.description}\nDetails: ${currentIdea.details || 'None yet'}\n\nWhat would be the best approach to build this?`;
+        terminalWs.send(JSON.stringify({ type: 'input', data: prompt + '\r' }));
+        term.focus();
+      } else {
+        // Start terminal first, then queue the message
+        startTerminalSession();
+        setTimeout(() => {
+          if (terminalWs && terminalWs.readyState === WebSocket.OPEN) {
+            const prompt = `Help me plan and implement this tool idea:\n\nTitle: ${currentIdea.title}\nDescription: ${currentIdea.description}\nDetails: ${currentIdea.details || 'None yet'}\n\nWhat would be the best approach to build this?`;
+            terminalWs.send(JSON.stringify({ type: 'input', data: prompt + '\r' }));
+          }
+        }, 2000);
+      }
+    }
+
+    // Terminal
     let term = null;
     let terminalWs = null;
     let terminalRunning = false;
     const fitAddon = new FitAddon.FitAddon();
 
-    // DOM elements
     const terminalEl = document.getElementById('terminal');
     const terminalPlaceholder = document.getElementById('terminalPlaceholder');
     const startBtn = document.getElementById('startTerminal');
     const stopBtn = document.getElementById('stopTerminal');
     const ASSISTANT_DIR = 'C:\\Users\\kapla\\OneDrive\\Desktop\\Claude HQ\\Applications\\Assistant';
 
-    // Initialize xterm
     function initTerminal() {
       if (term) return;
 
@@ -114,7 +463,6 @@
       term.open(terminalEl);
       fitAddon.fit();
 
-      // Handle window resize
       window.addEventListener('resize', () => {
         if (terminalRunning) {
           fitAddon.fit();
@@ -128,7 +476,6 @@
         }
       });
 
-      // Handle terminal input
       term.onData((data) => {
         if (terminalWs && terminalWs.readyState === WebSocket.OPEN) {
           terminalWs.send(JSON.stringify({ type: 'input', data }));
@@ -136,7 +483,6 @@
       });
     }
 
-    // Start terminal
     function startTerminalSession() {
       initTerminal();
 
@@ -154,7 +500,6 @@
           workingDir: ASSISTANT_DIR
         }));
 
-        // Send initial resize
         setTimeout(() => {
           fitAddon.fit();
           terminalWs.send(JSON.stringify({
@@ -195,7 +540,6 @@
       };
     }
 
-    // Stop terminal
     function stopTerminalSession() {
       terminalRunning = false;
       startBtn.disabled = false;
@@ -207,11 +551,9 @@
       }
     }
 
-    // Event listeners
     startBtn.addEventListener('click', startTerminalSession);
     stopBtn.addEventListener('click', () => {
       if (terminalWs && terminalWs.readyState === WebSocket.OPEN) {
-        // Send Ctrl+C then exit
         terminalWs.send(JSON.stringify({ type: 'input', data: '\x03' }));
         setTimeout(() => {
           terminalWs.send(JSON.stringify({ type: 'input', data: 'exit\r' }));
@@ -219,6 +561,9 @@
       }
       stopTerminalSession();
     });
+
+    // Initial load
+    loadIdeas();
   </script>
 </body>
 </html>
