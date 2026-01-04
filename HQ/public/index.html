@@ -4,139 +4,146 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HQ - Command Center</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div class="grid-bg"></div>
+  <div class="grain"></div>
 
-  <div class="container">
-    <header class="header">
-      <div class="logo">
-        <div class="logo-icon">HQ</div>
-        <div class="logo-text">
-          <h1>Command Center</h1>
-          <span>Development Hub</span>
+  <div class="page-wrapper">
+    <header class="masthead">
+      <div class="masthead-left">
+        <div class="brand">
+          <div class="brand-mark">
+            <div class="mark-circle"></div>
+            <div class="mark-dot"></div>
+          </div>
+          <div class="brand-text">
+            <h1>Command Center</h1>
+            <span class="brand-tag">Operations Dashboard</span>
+          </div>
         </div>
       </div>
-      <div class="header-status">
-        <div class="status-badge">
-          <div class="status-dot"></div>
-          <span>System Online</span>
+
+      <div class="masthead-right">
+        <div class="status-pill">
+          <span class="pill-dot"></span>
+          <span>All Systems Operational</span>
         </div>
-        <div class="time-display" id="time"></div>
+        <div class="time-badge" id="time"></div>
+        <button class="restart-trigger" id="restart-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          </svg>
+          <span>Restart</span>
+        </button>
       </div>
     </header>
 
-    <main class="main-grid">
-      <!-- System Stats -->
-      <section class="system-stats">
-        <div class="stat-card" id="cpu-card">
-          <div class="stat-header">
-            <span class="stat-label">CPU Usage</span>
-            <div class="stat-icon" style="background: rgba(0, 212, 255, 0.1); color: var(--accent-cyan);">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-              </svg>
-            </div>
+    <main class="canvas">
+      <div class="decorative-block top-left"></div>
+      <div class="decorative-block bottom-right"></div>
+
+      <!-- Metrics Section -->
+      <section class="metrics-section">
+        <div class="metric-card" data-color="lavender">
+          <div class="metric-header">
+            <span class="metric-name">Processor</span>
+            <span class="metric-badge">CPU</span>
           </div>
-          <div class="stat-value" id="cpu-value">---%</div>
-          <div class="stat-bar">
-            <div class="stat-bar-fill" id="cpu-bar" style="width: 0%; background: var(--accent-cyan);"></div>
+          <div class="metric-reading" id="cpu-value">---%</div>
+          <div class="metric-bar">
+            <div class="bar-fill" id="cpu-bar"></div>
           </div>
-          <div class="stat-detail" id="cpu-detail">Loading...</div>
+          <div class="metric-info" id="cpu-detail">Initializing...</div>
         </div>
 
-        <div class="stat-card" id="ram-card">
-          <div class="stat-header">
-            <span class="stat-label">Memory</span>
-            <div class="stat-icon" style="background: rgba(168, 85, 247, 0.1); color: var(--accent-purple);">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707-.293l.353-.353a.5.5 0 0 1 .708 0l.353.353a1 1 0 0 0 .707.293H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1zm.5 1h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5zm5 0h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5zm4.5.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4z"/>
-              </svg>
-            </div>
+        <div class="metric-card" data-color="mint">
+          <div class="metric-header">
+            <span class="metric-name">Memory</span>
+            <span class="metric-badge">RAM</span>
           </div>
-          <div class="stat-value" id="ram-value">---%</div>
-          <div class="stat-bar">
-            <div class="stat-bar-fill" id="ram-bar" style="width: 0%; background: var(--accent-purple);"></div>
+          <div class="metric-reading" id="ram-value">---%</div>
+          <div class="metric-bar">
+            <div class="bar-fill" id="ram-bar"></div>
           </div>
-          <div class="stat-detail" id="ram-detail">Loading...</div>
+          <div class="metric-info" id="ram-detail">Initializing...</div>
         </div>
 
-        <div class="stat-card" id="disk-card">
-          <div class="stat-header">
-            <span class="stat-label">Disk</span>
-            <div class="stat-icon" style="background: rgba(34, 197, 94, 0.1); color: var(--accent-green);">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M4.5 11a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM3 10.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                <path d="M16 11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V9.51c0-.418.105-.83.305-1.197l2.472-4.531A1.5 1.5 0 0 1 4.094 3h7.812a1.5 1.5 0 0 1 1.317.782l2.472 4.53c.2.368.305.78.305 1.198V11zM3.655 4.26 1.592 8.043C1.724 8.014 1.86 8 2 8h12c.14 0 .276.014.408.042L12.345 4.26a.5.5 0 0 0-.439-.26H4.094a.5.5 0 0 0-.44.26zM1 10v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
-              </svg>
-            </div>
+        <div class="metric-card" data-color="peach">
+          <div class="metric-header">
+            <span class="metric-name">Storage</span>
+            <span class="metric-badge">DISK</span>
           </div>
-          <div class="stat-value" id="disk-value">---%</div>
-          <div class="stat-bar">
-            <div class="stat-bar-fill" id="disk-bar" style="width: 0%; background: var(--accent-green);"></div>
+          <div class="metric-reading" id="disk-value">---%</div>
+          <div class="metric-bar">
+            <div class="bar-fill" id="disk-bar"></div>
           </div>
-          <div class="stat-detail" id="disk-detail">Loading...</div>
+          <div class="metric-info" id="disk-detail">Initializing...</div>
         </div>
 
-        <div class="stat-card" id="uptime-card">
-          <div class="stat-header">
-            <span class="stat-label">Uptime</span>
-            <div class="stat-icon" style="background: rgba(234, 179, 8, 0.1); color: var(--accent-yellow);">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-              </svg>
-            </div>
+        <div class="metric-card" data-color="sky">
+          <div class="metric-header">
+            <span class="metric-name">Uptime</span>
+            <span class="metric-badge">TIME</span>
           </div>
-          <div class="stat-value" id="uptime-value">--:--:--</div>
-          <div class="stat-bar" style="visibility: hidden;">
-            <div class="stat-bar-fill"></div>
-          </div>
-          <div class="stat-detail" id="uptime-detail">Loading...</div>
+          <div class="metric-reading" id="uptime-value">--:--:--</div>
+          <div class="metric-info" id="uptime-detail">Loading...</div>
         </div>
       </section>
 
-      <!-- Apps Section -->
+      <!-- Applications Section -->
       <section class="apps-section">
-        <div class="section-header">
-          <h2 class="section-title">Applications</h2>
+        <div class="section-heading">
+          <h2>Applications</h2>
+          <div class="heading-accent"></div>
         </div>
         <div class="apps-grid" id="apps-grid">
-          <!-- Apps will be loaded dynamically -->
+          <!-- Apps loaded dynamically -->
         </div>
       </section>
 
       <!-- Console Section -->
       <section class="console-section">
-        <div class="section-header">
-          <h2 class="section-title">Console Output</h2>
-          <button class="btn btn-secondary" onclick="clearLogs()" style="flex: 0; padding: 8px 16px;">
+        <div class="section-heading">
+          <h2>System Logs</h2>
+          <div class="heading-accent"></div>
+          <button class="purge-btn" onclick="clearLogs()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="3 6 5 6 21 6"/>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            </svg>
             Clear
           </button>
         </div>
-        <div class="console-container">
-          <div class="console-header">
-            <div class="console-dots">
-              <div class="console-dot red"></div>
-              <div class="console-dot yellow"></div>
-              <div class="console-dot green"></div>
-            </div>
-            <div class="console-title">
-              <span>Terminal</span>
-            </div>
-            <div style="width: 54px;"></div>
-          </div>
-          <div class="console-body" id="console-body">
-            <div class="console-empty">No logs yet...</div>
+        <div class="console-wrapper">
+          <div class="console-content" id="console-body">
+            <div class="console-empty">Awaiting system events...</div>
           </div>
         </div>
       </section>
     </main>
   </div>
 
-  <div class="toast-container" id="toast-container"></div>
+  <div class="toast-stack" id="toast-container"></div>
+
+  <div class="modal-overlay" id="restart-modal">
+    <div class="modal-box">
+      <div class="modal-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <h3>Restart System</h3>
+      <p>This will restart the HQ server. All active connections will be interrupted. Continue?</p>
+      <div class="modal-actions">
+        <button class="modal-btn cancel" id="cancel-restart">Cancel</button>
+        <button class="modal-btn confirm" id="confirm-restart">Restart System</button>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/app.js"></script>
 </body>

@@ -82,63 +82,81 @@ const iconMap = {
 };
 
 // Fetch and display servers
-async function updateServers() {
+async function updateServers(forceRebuild = false) {
   try {
     const response = await fetch('/api/servers');
     const data = await response.json();
 
     const grid = document.getElementById('apps-grid');
-    grid.innerHTML = '';
 
-    data.servers.forEach(server => {
-      const card = document.createElement('div');
-      card.className = `app-card ${server.running ? 'running' : ''}`;
-      card.style.setProperty('--app-color', server.color);
+    // Color mapping for apps
+    const getColorWithShadow = (color) => {
+      const shadowMap = {
+        '#a855f7': 'rgba(168, 85, 247, 0.3)',
+        '#00d4ff': 'rgba(0, 212, 255, 0.3)',
+        '#ff6b35': 'rgba(255, 107, 53, 0.3)',
+        '#ff5757': 'rgba(255, 87, 87, 0.3)',
+        '#10b981': 'rgba(16, 185, 129, 0.3)',
+        '#f59e0b': 'rgba(245, 158, 11, 0.3)',
+        '#00b4d8': 'rgba(0, 180, 216, 0.3)'
+      };
+      return shadowMap[color] || 'rgba(0, 0, 0, 0.2)';
+    };
 
-      card.innerHTML = `
-        <div class="app-header">
-          <div class="app-info">
-            <div class="app-icon" style="color: ${server.color}">
-              ${iconMap[server.icon] || iconMap.memory}
+    // Only rebuild if forced or grid is empty
+    if (forceRebuild || grid.children.length === 0) {
+      grid.innerHTML = '';
+      data.servers.forEach((server, index) => {
+        const tile = document.createElement('div');
+        tile.className = 'app-tile';
+        tile.style.setProperty('--app-color', server.color);
+        tile.style.setProperty('--app-color-shadow', getColorWithShadow(server.color));
+        tile.dataset.serverId = server.id;
+
+        tile.innerHTML = `
+          <div class="app-top">
+            <div class="app-details">
+              <div class="app-title">${server.name}</div>
+              <div class="app-subtitle">${server.description}</div>
             </div>
-            <div>
-              <div class="app-name">${server.name}</div>
-              <div class="app-desc">${server.description}</div>
+            <div class="app-indicator ${server.running ? 'running' : 'stopped'}">
+              ${server.running ? 'Running' : 'Stopped'}
             </div>
           </div>
-          <div class="app-status ${server.running ? 'online' : 'offline'}">
-            <div class="app-status-dot"></div>
-            ${server.running ? 'Online' : 'Offline'}
+          <div class="app-buttons">
+            ${server.running ? `
+              <button class="app-btn secondary" onclick="openApp('${server.url}')">Open</button>
+              <button class="app-btn secondary" onclick="stopServer('${server.id}', this)">Stop</button>
+            ` : `
+              <button class="app-btn primary" onclick="startServer('${server.id}', this)">Start</button>
+            `}
           </div>
-        </div>
-        <div class="app-details">
-          <div class="app-detail-item">
-            <span class="app-detail-label">Port</span>
-            <span class="app-detail-value">${server.port}</span>
-          </div>
-          <div class="app-detail-item">
-            <span class="app-detail-label">PID</span>
-            <span class="app-detail-value">${server.pid || '---'}</span>
-          </div>
-        </div>
-        <div class="app-actions">
-          ${server.running ? `
-            <button class="btn btn-secondary" onclick="openApp('${server.url}')">
-              Open App
-            </button>
-            <button class="btn btn-danger" onclick="stopServer('${server.id}', this)">
-              Stop
-            </button>
-          ` : `
-            <button class="btn btn-success" onclick="startServer('${server.id}', this)">
-              Start
-            </button>
-          `}
-        </div>
-      `;
+        `;
 
-      grid.appendChild(card);
-    });
+        grid.appendChild(tile);
+      });
+    } else {
+      // Update existing tiles
+      data.servers.forEach(server => {
+        const tile = grid.querySelector(`[data-server-id="${server.id}"]`);
+        if (!tile) return;
+
+        const indicator = tile.querySelector('.app-indicator');
+        const buttons = tile.querySelector('.app-buttons');
+
+        // Update indicator
+        indicator.className = `app-indicator ${server.running ? 'running' : 'stopped'}`;
+        indicator.textContent = server.running ? 'Running' : 'Stopped';
+
+        // Update buttons
+        buttons.innerHTML = server.running ? `
+          <button class="app-btn secondary" onclick="openApp('${server.url}')">Open</button>
+          <button class="app-btn secondary" onclick="stopServer('${server.id}', this)">Stop</button>
+        ` : `
+          <button class="app-btn primary" onclick="startServer('${server.id}', this)">Start</button>
+        `;
+      });
+    }
 
   } catch (error) {
     console.error('Failed to fetch servers:', error);
@@ -163,7 +181,7 @@ async function startServer(id, btn) {
     showToast('Failed to start server', 'error');
   }
 
-  await updateServers();
+  await updateServers(); // Only update existing tiles, don't rebuild
   await updateLogs();
 }
 
@@ -184,7 +202,7 @@ async function stopServer(id, btn) {
     showToast('Failed to stop server', 'error');
   }
 
-  await updateServers();
+  await updateServers(); // Only update existing tiles, don't rebuild
   await updateLogs();
 }
 
@@ -201,7 +219,7 @@ async function updateLogs() {
     const consoleBody = document.getElementById('console-body');
 
     if (data.logs.length === 0) {
-      consoleBody.innerHTML = '<div class="console-empty">No logs yet...</div>';
+      consoleBody.innerHTML = '<div class="console-empty">Awaiting system events...</div>';
       return;
     }
 
@@ -213,10 +231,10 @@ async function updateLogs() {
         second: '2-digit'
       });
       return `
-        <div class="log-entry ${log.type}">
-          <span class="log-time">${time}</span>
-          <span class="log-source">[${log.source}]</span>
-          <span class="log-message">${log.message}</span>
+        <div class="console-line ${log.type}">
+          <span class="console-timestamp">${time}</span>
+          <span class="console-source">[${log.source}]</span>
+          <span class="console-message">${log.message}</span>
         </div>
       `;
     }).join('');
@@ -229,6 +247,39 @@ async function updateLogs() {
 async function clearLogs() {
   await fetch('/api/logs/clear', { method: 'POST' });
   await updateLogs();
+}
+
+// Restart HQ functionality
+function showRestartModal() {
+  const modal = document.getElementById('restart-modal');
+  modal.classList.add('active');
+}
+
+function hideRestartModal() {
+  const modal = document.getElementById('restart-modal');
+  modal.classList.remove('active');
+}
+
+async function restartHQ() {
+  try {
+    hideRestartModal();
+    showToast('Restarting HQ server...', 'info');
+
+    const response = await fetch('/api/system/restart', { method: 'POST' });
+    const data = await response.json();
+
+    if (response.ok) {
+      showToast(data.message, 'success');
+      // Wait a bit before reloading
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    } else {
+      showToast(data.error || 'Failed to restart HQ', 'error');
+    }
+  } catch (error) {
+    showToast('Failed to communicate with server', 'error');
+  }
 }
 
 // Initialize application
@@ -246,6 +297,18 @@ function init() {
   setInterval(updateSystemStats, 2000);
   setInterval(updateServers, 3000);
   setInterval(updateLogs, 2000);
+
+  // Restart button event listeners
+  document.getElementById('restart-btn').addEventListener('click', showRestartModal);
+  document.getElementById('cancel-restart').addEventListener('click', hideRestartModal);
+  document.getElementById('confirm-restart').addEventListener('click', restartHQ);
+
+  // Close modal on overlay click
+  document.getElementById('restart-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'restart-modal') {
+      hideRestartModal();
+    }
+  });
 }
 
 // Start the application when DOM is ready

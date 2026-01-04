@@ -65,4 +65,20 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.post('/restart', async (req, res) => {
+  try {
+    const { addLog } = require('../services/logger');
+    addLog('HQ', 'Restart requested', 'system');
+
+    res.json({ message: 'HQ server restarting...' });
+
+    // Give time for response to be sent
+    setTimeout(() => {
+      process.exit(0);
+    }, 500);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
