@@ -455,7 +455,14 @@
           brightCyan: '#22d3ee',
           brightWhite: '#ffffff'
         },
-        allowProposedApi: true
+        allowProposedApi: true,
+        // Performance optimizations
+        scrollback: 5000,  // Limit scrollback buffer (default is 1000, but Claude outputs a lot)
+        fastScrollModifier: 'shift',
+        fastScrollSensitivity: 5,
+        rendererType: 'canvas', // Force canvas renderer (faster than DOM)
+        windowsMode: true, // Optimize for Windows line endings
+        convertEol: true
       });
 
       term.loadAddon(fitAddon);
@@ -511,14 +518,44 @@
         }, 100);
       };
 
+      // Client-side write batching for smooth rendering
+      let writeQueue = [];
+      let isWriting = false;
+
+      const processWriteQueue = () => {
+        if (writeQueue.length === 0) {
+          isWriting = false;
+          return;
+        }
+
+        isWriting = true;
+        const batch = writeQueue.splice(0, 10); // Process up to 10 messages at once
+        const combined = batch.join('');
+
+        term.write(combined, () => {
+          // Schedule next batch after current write completes
+          if (writeQueue.length > 0) {
+            requestAnimationFrame(processWriteQueue);
+          } else {
+            isWriting = false;
+          }
+        });
+      };
+
       terminalWs.onmessage = (event) => {
         try {
           const msg = JSON.parse(event.data);
           if (msg.type === 'output') {
-            term.write(msg.data);
+            writeQueue.push(msg.data);
+            if (!isWriting) {
+              requestAnimationFrame(processWriteQueue);
+            }
           } else if (msg.type === 'exit') {
-            term.write('\r\n\x1b[33m[Session ended]\x1b[0m\r\n');
-            stopTerminalSession();
+            writeQueue.push('\r\n\x1b[33m[Session ended]\x1b[0m\r\n');
+            if (!isWriting) {
+              requestAnimationFrame(processWriteQueue);
+            }
+            setTimeout(stopTerminalSession, 100);
           } else if (msg.type === 'started') {
             terminalRunning = true;
             startBtn.disabled = true;

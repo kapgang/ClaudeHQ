@@ -9,6 +9,12 @@ class MatchingService {
     try {
       console.log(`\n=== Processing news article: "${article.title}" ===`);
 
+      // Mark article as being processed
+      dataStore.updateNewsArticle(article.id, {
+        matchStatus: 'processing',
+        processedAt: new Date().toISOString()
+      });
+
       // 1. Extract keywords from article
       const keywords = this.extractKeywords(article);
       console.log(`Keywords: ${keywords.join(', ')}`);
@@ -18,6 +24,14 @@ class MatchingService {
 
       if (markets.length === 0) {
         console.log('No matching markets found');
+
+        // Update article status - no markets found
+        dataStore.updateNewsArticle(article.id, {
+          matchStatus: 'no-match',
+          matchedMarkets: 0,
+          processedAt: new Date().toISOString()
+        });
+
         return {
           article,
           matches: [],
@@ -44,7 +58,9 @@ class MatchingService {
             newsTitle: article.title,
             marketId: market.id,
             marketQuestion: market.question,
+            marketUrl: market.url,
             currentOdds: market.currentOdds,
+            matchedKeywords: keywords,
             aiDecision: decision,
             status: decision.decision === 'skip' ? 'skipped' : 'pending_execution',
             createdAt: new Date().toISOString()
@@ -69,6 +85,13 @@ class MatchingService {
 
       console.log(`\n=== Completed processing: ${matches.length} matches, ${trades.length} trade actions ===\n`);
 
+      // Update article status - matched
+      dataStore.updateNewsArticle(article.id, {
+        matchStatus: matches.length > 0 ? 'matched' : 'no-match',
+        matchedMarkets: matches.length,
+        processedAt: new Date().toISOString()
+      });
+
       return {
         article,
         matches,
@@ -77,6 +100,14 @@ class MatchingService {
 
     } catch (error) {
       console.error(`Error in matchingService.processNewsArticle:`, error);
+
+      // Update article status - error
+      dataStore.updateNewsArticle(article.id, {
+        matchStatus: 'error',
+        matchedMarkets: 0,
+        processedAt: new Date().toISOString()
+      });
+
       throw error;
     }
   }

@@ -5,10 +5,16 @@ let updateInterval = null;
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', async () => {
   await loadSettings();
+  await loadWallets();
   await updateAll();
 
   // Start auto-refresh every 30 seconds
   updateInterval = setInterval(updateAll, 30000);
+
+  // Setup news source type toggle
+  document.querySelectorAll('input[name="news-source-type"]').forEach(radio => {
+    radio.addEventListener('change', toggleNewsSourceFields);
+  });
 });
 
 // Main update function
@@ -48,17 +54,33 @@ function renderNews(articles) {
     return;
   }
 
-  container.innerHTML = articles.map(article => `
-    <div class="news-card">
-      <div class="title">${escapeHtml(article.title)}</div>
-      <div class="meta">
-        ${article.source} • ${timeAgo(article.publishedAt)}
+  container.innerHTML = articles.map(article => {
+    // Determine match status badge
+    let statusBadge = '';
+    const matchStatus = article.matchStatus || 'pending';
+
+    if (matchStatus === 'matched') {
+      statusBadge = `<span class="match-status matched clickable" onclick="rematchArticle('${article.id}')" title="Click to recheck">✓ ${article.matchedMarkets || 0} Match${article.matchedMarkets !== 1 ? 'es' : ''}</span>`;
+    } else if (matchStatus === 'no-match') {
+      statusBadge = `<span class="match-status no-match clickable" onclick="rematchArticle('${article.id}')" title="Click to recheck">✗ No Match</span>`;
+    } else if (matchStatus === 'processing') {
+      statusBadge = `<span class="match-status processing">⏳ Processing...</span>`;
+    } else if (matchStatus === 'error') {
+      statusBadge = `<span class="match-status error clickable" onclick="rematchArticle('${article.id}')" title="Click to retry">⚠ Error</span>`;
+    } else {
+      statusBadge = `<span class="match-status pending clickable" onclick="rematchArticle('${article.id}')" title="Click to check">⋯ Pending</span>`;
+    }
+
+    return `
+      <div class="news-card" id="news-${article.id}">
+        <div class="title">${escapeHtml(article.title)}</div>
+        <div class="meta">
+          ${article.source} • ${timeAgo(article.publishedAt)}
+          ${statusBadge}
+        </div>
       </div>
-      ${article.matchedMarkets > 0 ? `
-        <span class="matches-count">${article.matchedMarkets} markets matched</span>
-      ` : ''}
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 // Fetch and render matches
@@ -85,26 +107,47 @@ function renderMatches(matches) {
     return;
   }
 
-  container.innerHTML = matches.map(match => `
-    <div class="match-card">
-      <div class="news-title">${escapeHtml(match.newsTitle || 'News article')}</div>
-      <div class="market-question">${escapeHtml(match.marketQuestion)}</div>
+  container.innerHTML = matches.map(match => {
+    // Highlight matched keywords in the news title
+    let highlightedTitle = escapeHtml(match.newsTitle || 'News article');
+    if (match.matchedKeywords && match.matchedKeywords.length > 0) {
+      match.matchedKeywords.forEach(keyword => {
+        const regex = new RegExp(`(${keyword})`, 'gi');
+        highlightedTitle = highlightedTitle.replace(regex, '<mark class="keyword-highlight">$1</mark>');
+      });
+    }
 
-      <div class="ai-decision">
-        <span class="decision-badge ${match.aiDecision.decision}">
-          ${match.aiDecision.decision.toUpperCase()}
-        </span>
-        <span class="confidence">${match.aiDecision.confidence}% confidence</span>
-        <div class="reasoning">${escapeHtml(match.aiDecision.reasoning)}</div>
-      </div>
-
-      ${match.status === 'executed' || match.status === 'queued' ? `
-        <div class="execution-status ${match.status}">
-          ${match.status === 'executed' ? '⚡ AUTO-EXECUTED' : '⏳ QUEUED FOR APPROVAL'}
+    return `
+      <div class="match-card">
+        <div class="news-title">${highlightedTitle}</div>
+        <div class="market-question">
+          ${escapeHtml(match.marketQuestion)}
+          ${match.marketUrl ? `<a href="${match.marketUrl}" target="_blank" rel="noopener noreferrer" class="market-link" title="View on Polymarket">🔗</a>` : ''}
         </div>
-      ` : ''}
-    </div>
-  `).join('');
+
+        ${match.matchedKeywords && match.matchedKeywords.length > 0 ? `
+          <div class="matched-keywords">
+            <span class="keywords-label">Keywords:</span>
+            ${match.matchedKeywords.map(kw => `<span class="keyword-tag">${escapeHtml(kw)}</span>`).join('')}
+          </div>
+        ` : ''}
+
+        <div class="ai-decision">
+          <span class="decision-badge ${match.aiDecision.decision}">
+            ${match.aiDecision.decision.toUpperCase()}
+          </span>
+          <span class="confidence">${match.aiDecision.confidence}% confidence</span>
+          <div class="reasoning">${escapeHtml(match.aiDecision.reasoning)}</div>
+        </div>
+
+        ${match.status === 'executed' || match.status === 'queued' ? `
+          <div class="execution-status ${match.status}">
+            ${match.status === 'executed' ? '⚡ AUTO-EXECUTED' : '⏳ QUEUED FOR APPROVAL'}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
 }
 
 // Fetch and render trade queue
@@ -140,7 +183,10 @@ function renderQueue(queue) {
       </div>
 
       <div><strong>News:</strong> ${escapeHtml(trade.newsArticle.title)}</div>
-      <div style="margin-top: 0.5rem"><strong>Market:</strong> ${escapeHtml(trade.market.question)}</div>
+      <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        <strong>Market:</strong> ${escapeHtml(trade.market.question)}
+        ${trade.market.url ? `<a href="${trade.market.url}" target="_blank" rel="noopener noreferrer" class="market-link" title="View on Polymarket">🔗</a>` : ''}
+      </div>
 
       <div style="margin-top: 0.75rem; padding: 0.75rem; background: var(--bg-tertiary); border-radius: 4px;">
         <div><strong>AI Suggests:</strong> BET ${trade.aiDecision.decision.toUpperCase()} (${trade.aiDecision.confidence}%)</div>
@@ -339,6 +385,20 @@ function toggleSettings() {
   document.querySelector('.settings-content').classList.toggle('open');
 }
 
+function toggleNewsSourceFields() {
+  const sourceType = document.querySelector('input[name="news-source-type"]:checked').value;
+  const apiKeyField = document.getElementById('newsapi-key-field');
+  const rssInfo = document.getElementById('rss-info');
+
+  if (sourceType === 'newsapi') {
+    apiKeyField.style.display = 'block';
+    rssInfo.style.display = 'none';
+  } else {
+    apiKeyField.style.display = 'none';
+    rssInfo.style.display = 'block';
+  }
+}
+
 async function loadSettings() {
   try {
     const response = await fetch('/api/settings');
@@ -347,14 +407,21 @@ async function loadSettings() {
     if (data.success) {
       const s = data.settings;
 
-      // NewsAPI
+      // NewsAPI - Source Type
+      const sourceType = s.newsApi.sourceType || 'rss';
+      if (sourceType === 'rss') {
+        document.getElementById('newsapi-source-rss').checked = true;
+      } else {
+        document.getElementById('newsapi-source-newsapi').checked = true;
+      }
+      toggleNewsSourceFields();
+
       document.getElementById('newsapi-key').value = s.newsApi.apiKey || '';
       document.getElementById('newsapi-sources').value = s.newsApi.sources.join(',');
       document.getElementById('newsapi-keywords').value = s.newsApi.keywords.join(',');
       document.getElementById('newsapi-enabled').checked = s.newsApi.enabled;
 
-      // Polymarket
-      document.getElementById('polymarket-key').value = s.polymarket.apiKey || '';
+      // Polymarket - Note: Private keys are now managed via wallet management
       document.getElementById('polymarket-testmode').checked = s.polymarket.testMode;
       document.getElementById('polymarket-enabled').checked = s.polymarket.enabled;
 
@@ -375,10 +442,13 @@ async function loadSettings() {
 }
 
 async function saveSettings() {
+  const sourceType = document.querySelector('input[name="news-source-type"]:checked').value;
+
   const updates = [
     {
       endpoint: '/api/settings/news',
       data: {
+        sourceType: sourceType,
         apiKey: document.getElementById('newsapi-key').value,
         sources: document.getElementById('newsapi-sources').value.split(',').map(s => s.trim()),
         keywords: document.getElementById('newsapi-keywords').value.split(',').map(s => s.trim()),
@@ -388,7 +458,6 @@ async function saveSettings() {
     {
       endpoint: '/api/settings/polymarket',
       data: {
-        apiKey: document.getElementById('polymarket-key').value,
         testMode: document.getElementById('polymarket-testmode').checked,
         enabled: document.getElementById('polymarket-enabled').checked
       }
@@ -441,6 +510,128 @@ async function testConnections() {
   }
 }
 
+// Wallet Management
+async function loadWallets() {
+  try {
+    const response = await fetch('/api/wallets');
+    const data = await response.json();
+
+    if (data.wallets) {
+      renderWallets(data.wallets, data.activeWalletId);
+    }
+  } catch (error) {
+    console.error('Error loading wallets:', error);
+    document.getElementById('wallet-list').innerHTML = '<div class="empty">Error loading wallets</div>';
+  }
+}
+
+function renderWallets(wallets, activeWalletId) {
+  const container = document.getElementById('wallet-list');
+
+  if (!wallets || wallets.length === 0) {
+    container.innerHTML = '<div class="empty">No wallets added yet</div>';
+    return;
+  }
+
+  container.innerHTML = wallets.map(wallet => `
+    <div class="wallet-card ${wallet.isActive ? 'active' : ''}">
+      <div style="display: flex; justify-content: space-between; align-items: start">
+        <div style="flex: 1">
+          <div style="font-weight: bold; margin-bottom: 0.25rem">
+            ${escapeHtml(wallet.name)}
+            ${wallet.isActive ? '<span style="color: var(--success); margin-left: 0.5rem">✓ Active</span>' : ''}
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.25rem">
+            ${wallet.address}
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-dim); font-family: monospace">
+            ${wallet.privateKey}
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem">
+          ${!wallet.isActive ? `<button class="btn-small" onclick="setActiveWallet('${wallet.id}')">Set Active</button>` : ''}
+          <button class="btn-small btn-danger" onclick="removeWallet('${wallet.id}')">Delete</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function addWallet() {
+  const name = document.getElementById('new-wallet-name').value.trim();
+  const privateKey = document.getElementById('new-wallet-privatekey').value.trim();
+
+  if (!name || !privateKey) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/wallets', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, privateKey })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert(`Wallet added successfully!\nAddress: ${data.wallet.address}`);
+      // Clear form
+      document.getElementById('new-wallet-name').value = '';
+      document.getElementById('new-wallet-privatekey').value = '';
+      // Reload wallets
+      await loadWallets();
+    } else {
+      alert('Error: ' + data.error);
+    }
+  } catch (error) {
+    alert('Error adding wallet: ' + error.message);
+  }
+}
+
+async function setActiveWallet(id) {
+  try {
+    const response = await fetch(`/api/wallets/active/${id}`, {
+      method: 'PUT'
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert('Active wallet updated!');
+      await loadWallets();
+    } else {
+      alert('Error: ' + data.error);
+    }
+  } catch (error) {
+    alert('Error setting active wallet: ' + error.message);
+  }
+}
+
+async function removeWallet(id) {
+  if (!confirm('Are you sure you want to delete this wallet?')) {
+    return;
+  }
+
+  try {
+    const response = await fetch(`/api/wallets/${id}`, {
+      method: 'DELETE'
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert('Wallet removed successfully!');
+      await loadWallets();
+    } else {
+      alert('Error: ' + data.error);
+    }
+  } catch (error) {
+    alert('Error removing wallet: ' + error.message);
+  }
+}
+
 // Manual refresh
 async function refreshNews() {
   try {
@@ -453,6 +644,47 @@ async function refreshNews() {
     }
   } catch (error) {
     alert('Error refreshing news: ' + error.message);
+  }
+}
+
+// Rematch article - rerun matching logic
+async function rematchArticle(articleId) {
+  try {
+    // Find the article card and update the badge to show processing
+    const articleCard = document.getElementById(`news-${articleId}`);
+    if (articleCard) {
+      const badge = articleCard.querySelector('.match-status');
+      if (badge) {
+        badge.className = 'match-status processing';
+        badge.innerHTML = '⏳ Processing...';
+        badge.onclick = null; // Disable clicking while processing
+      }
+    }
+
+    console.log(`Rematching article ${articleId}...`);
+
+    const response = await fetch(`/api/markets/rematch/${articleId}`, {
+      method: 'POST'
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      console.log('Rematch successful:', data);
+      // Wait a moment then refresh the news to get updated status
+      setTimeout(async () => {
+        await updateNews();
+      }, 500);
+    } else {
+      alert('Error rematching article: ' + (data.error || 'Unknown error'));
+      // Refresh anyway to restore the correct state
+      await updateNews();
+    }
+  } catch (error) {
+    console.error('Error rematching article:', error);
+    alert('Error rematching article: ' + error.message);
+    // Refresh to restore the correct state
+    await updateNews();
   }
 }
 

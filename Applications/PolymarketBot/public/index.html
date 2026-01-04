@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Monitor - Polymarket Auto-Trader</title>
+  <title>Polymarket Bot - AI-Powered Auto-Trader</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
     <!-- Header -->
     <header class="header">
       <div class="header-left">
-        <h1>News Monitor</h1>
-        <span class="subtitle">Polymarket Auto-Trader</span>
+        <h1>Polymarket Bot</h1>
+        <span class="subtitle">AI-Powered Auto-Trader</span>
       </div>
       <div class="header-right">
         <div class="status-indicators">
@@ -81,17 +81,80 @@
         <h3>Configuration</h3>
 
         <div class="settings-section">
-          <h4>NewsAPI</h4>
-          <label>API Key: <input type="text" id="newsapi-key" placeholder="Enter API key"></label>
-          <label>Sources: <input type="text" id="newsapi-sources" placeholder="reuters,bloomberg,techcrunch"></label>
-          <label>Keywords: <input type="text" id="newsapi-keywords" placeholder="election,sports,technology"></label>
-          <label><input type="checkbox" id="newsapi-enabled"> Enabled</label>
+          <h4>News Source Configuration</h4>
+
+          <!-- Source Type Selection -->
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">News Source Type:</label>
+            <label style="display: inline-flex; align-items: center; margin-right: 1.5rem;">
+              <input type="radio" name="news-source-type" value="rss" id="newsapi-source-rss" checked>
+              <span style="margin-left: 0.5rem;">Free RSS Feeds (No API Key Required)</span>
+            </label>
+            <label style="display: inline-flex; align-items: center;">
+              <input type="radio" name="news-source-type" value="newsapi" id="newsapi-source-newsapi">
+              <span style="margin-left: 0.5rem;">NewsAPI (Requires API Key)</span>
+            </label>
+          </div>
+
+          <!-- Available RSS Sources Info -->
+          <div id="rss-info" style="background: var(--bg-primary); padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; font-size: 0.85rem;">
+            <strong>Available RSS Sources:</strong><br>
+            reuters, techcrunch, bbc, cnn, npr, apnews, theverge, wired, ars
+          </div>
+
+          <!-- NewsAPI Key Field (hidden by default) -->
+          <div id="newsapi-key-field" style="display: none; margin-bottom: 1rem;">
+            <label>
+              NewsAPI Key:
+              <input type="text" id="newsapi-key" placeholder="Enter your NewsAPI key">
+            </label>
+            <div style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">
+              Get your free API key from <a href="https://newsapi.org" target="_blank" style="color: var(--accent);">newsapi.org</a>
+            </div>
+          </div>
+
+          <!-- Common Settings -->
+          <label>
+            Sources (comma-separated):
+            <input type="text" id="newsapi-sources" placeholder="reuters,techcrunch,bbc">
+          </label>
+          <label>
+            Keywords (comma-separated):
+            <input type="text" id="newsapi-keywords" placeholder="election,sports,technology">
+          </label>
+          <div style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem; margin-bottom: 1rem;">
+            RSS mode will filter articles by keywords. NewsAPI mode will search for articles containing these keywords.
+          </div>
+
+          <label><input type="checkbox" id="newsapi-enabled"> Enable News Monitoring</label>
         </div>
 
         <div class="settings-section">
-          <h4>Polymarket</h4>
-          <label>API Key: <input type="text" id="polymarket-key" placeholder="Enter API key"></label>
-          <label><input type="checkbox" id="polymarket-testmode" checked> Test Mode (Paper Trading)</label>
+          <h4>Polymarket - Wallet Management</h4>
+
+          <!-- Wallet List -->
+          <div class="wallet-list" id="wallet-list">
+            <div class="loading">Loading wallets...</div>
+          </div>
+
+          <!-- Add New Wallet Form -->
+          <div class="add-wallet-form">
+            <h5>Add New Wallet</h5>
+            <label>
+              Wallet Name:
+              <input type="text" id="new-wallet-name" placeholder="e.g., Main Wallet">
+            </label>
+            <label>
+              Private Key (64 hex characters, with or without 0x):
+              <input type="password" id="new-wallet-privatekey" placeholder="Your private key">
+            </label>
+            <div style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">
+              The wallet address will be automatically derived from your private key.
+            </div>
+            <button class="btn-primary" onclick="addWallet()">Add Wallet</button>
+          </div>
+
+          <label style="margin-top: 1rem"><input type="checkbox" id="polymarket-testmode" checked> Test Mode (Paper Trading)</label>
           <label><input type="checkbox" id="polymarket-enabled"> Enabled</label>
         </div>
 

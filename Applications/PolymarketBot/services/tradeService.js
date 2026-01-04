@@ -99,6 +99,7 @@ class TradeService {
       market: {
         id: market.id,
         question: market.question,
+        url: market.url,
         currentOdds: market.currentOdds,
         endDate: market.endDate
       },

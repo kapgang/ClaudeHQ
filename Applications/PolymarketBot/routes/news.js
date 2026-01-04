@@ -101,4 +101,46 @@ router.get('/status/polling', async (req, res) => {
   }
 });
 
+// POST /api/news/reprocess - Reprocess all pending articles
+router.post('/reprocess', async (req, res) => {
+  try {
+    const matchingService = require('../services/matchingService');
+    const articles = await newsService.getRecentNews(24);
+
+    // Filter for articles that are pending or haven't been processed
+    const pendingArticles = articles.filter(a =>
+      !a.matchStatus || a.matchStatus === 'pending' || a.matchStatus === 'error'
+    );
+
+    console.log(`Reprocessing ${pendingArticles.length} pending articles...`);
+
+    let processed = 0;
+    let errors = 0;
+
+    for (const article of pendingArticles) {
+      try {
+        await matchingService.processNewsArticle(article);
+        processed++;
+      } catch (error) {
+        console.error(`Error reprocessing article ${article.id}:`, error.message);
+        errors++;
+      }
+    }
+
+    res.json({
+      success: true,
+      totalArticles: articles.length,
+      pendingArticles: pendingArticles.length,
+      processed,
+      errors,
+      message: `Reprocessed ${processed} articles with ${errors} errors`
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 module.exports = router;

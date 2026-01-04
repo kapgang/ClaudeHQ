@@ -18,11 +18,6 @@ router.get('/', async (req, res) => {
       sanitized.newsApi.apiKey = key.length > 4 ? '***' + key.slice(-4) : '***';
     }
 
-    if (sanitized.polymarket.apiKey) {
-      const key = sanitized.polymarket.apiKey;
-      sanitized.polymarket.apiKey = key.length > 4 ? '***' + key.slice(-4) : '***';
-    }
-
     if (sanitized.polymarket.privateKey) {
       const key = sanitized.polymarket.privateKey;
       sanitized.polymarket.privateKey = key.length > 4 ? '***' + key.slice(-4) : '***';
@@ -74,6 +69,12 @@ router.put('/news', async (req, res) => {
 router.put('/polymarket', async (req, res) => {
   try {
     const result = dataStore.updateSettings('polymarket', req.body);
+
+    // Reinitialize Polymarket client if private key changed and enabled
+    if (result && req.body.privateKey && req.body.enabled) {
+      polymarketService.client = null; // Reset client to force re-initialization
+      console.log('Polymarket settings updated - client will reinitialize on next use');
+    }
 
     res.json({
       success: result,

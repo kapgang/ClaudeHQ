@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
@@ -73,6 +74,17 @@ class DataStore {
     const cutoff = Date.now() - (days * 24 * 60 * 60 * 1000);
     data.articles = data.articles.filter(a => new Date(a.publishedAt).getTime() > cutoff);
     return this.saveJSON('news.json', data);
+  }
+
+  updateNewsArticle(id, updates) {
+    const data = this.loadJSON('news.json') || { articles: [], lastUpdate: null };
+    const article = data.articles.find(a => a.id === id);
+    if (article) {
+      Object.assign(article, updates);
+      data.lastUpdate = new Date().toISOString();
+      return this.saveJSON('news.json', data);
+    }
+    return false;
   }
 
   // Market operations
@@ -201,6 +213,7 @@ class DataStore {
   getDefaultSettings() {
     return {
       newsApi: {
+        sourceType: 'rss', // 'rss' or 'newsapi'
         apiKey: '',
         sources: ['reuters', 'bloomberg', 'techcrunch'],
         keywords: ['election', 'sports', 'technology'],
@@ -209,10 +222,7 @@ class DataStore {
         enabled: false
       },
       polymarket: {
-        apiKey: '',
         privateKey: '',
-        walletAddress: '',
-        endpoint: 'https://gamma-api.polymarket.com',
         clobEndpoint: 'https://clob.polymarket.com',
         testMode: true,
         enabled: false
@@ -233,6 +243,68 @@ class DataStore {
         resetHour: 0
       }
     };
+  }
+
+  // Wallet operations
+  getWallets() {
+    const data = this.loadJSON('wallets.json') || { wallets: [], activeWalletId: null };
+    return data.wallets || [];
+  }
+
+  getActiveWallet() {
+    const data = this.loadJSON('wallets.json') || { wallets: [], activeWalletId: null };
+    if (!data.activeWalletId) return null;
+    return data.wallets.find(w => w.id === data.activeWalletId) || null;
+  }
+
+  addWallet(wallet) {
+    const data = this.loadJSON('wallets.json') || { wallets: [], activeWalletId: null };
+
+    // Generate unique ID
+    wallet.id = crypto.randomUUID();
+    wallet.createdAt = new Date().toISOString();
+
+    // Add wallet to array
+    data.wallets.push(wallet);
+
+    // If this is the first wallet, make it active
+    if (data.wallets.length === 1) {
+      data.activeWalletId = wallet.id;
+    }
+
+    this.saveJSON('wallets.json', data);
+    return wallet;
+  }
+
+  removeWallet(id) {
+    const data = this.loadJSON('wallets.json') || { wallets: [], activeWalletId: null };
+    const initialLength = data.wallets.length;
+    data.wallets = data.wallets.filter(w => w.id !== id);
+
+    // If we removed the active wallet, set a new one or null
+    if (data.activeWalletId === id) {
+      data.activeWalletId = data.wallets.length > 0 ? data.wallets[0].id : null;
+    }
+
+    this.saveJSON('wallets.json', data);
+    return data.wallets.length < initialLength;
+  }
+
+  setActiveWallet(id) {
+    const data = this.loadJSON('wallets.json') || { wallets: [], activeWalletId: null };
+    const wallet = data.wallets.find(w => w.id === id);
+
+    if (!wallet) {
+      return false;
+    }
+
+    data.activeWalletId = id;
+    return this.saveJSON('wallets.json', data);
+  }
+
+  getActiveWalletId() {
+    const data = this.loadJSON('wallets.json') || { wallets: [], activeWalletId: null };
+    return data.activeWalletId;
   }
 }
 

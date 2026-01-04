@@ -1,25 +1,21 @@
 {
   "newsApi": {
+    "sourceType": "rss",
     "apiKey": "",
     "sources": [
       "reuters",
-      "bloomberg",
-      "techcrunch"
+      "techcrunch",
+      "bbc"
     ],
     "keywords": [
-      "election",
-      "sports",
-      "technology"
+      ""
     ],
     "pollingInterval": 300000,
     "maxArticlesPerPoll": 50,
-    "enabled": false
+    "enabled": true
   },
   "polymarket": {
-    "apiKey": "",
     "privateKey": "",
-    "walletAddress": "",
-    "endpoint": "https://gamma-api.polymarket.com",
     "clobEndpoint": "https://clob.polymarket.com",
     "testMode": true,
     "enabled": false
@@ -30,7 +26,7 @@
     "maxTokens": 500,
     "temperature": 0.3,
     "confidenceThreshold": 70,
-    "enabled": false
+    "enabled": true
   },
   "tradingLimits": {
     "dailyMaxUSD": 50,

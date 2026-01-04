@@ -1,0 +1,12 @@
+{
+  "wallets": [
+    {
+      "name": "PC Wallet 2",
+      "address": "0x1b5Da2CcE89C8Fa46C0C4ebf95339fBb6FF0Eec0",
+      "privateKey": "0x8d31ed820548cf7f185284c3986df157ed0494e8dd04640b75901c8f8ffdb03d",
+      "id": "a7d47662-736a-4d8b-b9f5-a34b315e8550",
+      "createdAt": "2026-01-04T06:08:31.849Z"
+    }
+  ],
+  "activeWalletId": "a7d47662-736a-4d8b-b9f5-a34b315e8550"
+}

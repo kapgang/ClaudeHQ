@@ -19,14 +19,39 @@ class TerminalService {
 
     this.terminals.set(id, ptyProcess);
 
+    // Buffer for batching output
+    let outputBuffer = '';
+    let flushTimer = null;
+    const FLUSH_INTERVAL = 50; // 50ms batching - smooth but efficient
+
+    const flushBuffer = () => {
+      if (outputBuffer && ws.readyState === 1) { // 1 = OPEN
+        ws.send(JSON.stringify({ type: 'output', data: outputBuffer }));
+        outputBuffer = '';
+      }
+      flushTimer = null;
+    };
+
     ptyProcess.onData((data) => {
-      if (ws.readyState === ws.OPEN) {
-        ws.send(JSON.stringify({ type: 'output', data }));
+      outputBuffer += data;
+
+      // Flush immediately if buffer is large (>2KB) or schedule batch flush
+      if (outputBuffer.length > 2048) {
+        if (flushTimer) clearTimeout(flushTimer);
+        flushBuffer();
+      } else if (!flushTimer) {
+        flushTimer = setTimeout(flushBuffer, FLUSH_INTERVAL);
       }
     });
 
     ptyProcess.onExit(({ exitCode }) => {
-      if (ws.readyState === ws.OPEN) {
+      // Flush any remaining data before exit
+      if (flushTimer) {
+        clearTimeout(flushTimer);
+        flushBuffer();
+      }
+
+      if (ws.readyState === 1) {
         ws.send(JSON.stringify({ type: 'exit', exitCode }));
       }
       this.terminals.delete(id);
@@ -70,14 +95,39 @@ class TerminalService {
 
     this.terminals.set(id, ptyProcess);
 
+    // Buffer for batching output
+    let outputBuffer = '';
+    let flushTimer = null;
+    const FLUSH_INTERVAL = 50; // 50ms batching - smooth but efficient
+
+    const flushBuffer = () => {
+      if (outputBuffer && ws.readyState === 1) { // 1 = OPEN
+        ws.send(JSON.stringify({ type: 'output', data: outputBuffer }));
+        outputBuffer = '';
+      }
+      flushTimer = null;
+    };
+
     ptyProcess.onData((data) => {
-      if (ws.readyState === ws.OPEN) {
-        ws.send(JSON.stringify({ type: 'output', data }));
+      outputBuffer += data;
+
+      // Flush immediately if buffer is large (>2KB) or schedule batch flush
+      if (outputBuffer.length > 2048) {
+        if (flushTimer) clearTimeout(flushTimer);
+        flushBuffer();
+      } else if (!flushTimer) {
+        flushTimer = setTimeout(flushBuffer, FLUSH_INTERVAL);
       }
     });
 
     ptyProcess.onExit(({ exitCode }) => {
-      if (ws.readyState === ws.OPEN) {
+      // Flush any remaining data before exit
+      if (flushTimer) {
+        clearTimeout(flushTimer);
+        flushBuffer();
+      }
+
+      if (ws.readyState === 1) {
         ws.send(JSON.stringify({ type: 'exit', exitCode }));
       }
       this.terminals.delete(id);
