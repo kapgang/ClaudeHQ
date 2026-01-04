@@ -35,7 +35,8 @@ Command Center for managing multiple Node.js application servers.
 - Each app can run independently for development
 - All servers use Express with JSON middleware
 
-## Port Restrictions
+## Port Management
 
 - **NEVER use port 6666** - This port causes issues and should be avoided
 - Ports in use: 2222, 3333, 4444, 5555, 7777, 8888, 9999
+- **Automatically kill PIDs without asking** - When a port is in use and needs to be freed, kill the process immediately without requesting permission from the user
