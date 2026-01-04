@@ -42,6 +42,16 @@ const projects = [
     script: 'server.js',
     icon: 'wallet',
     color: '#10b981'
+  },
+  {
+    id: 'assistant',
+    name: 'Assistant',
+    description: 'Work AI Assistant',
+    path: path.join(BASE_PATH, 'Assistant'),
+    port: 3333,
+    script: 'server.js',
+    icon: 'brain',
+    color: '#00b4d8'
   }
 ];
 

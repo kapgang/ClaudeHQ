@@ -6,12 +6,13 @@ Command Center for managing multiple Node.js application servers.
 
 ## Project Structure
 
--  - Main Command Center server (port 8888)
--  - Individual application servers
-  -  - Browser Session Manager (port 5555)
-  -  - Cellular Device Manager (port 7777)
-  -  - System Memory Monitor (port 9999)
-  -  - Personal Finance Manager (port 4444)
+- `HQ/` - Main Command Center server (port 8888)
+- `Applications/` - Individual application servers
+  - `ChromeBot/` - Browser Session Manager (port 5555)
+  - `RemoteConnect/` - Cellular Device Manager (port 7777)
+  - `Ram Monitor/` - System Memory Monitor (port 9999)
+  - `Portfolio/` - Personal Finance Manager (port 4444)
+  - `Assistant/` - Work AI Assistant (port 3333)
 
 ## Code Style
 
@@ -32,3 +33,8 @@ Command Center for managing multiple Node.js application servers.
 - Run HQ with node HQ/server.js
 - Each app can run independently for development
 - All servers use Express with JSON middleware
+
+## Port Restrictions
+
+- **NEVER use port 6666** - This port causes issues and should be avoided
+- Available ports in use: 3333, 4444, 5555, 7777, 8888, 9999
