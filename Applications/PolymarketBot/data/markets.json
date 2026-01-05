@@ -1,7 +1,7 @@
 {
   "matches": [
     {
-      "id": "9c261c42-3528-4de4-af56-39b888090806",
+      "id": "620e567f-c986-4178-878f-351233c68b7d",
       "newsId": "f4bbc365-e1c0-4ff6-8351-36d18f118f7e",
       "newsTitle": "Trump says US oil companies will spend billions in Venezuela By Reuters - Investing.com",
       "marketId": "mock_election_1",
@@ -10,16 +10,22 @@
         "yes": 0.45,
         "no": 0.55
       },
+      "matchedKeywords": [
+        "trump",
+        "says",
+        "oil",
+        "companies"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 45,
-        "reasoning": "While Trump's statement about US oil companies spending billions in Venezuela could constitute a major policy announcement, the article lacks sufficient detail to confirm this is an official policy announcement versus informal comments. Additionally, the article is dated January 3, 2026, but the market ends February 3, 2026, and asks about 'this week' - the timing ambiguity makes it unclear if this announcement would count for the market's timeframe. The confidence is too low to warrant a bet."
+        "reasoning": "While Trump's statement about US oil companies spending billions in Venezuela could constitute a major policy announcement, the article lacks sufficient detail to confirm this is an official policy announcement versus informal comments. Additionally, the article is dated January 3, 2026, but the market ends February 3, 2026, and asks about 'this week' - the timing ambiguity makes it unclear if this event would qualify for the market's timeframe. The confidence is too low to warrant a bet."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:48:11.153Z"
+      "createdAt": "2026-01-04T07:10:32.975Z"
     },
     {
-      "id": "e24d09f1-4a6a-445b-ae02-ea324a1f467c",
+      "id": "f2d34d23-f20b-42fc-97f2-cd71c853a534",
       "newsId": "f4bbc365-e1c0-4ff6-8351-36d18f118f7e",
       "newsTitle": "Trump says US oil companies will spend billions in Venezuela By Reuters - Investing.com",
       "marketId": "mock_tech_1",
@@ -28,16 +34,22 @@
         "yes": 0.65,
         "no": 0.35
       },
+      "matchedKeywords": [
+        "trump",
+        "says",
+        "oil",
+        "companies"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article is about US oil companies investing in Venezuela, which is completely unrelated to tech companies announcing AI products. There is no actionable connection between this news and the prediction market question."
+        "reasoning": "The news article is about Trump's statement regarding US oil companies investing in Venezuela, which is completely unrelated to tech companies announcing AI products. There is no actionable connection between this news and the prediction market question."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:48:15.547Z"
+      "createdAt": "2026-01-04T07:10:37.245Z"
     },
     {
-      "id": "00afe0ee-529d-4392-af8e-712508b7a896",
+      "id": "9bc62727-7a6e-4f7b-82bc-c29b023877bf",
       "newsId": "f4bbc365-e1c0-4ff6-8351-36d18f118f7e",
       "newsTitle": "Trump says US oil companies will spend billions in Venezuela By Reuters - Investing.com",
       "marketId": "mock_sports_1",
@@ -46,18 +58,102 @@
         "yes": 0.52,
         "no": 0.48
       },
+      "matchedKeywords": [
+        "trump",
+        "says",
+        "oil",
+        "companies"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article about Trump and US oil companies investing in Venezuela has no relevance to a sports championship game viewership record. These are completely unrelated topics, so this news provides no actionable insight for the market."
+        "reasoning": "The news article about Trump and US oil companies investing in Venezuela has no relevance to a sports championship game viewership record market. These are completely unrelated topics - one concerns international oil industry investments while the other is about TV viewership for a sporting event."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:48:19.854Z"
+      "createdAt": "2026-01-04T07:10:42.014Z"
     },
     {
-      "id": "86313662-954d-407d-8445-a4ed1f26e1c5",
-      "newsId": "f4bbc365-e1c0-4ff6-8351-36d18f118f7e",
-      "newsTitle": "Trump says US oil companies will spend billions in Venezuela By Reuters - Investing.com",
+      "id": "efadc04b-1a19-4263-b988-df9111153e0a",
+      "newsId": "aa31f6f8-9267-4a62-bec3-a35f297b5a9d",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "",
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While a US operation to capture Maduro would be significant geopolitically, the article is from January 3, 2026, and the market asks about 'this week' but ends February 3, 2026 - a full month later. The timing ambiguity makes it unclear which week is referenced. Additionally, the article describes an operation rather than a policy announcement, and without knowing the current date or outcome of the operation, there's insufficient actionable information."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:11:35.952Z"
+    },
+    {
+      "id": "14fc6a78-b1cb-40d3-bfbb-7a7e7ce8cc14",
+      "newsId": "aa31f6f8-9267-4a62-bec3-a35f297b5a9d",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a US operation to capture Maduro is completely unrelated to the market question about major tech companies announcing new AI products. There is no connection between Venezuelan political operations and tech company AI product announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:11:40.457Z"
+    },
+    {
+      "id": "a7df0c98-1c8b-49f3-8620-f4386601f131",
+      "newsId": "aa31f6f8-9267-4a62-bec3-a35f297b5a9d",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about a US operation to capture Maduro is completely unrelated to championship game viewership records. There is no connection between this geopolitical/military operation and sports viewership metrics. The article provides no actionable insight for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:11:44.628Z"
+    },
+    {
+      "id": "c7486765-7b8c-4005-890f-67f5c63fec17",
+      "newsId": "cafa2fc0-1883-4b54-9dd3-d3da83c72f8f",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_election_1",
       "marketQuestion": "Will there be a major policy announcement this week?",
       "currentOdds": {
@@ -67,15 +163,15 @@
       "aiDecision": {
         "decision": "skip",
         "confidence": 45,
-        "reasoning": "While Trump's statement about US oil companies investing billions in Venezuela could constitute a major policy announcement, the timing is problematic. The article is from January 3, 2026, but the market asks about 'this week' and ends February 3, 2026 - a full month later. Without knowing the current date or what 'this week' refers to, and given the vague market definition of 'major policy announcement' without specifying whose policy or what domain, the relevance is unclear. The confidence is too low to justify a bet."
+        "reasoning": "While a US operation to capture Maduro would be significant news, the article is from January 3, 2026, and the market asks about 'this week' but ends February 3, 2026 - a month later. The timing mismatch makes it unclear which week is referenced. Additionally, the article describes an operation rather than a policy announcement, and without knowing the current date or outcome of the operation, there's insufficient actionable information for this specific market."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:48:33.209Z"
+      "createdAt": "2026-01-04T07:14:44.546Z"
     },
     {
-      "id": "d9c0a28c-3b2b-4912-a5b3-407d12bcb916",
-      "newsId": "f4bbc365-e1c0-4ff6-8351-36d18f118f7e",
-      "newsTitle": "Trump says US oil companies will spend billions in Venezuela By Reuters - Investing.com",
+      "id": "d09d15ed-7550-49df-b66d-57432719d571",
+      "newsId": "cafa2fc0-1883-4b54-9dd3-d3da83c72f8f",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_tech_1",
       "marketQuestion": "Will major tech company announce new AI product this quarter?",
       "currentOdds": {
@@ -85,15 +181,15 @@
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article is about US oil companies investing in Venezuela, which is completely unrelated to the market question about major tech companies announcing new AI products. There is no connection between oil industry investments and tech AI product announcements."
+        "reasoning": "This news article is about a US military/intelligence operation regarding Venezuela's Maduro and has no relevance to tech companies announcing AI products. The article topic is completely unrelated to the prediction market question."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:48:37.521Z"
+      "createdAt": "2026-01-04T07:14:49.597Z"
     },
     {
-      "id": "0705dd42-f053-4e6d-89cf-d588ac2f6fe8",
-      "newsId": "f4bbc365-e1c0-4ff6-8351-36d18f118f7e",
-      "newsTitle": "Trump says US oil companies will spend billions in Venezuela By Reuters - Investing.com",
+      "id": "f6ef628b-7bb1-4ef8-b014-c353b561875b",
+      "newsId": "cafa2fc0-1883-4b54-9dd3-d3da83c72f8f",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_sports_1",
       "marketQuestion": "Will the championship game exceed viewership records?",
       "currentOdds": {
@@ -103,302 +199,164 @@
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article about Trump and US oil companies investing in Venezuela has no relevance to a sports championship game viewership record market. These are completely unrelated topics, so there is no actionable insight to be gained from this news for this particular prediction market."
+        "reasoning": "The news article about a US operation to capture Maduro is completely unrelated to championship game viewership records. There is no connection between this geopolitical/military operation and sports viewership metrics. The article provides no actionable insight for this market."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:48:41.850Z"
+      "createdAt": "2026-01-04T07:14:54.336Z"
     },
     {
-      "id": "a15b5503-fdff-46f4-9166-3e3441bcbe5d",
-      "newsId": "894dccb5-8aca-46b1-a15c-453974cc9b15",
-      "newsTitle": "Trump says Maduro to face justice and US will run Venezuela until 'safe' transition - as it happened - Reuters",
+      "id": "f1723218-deb2-41a7-99f5-c5dd1cf9f0ee",
+      "newsId": "5382a575-dc99-4361-b905-267cefb1713b",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_election_1",
       "marketQuestion": "Will there be a major policy announcement this week?",
       "currentOdds": {
         "yes": 0.45,
         "no": 0.55
       },
+      "matchedKeywords": [
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 45,
-        "reasoning": "While Trump's statement about running Venezuela is significant, the article is dated January 3, 2026, but the market asks about 'this week' and ends February 3, 2026 - a full month later. The timing ambiguity makes it unclear which week is referenced. Additionally, without knowing the current date or what constitutes a 'major policy announcement' in the market's context, and given the current odds already reflect uncertainty (45/55), there's insufficient clarity to make a confident bet."
+        "reasoning": "While a US operation to capture Maduro would be significant news, the article is from January 3, 2026, and the market asks about 'this week' but ends February 3, 2026 - a full month later. The timing misalignment makes it unclear which week is relevant. Additionally, the article describes an operation rather than a 'policy announcement,' which are distinct concepts. The relevance is too ambiguous to warrant a confident bet."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:49:27.583Z"
+      "createdAt": "2026-01-04T07:15:16.194Z"
     },
     {
-      "id": "2dbe33ab-09d7-4a80-b999-1a8407e144d5",
-      "newsId": "894dccb5-8aca-46b1-a15c-453974cc9b15",
-      "newsTitle": "Trump says Maduro to face justice and US will run Venezuela until 'safe' transition - as it happened - Reuters",
+      "id": "260356d2-ff76-4016-9581-7bcad8dc01b4",
+      "newsId": "5382a575-dc99-4361-b905-267cefb1713b",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_tech_1",
       "marketQuestion": "Will major tech company announce new AI product this quarter?",
       "currentOdds": {
         "yes": 0.65,
         "no": 0.35
       },
+      "matchedKeywords": [
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "This news article about Trump's statements on Venezuela and Maduro has no relevance to whether a major tech company will announce a new AI product this quarter. The article concerns geopolitical matters, not technology industry announcements."
+        "reasoning": "This news article is about a US military/intelligence operation regarding Venezuela's Maduro and has no relevance to tech companies announcing AI products. The article content is completely unrelated to the market question."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:49:31.847Z"
+      "createdAt": "2026-01-04T07:15:20.964Z"
     },
     {
-      "id": "6e8f024f-ed17-4d6b-91c7-f572b7613808",
-      "newsId": "894dccb5-8aca-46b1-a15c-453974cc9b15",
-      "newsTitle": "Trump says Maduro to face justice and US will run Venezuela until 'safe' transition - as it happened - Reuters",
+      "id": "a0a1d12e-9515-48b3-91b8-f9ef2652a1e2",
+      "newsId": "5382a575-dc99-4361-b905-267cefb1713b",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_sports_1",
       "marketQuestion": "Will the championship game exceed viewership records?",
       "currentOdds": {
         "yes": 0.52,
         "no": 0.48
       },
+      "matchedKeywords": [
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article about Trump's statements on Venezuela and Maduro has no relevance to a market about championship game viewership records. These are completely unrelated topics - one concerns US foreign policy toward Venezuela, while the other is about sports broadcasting metrics."
+        "reasoning": "The news article about a US operation to capture Maduro is completely unrelated to championship game viewership records. There is no connection between these topics, making this news irrelevant to the market question."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:49:36.669Z"
+      "createdAt": "2026-01-04T07:15:25.910Z"
     },
     {
-      "id": "9f6a71d6-6e52-4a01-847d-29cdac383af6",
-      "newsId": "23e10eaf-3d6f-4522-b3cb-69a39f26f7e6",
-      "newsTitle": "Trump says Maduro to face justice and US will run Venezuela until 'safe' transition - as it happened - Reuters",
+      "id": "f6b046ca-fa5a-4f1f-bb4d-7726052565c2",
+      "newsId": "61d7ef44-4500-4244-8b36-11a7991d38f0",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_election_1",
       "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
       "currentOdds": {
         "yes": 0.45,
         "no": 0.55
       },
+      "matchedKeywords": [
+        "",
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 45,
-        "reasoning": "While Trump's statement about running Venezuela is significant, the article is dated January 3, 2026, but the market asks about 'this week' and ends February 3, 2026 - a full month later. The timing ambiguity makes it unclear which week is referenced. Additionally, without knowing the current date or what constitutes a 'major policy announcement' in the market's context, and given the article title suggests this may already be public knowledge, there's insufficient clarity to make a confident bet."
+        "reasoning": "While a US operation to capture Maduro would be significant news, the article is from January 3, 2026, and the market asks about 'this week' but ends February 3, 2026 - a full month later. The timing mismatch makes it unclear which week is referenced. Additionally, the article describes an operation rather than a policy announcement, and without knowing the current date or outcome of the operation, there's insufficient clarity to make a confident bet."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:49:44.127Z"
+      "createdAt": "2026-01-04T07:15:38.096Z"
     },
     {
-      "id": "5811d234-e60e-43dc-a07e-e275b6bb387c",
-      "newsId": "23e10eaf-3d6f-4522-b3cb-69a39f26f7e6",
-      "newsTitle": "Trump says Maduro to face justice and US will run Venezuela until 'safe' transition - as it happened - Reuters",
+      "id": "5ff2ae90-1361-4bed-af4b-04ae53698077",
+      "newsId": "61d7ef44-4500-4244-8b36-11a7991d38f0",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_tech_1",
       "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
       "currentOdds": {
         "yes": 0.65,
         "no": 0.35
       },
+      "matchedKeywords": [
+        "",
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "This news article about Trump's statements on Venezuela and Maduro has no relevance to whether a major tech company will announce a new AI product this quarter. The geopolitical situation in Venezuela does not provide any actionable insight for this specific prediction market about tech company AI product announcements."
+        "reasoning": "This news article is about a US military/intelligence operation to capture Venezuelan President Maduro. It has absolutely no relevance to whether a major tech company will announce a new AI product this quarter. The topics are completely unrelated."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:49:48.854Z"
+      "createdAt": "2026-01-04T07:15:42.215Z"
     },
     {
-      "id": "df54921d-95aa-4045-bb10-741deb7127ce",
-      "newsId": "23e10eaf-3d6f-4522-b3cb-69a39f26f7e6",
-      "newsTitle": "Trump says Maduro to face justice and US will run Venezuela until 'safe' transition - as it happened - Reuters",
+      "id": "7e150594-dca0-47e9-9181-08a7dcc76fa8",
+      "newsId": "61d7ef44-4500-4244-8b36-11a7991d38f0",
+      "newsTitle": "Mock house, CIA source and Special Forces: The US operation to capture Maduro - Reuters",
       "marketId": "mock_sports_1",
       "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
       "currentOdds": {
         "yes": 0.52,
         "no": 0.48
       },
+      "matchedKeywords": [
+        "",
+        "mock",
+        "house",
+        "cia",
+        "source"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article about Trump's statements on Venezuela and Maduro has no relevance to a sports championship game viewership market. These are completely unrelated topics - one concerns geopolitical affairs while the other concerns sports broadcasting metrics."
+        "reasoning": "The news article about a US military operation to capture Maduro is completely unrelated to a sports championship game viewership market. There is no connection between these topics, making this news irrelevant for trading decisions on this market."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:49:53.721Z"
+      "createdAt": "2026-01-04T07:15:47.570Z"
     },
     {
-      "id": "cdc2959e-ed81-49b8-b4a0-fa34ab6cac35",
-      "newsId": "afb5ee36-15a9-4d3f-874d-f43b093e2d56",
-      "newsTitle": "Venezuela's Supreme Court orders Delcy Rodriguez become interim president - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While Venezuela's Supreme Court ordering an interim president is significant political news, the market asks about 'a major policy announcement this week' without specifying jurisdiction or policy area. The article is from January 4, 2026, but doesn't specify when 'this week' refers to in the market context. The news is about a leadership transition order rather than a policy announcement itself, and without clarity on whether the market refers to Venezuelan policy specifically or global/US policy, the relevance is too uncertain to warrant a bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:28.172Z"
-    },
-    {
-      "id": "703a0968-7115-4453-85c7-428543814aa8",
-      "newsId": "afb5ee36-15a9-4d3f-874d-f43b093e2d56",
-      "newsTitle": "Venezuela's Supreme Court orders Delcy Rodriguez become interim president - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's political leadership change has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics with no causal connection."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:32.997Z"
-    },
-    {
-      "id": "c585b473-a473-4979-9f33-8d92454245f1",
-      "newsId": "afb5ee36-15a9-4d3f-874d-f43b093e2d56",
-      "newsTitle": "Venezuela's Supreme Court orders Delcy Rodriguez become interim president - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's political situation has no relevance to a sports championship game viewership market. These are completely unrelated topics - one concerns Venezuelan politics and the other concerns sports broadcasting metrics."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:37.802Z"
-    },
-    {
-      "id": "9925d97d-f7ce-4c2e-8ca8-f0236177ae90",
-      "newsId": "7d9a2787-b8fd-4422-87d9-75168d2d0454",
-      "newsTitle": "Venezuela's Supreme Court orders Delcy Rodriguez become interim president - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While Venezuela's Supreme Court ordering an interim president is significant political news, the market asks about 'a major policy announcement this week' without specifying jurisdiction or policy area. The news is from January 4, 2026, but the market ends February 3, 2026, making the timeframe unclear. The connection between a Venezuelan leadership change and 'this week's' policy announcements is too ambiguous to warrant a confident bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:43.231Z"
-    },
-    {
-      "id": "46609a8f-89a7-44ff-87da-1ccc401ca59d",
-      "newsId": "5a96c2f4-8ab7-45d5-b127-c620122b78ff",
-      "newsTitle": "UN Security Council to meet Monday over US action in Venezuela - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While a UN Security Council meeting about US action in Venezuela could potentially lead to policy announcements, the market asks about 'this week' but doesn't specify which week. The article is from January 3, 2026, and the meeting is scheduled for Monday (Jan 5), but the market ends February 3, 2026 - making the timeframe ambiguous. Additionally, the meeting itself isn't a policy announcement, just a discussion that may or may not result in one. The confidence is too low to warrant a bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:44.401Z"
-    },
-    {
-      "id": "7c74ee96-9672-4918-8a1d-0793fac8ac55",
-      "newsId": "7d9a2787-b8fd-4422-87d9-75168d2d0454",
-      "newsTitle": "Venezuela's Supreme Court orders Delcy Rodriguez become interim president - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's political situation has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics - one concerns Venezuelan politics and the other concerns technology industry product announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:48.265Z"
-    },
-    {
-      "id": "cb50c0bf-1b5a-4454-bf82-22338ae64f4c",
-      "newsId": "5a96c2f4-8ab7-45d5-b127-c620122b78ff",
-      "newsTitle": "UN Security Council to meet Monday over US action in Venezuela - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about UN Security Council meeting regarding US action in Venezuela has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics - one concerns international diplomacy and geopolitics, while the other concerns corporate technology announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:48.992Z"
-    },
-    {
-      "id": "338d721e-aa0a-4f1a-9453-2bbdf827ab87",
-      "newsId": "7d9a2787-b8fd-4422-87d9-75168d2d0454",
-      "newsTitle": "Venezuela's Supreme Court orders Delcy Rodriguez become interim president - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's political situation has no relevance to a sports championship game viewership market. These are completely unrelated topics with no logical connection between Venezuelan leadership changes and TV viewership records for a sporting event."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:53.449Z"
-    },
-    {
-      "id": "40e0e78e-e346-465e-b1e2-307fed399ea4",
-      "newsId": "5a96c2f4-8ab7-45d5-b127-c620122b78ff",
-      "newsTitle": "UN Security Council to meet Monday over US action in Venezuela - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about a UN Security Council meeting regarding US action in Venezuela has no relevance to a sports championship game viewership market. These are completely unrelated topics - one is geopolitical and the other is sports entertainment metrics."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:53.638Z"
-    },
-    {
-      "id": "00f0d5c5-675e-4642-950a-76d48e67360a",
-      "newsId": "622e5004-aef5-466b-ad71-ec742c77f10d",
-      "newsTitle": "UN Security Council to meet Monday over US action in Venezuela - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While a UN Security Council meeting about US action in Venezuela could potentially lead to policy announcements, the article lacks specifics about what those actions were or what announcements might follow. The market asks about 'this week' but the article is from January 3, 2026, and the meeting is Monday - without knowing the current date or what constitutes a 'major policy announcement,' there's insufficient actionable information. The confidence is too low to warrant a bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:54:58.909Z"
-    },
-    {
-      "id": "a18caa34-886e-45ad-b275-83126d65f340",
-      "newsId": "9201535a-6409-4386-b1d9-2ae658bacccc",
+      "id": "b0282369-3895-4b16-bee4-8e9d32e64a11",
+      "newsId": "5e08f55f-eb45-4f3e-a8d4-d497b5a52b7a",
       "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_election_1",
       "marketQuestion": "Will there be a major policy announcement this week?",
@@ -412,11 +370,11 @@
         "reasoning": "The article discusses Trump's Venezuela policy stance but doesn't indicate whether a formal policy announcement is imminent this week. The news is from January 4, 2026, and the market asks about 'this week' but ends February 3, making the timeframe ambiguous. Without clear indication of an upcoming announcement, this is speculative rather than actionable."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:54:58.965Z"
+      "createdAt": "2026-01-04T07:19:43.399Z"
     },
     {
-      "id": "66d6fae6-8eb3-4404-825f-f6b4753c6cdc",
-      "newsId": "9201535a-6409-4386-b1d9-2ae658bacccc",
+      "id": "d29fef11-5315-458c-83fd-7a4ff5f31d9e",
+      "newsId": "5e08f55f-eb45-4f3e-a8d4-d497b5a52b7a",
       "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_tech_1",
       "marketQuestion": "Will major tech company announce new AI product this quarter?",
@@ -430,29 +388,11 @@
         "reasoning": "This news article about Trump's Venezuela policy has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses geopolitical strategy, not technology sector developments. There is no actionable insight here for the AI product announcement market."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:55:03.491Z"
+      "createdAt": "2026-01-04T07:19:47.600Z"
     },
     {
-      "id": "177fce91-4693-4cf5-af31-5fdbd19dabe5",
-      "newsId": "622e5004-aef5-466b-ad71-ec742c77f10d",
-      "newsTitle": "UN Security Council to meet Monday over US action in Venezuela - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about UN Security Council meeting regarding US action in Venezuela has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics - one concerns international diplomacy and geopolitics, while the other concerns corporate technology announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:03.706Z"
-    },
-    {
-      "id": "b4e36781-6030-4a4f-9883-57519f768175",
-      "newsId": "9201535a-6409-4386-b1d9-2ae658bacccc",
+      "id": "05b92309-389c-4d8f-ab14-51e719fc0bf0",
+      "newsId": "5e08f55f-eb45-4f3e-a8d4-d497b5a52b7a",
       "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_sports_1",
       "marketQuestion": "Will the championship game exceed viewership records?",
@@ -463,32 +403,14 @@
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article about Trump's Venezuela policy has no relevance to a sports championship viewership record market. The article discusses foreign policy and regime change, which has no connection to television viewership numbers for a sporting event."
+        "reasoning": "The news article about Trump's Venezuela policy has no relevance to a sports championship game viewership market. These are completely unrelated topics - one concerns foreign policy while the other concerns television ratings for a sporting event."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:55:08.282Z"
+      "createdAt": "2026-01-04T07:19:52.349Z"
     },
     {
-      "id": "b6eedaf0-b351-47a5-a1ac-955f6409bb23",
-      "newsId": "622e5004-aef5-466b-ad71-ec742c77f10d",
-      "newsTitle": "UN Security Council to meet Monday over US action in Venezuela - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about a UN Security Council meeting regarding US action in Venezuela has no relevance to a sports championship game's viewership records. These are completely unrelated topics, so this news provides no actionable insight for the market."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:08.488Z"
-    },
-    {
-      "id": "82ab40d7-ae63-4345-90c4-f576ea0c40ac",
-      "newsId": "7115ab0e-f592-4cd7-95f5-e75e1ad8bfe3",
+      "id": "e155d660-31ca-42f9-afa6-ced9e999ab4b",
+      "newsId": "efb56bf7-e466-42e4-96e7-4b6ebec55908",
       "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_election_1",
       "marketQuestion": "Will there be a major policy announcement this week?",
@@ -496,35 +418,23 @@
         "yes": 0.45,
         "no": 0.55
       },
+      "matchedKeywords": [
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 45,
-        "reasoning": "The article discusses Trump's Venezuela policy stance but doesn't indicate whether a formal policy announcement is imminent this week. The news is from January 4, 2026, and the market asks about 'this week' but ends February 3, making the timeframe ambiguous. Without clear indication of an upcoming announcement, this is speculative rather than actionable."
+        "reasoning": "The article discusses Trump's Venezuela policy stance but doesn't indicate whether a formal policy announcement will occur 'this week.' The market asks about a major policy announcement in a specific timeframe, but the article only describes a policy position without mentioning timing or imminent announcements. The news is too vague about actionable timing to warrant a bet."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:55:13.776Z"
+      "createdAt": "2026-01-04T07:20:14.455Z"
     },
     {
-      "id": "84018fd2-2ba7-43e9-ade3-abe222ec46f9",
-      "newsId": "4cfa565a-7456-4069-bfb8-eb25d7151a36",
-      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 25,
-        "reasoning": "The article only reports a diplomatic visit by Venezuela's VP to Russia without any indication of what policy announcements might result. The market asks about 'a major policy announcement this week' but doesn't specify which country or policy area, and the article from January 3rd provides no concrete information about upcoming announcements. The connection is too speculative and the market definition too vague to make an informed bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:14.267Z"
-    },
-    {
-      "id": "8ef5c67d-145b-4d63-aa78-6e4e3d342485",
-      "newsId": "7115ab0e-f592-4cd7-95f5-e75e1ad8bfe3",
+      "id": "69254fd5-8779-4b06-905a-4e4c70cab6e6",
+      "newsId": "efb56bf7-e466-42e4-96e7-4b6ebec55908",
       "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_tech_1",
       "marketQuestion": "Will major tech company announce new AI product this quarter?",
@@ -532,35 +442,23 @@
         "yes": 0.65,
         "no": 0.35
       },
+      "matchedKeywords": [
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "This news article about Trump's Venezuela policy has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses foreign policy and regime change, which has no connection to tech company AI product announcements. There is no actionable insight here for this market."
+        "reasoning": "This news article about Trump's Venezuela policy has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses geopolitical strategy, not technology sector developments. There is no actionable insight here for the AI product announcement market."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:55:18.373Z"
+      "createdAt": "2026-01-04T07:20:18.778Z"
     },
     {
-      "id": "847790d0-1a9a-472a-959d-01de85ca0d41",
-      "newsId": "4cfa565a-7456-4069-bfb8-eb25d7151a36",
-      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "This news about Venezuela's vice president visiting Russia has no relevance to whether a major tech company will announce a new AI product this quarter. The article concerns international diplomacy, not technology industry developments."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:18.649Z"
-    },
-    {
-      "id": "e9ff3ef6-913c-4a18-b943-a96b156fada7",
-      "newsId": "7115ab0e-f592-4cd7-95f5-e75e1ad8bfe3",
+      "id": "d0a9216a-d515-4bca-a2b7-e858a992321a",
+      "newsId": "efb56bf7-e466-42e4-96e7-4b6ebec55908",
       "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_sports_1",
       "marketQuestion": "Will the championship game exceed viewership records?",
@@ -568,378 +466,24 @@
         "yes": 0.52,
         "no": 0.48
       },
+      "matchedKeywords": [
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article about Trump's Venezuela policy has no relevance to a sports championship viewership market. The article discusses foreign policy and regime change, which has no connection to television viewership records for a championship game."
+        "reasoning": "The news article about Trump's Venezuela policy has no relevance to a sports championship game viewership market. These are completely unrelated topics - one concerns foreign policy while the other concerns sports broadcasting metrics."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:55:22.887Z"
+      "createdAt": "2026-01-04T07:20:23.515Z"
     },
     {
-      "id": "418a09fb-82f9-438d-ab8a-2aa7ee574bdb",
-      "newsId": "4cfa565a-7456-4069-bfb8-eb25d7151a36",
-      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's vice president visiting Russia has no relevance to a sports championship game's viewership records. These are completely unrelated topics, and the article provides no actionable insight for this market."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:22.991Z"
-    },
-    {
-      "id": "a9548c9f-fb82-4af0-8d2f-d154dfbdae3b",
-      "newsId": "a95d7000-950b-431e-abac-de4f807cbf80",
-      "newsTitle": "Was the US capture of Venezuela's president legal? - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While the capture of Venezuela's president would be a major geopolitical event, the article is from January 3, 2026, and the market asks about 'this week' but ends February 3, 2026 - a full month later. The timing ambiguity makes it unclear which week is referenced. Additionally, the article title suggests analysis of legality rather than announcing new policy, and we don't know if this event already occurred or is hypothetical. The relevance is too uncertain to warrant a bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:29.462Z"
-    },
-    {
-      "id": "9c74245e-b74f-41be-ac5d-3259ef2e31a6",
-      "newsId": "6d9a8b89-9693-456e-a0f7-77bb08760952",
-      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 35,
-        "reasoning": "The article only reports a diplomatic visit by Venezuela's VP to Russia without any indication of what will be discussed or announced. The market asks about 'a major policy announcement this week' but doesn't specify which country or policy area. The news is from January 3, 2026, while the market ends February 3, 2026, creating timing ambiguity about which 'week' is relevant. Without knowing what constitutes a 'major policy announcement' or clear signals that one is imminent, this news is too vague to provide actionable insight."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:29.860Z"
-    },
-    {
-      "id": "67961c87-ff24-41f9-824b-1a01541f84d4",
-      "newsId": "6d9a8b89-9693-456e-a0f7-77bb08760952",
-      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's vice president visiting Russia has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics - one concerns international diplomacy and the other concerns technology product announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:34.391Z"
-    },
-    {
-      "id": "3d1eafae-1075-4b61-b140-af30878188e7",
-      "newsId": "6d9a8b89-9693-456e-a0f7-77bb08760952",
-      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuela's vice president visiting Russia has no relevance to a sports championship game viewership market. These are completely unrelated topics - one is geopolitical diplomacy, the other is sports broadcasting metrics. There is no actionable insight here."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:39.380Z"
-    },
-    {
-      "id": "c28f6f13-c4ed-40b6-84f6-310036d3afeb",
-      "newsId": "c79e1b71-551a-484e-93f7-8132210c0410",
-      "newsTitle": "Was the US capture of Venezuela's president legal? - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While the capture of Venezuela's president would be a major geopolitical event that could trigger policy announcements, the article title suggests it's questioning the legality rather than confirming the event occurred. The article is from January 3, 2026, but the market asks about 'this week' and ends February 3, 2026 - creating timing ambiguity about which week is referenced. The uncertainty about both the event's confirmation and the relevant timeframe makes this not actionable."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:45.634Z"
-    },
-    {
-      "id": "b65262f0-526a-4fa3-bf86-b4899f4f4d9a",
-      "newsId": "c79e1b71-551a-484e-93f7-8132210c0410",
-      "newsTitle": "Was the US capture of Venezuela's president legal? - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about the US capture of Venezuela's president is completely unrelated to the market question about major tech companies announcing new AI products. There is no connection between geopolitical events in Venezuela and tech company AI product announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:50.022Z"
-    },
-    {
-      "id": "f751ced1-e531-4679-8e3c-d4cee4b13a9a",
-      "newsId": "c79e1b71-551a-484e-93f7-8132210c0410",
-      "newsTitle": "Was the US capture of Venezuela's president legal? - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about US capture of Venezuela's president has no relevance to a market about championship game viewership records. These are completely unrelated topics - one is geopolitical/legal news and the other is about sports broadcasting metrics."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:55:54.896Z"
-    },
-    {
-      "id": "8c1a735a-5dfd-48b4-b354-7f79c018e3a9",
-      "newsId": "2553fb1f-e90a-41ea-9459-7788250d5310",
-      "newsTitle": "Venezuela diaspora celebrates Maduro's deposition, wonders what's next - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article is from January 3, 2026, but the market ends February 3, 2026 and asks about 'this week' - which week is unclear. More critically, the article is about Venezuela's Maduro being deposed, which doesn't clearly relate to what jurisdiction or government the market is asking about for policy announcements. The market question is too vague and the news relevance is uncertain."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:00.743Z"
-    },
-    {
-      "id": "e732b95b-8fe6-4096-be48-c3ab508b4e93",
-      "newsId": "2553fb1f-e90a-41ea-9459-7788250d5310",
-      "newsTitle": "Venezuela diaspora celebrates Maduro's deposition, wonders what's next - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about Venezuela's political situation (Maduro's deposition) has no relevance to a prediction market about major tech companies announcing AI products. These are completely unrelated topics with no logical connection that would inform a betting decision."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:05.188Z"
-    },
-    {
-      "id": "8160c123-bea8-429f-bc6f-936da9f6ecd1",
-      "newsId": "2553fb1f-e90a-41ea-9459-7788250d5310",
-      "newsTitle": "Venezuela diaspora celebrates Maduro's deposition, wonders what's next - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about Venezuela's political situation (Maduro's deposition) has no relevance to a sports championship game viewership market. These are completely unrelated topics, and the Venezuelan political news would not impact TV viewership records for a championship game."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:10.134Z"
-    },
-    {
-      "id": "0f14b2b6-792b-4ecc-82fb-3eb6967b704d",
-      "newsId": "06dc9fa1-7896-4e46-8302-f1e53e913a96",
-      "newsTitle": "Venezuelan leader Maduro arrives in New York, news outlets report - Reuters",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 35,
-        "reasoning": "The article only reports Maduro's arrival in New York without any context about potential policy announcements. The market asks about 'a major policy announcement this week' but doesn't specify which country, organization, or policy area. Without knowing if this refers to Venezuelan, US, or other policy, and given the article provides no information about planned announcements, there's insufficient actionable information to make a confident bet."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:16.754Z"
-    },
-    {
-      "id": "f15d9581-1952-4d17-a679-27df774a7cf4",
-      "newsId": "06dc9fa1-7896-4e46-8302-f1e53e913a96",
-      "newsTitle": "Venezuelan leader Maduro arrives in New York, news outlets report - Reuters",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuelan leader Maduro arriving in New York has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics with no logical connection between geopolitical events in Venezuela and tech company product announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:21.970Z"
-    },
-    {
-      "id": "877b1c3e-12bf-463e-9b28-21ab1ce5cfe5",
-      "newsId": "06dc9fa1-7896-4e46-8302-f1e53e913a96",
-      "newsTitle": "Venezuelan leader Maduro arrives in New York, news outlets report - Reuters",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news about Venezuelan leader Maduro arriving in New York has no relevance to a sports championship game's viewership records. These are completely unrelated topics, and there is no logical connection between diplomatic travel and television ratings for a sporting event."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:26.530Z"
-    },
-    {
-      "id": "e03614d7-47e4-4c4b-9cfa-fa001d9c3c52",
-      "newsId": "89fe7b45-647f-48e8-a08e-b5e3532b2c10",
-      "newsTitle": "'I want to dominate' - Littler takes another step towards greatness",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "This article is about Luke Littler winning a darts championship and has no relevance to policy announcements. The news is entirely sports-related and provides no actionable insight for a market about government or organizational policy decisions."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:31.231Z"
-    },
-    {
-      "id": "21cbe6dd-0e72-4f3d-8b4e-b474c3ae9ed5",
-      "newsId": "89fe7b45-647f-48e8-a08e-b5e3532b2c10",
-      "newsTitle": "'I want to dominate' - Littler takes another step towards greatness",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "This article is about Luke Littler winning a darts championship and has no relevance to tech companies or AI product announcements. The news content is completely unrelated to the prediction market question."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:35.370Z"
-    },
-    {
-      "id": "e3042b9d-5a8a-47cf-8108-05ab61b8ea62",
-      "newsId": "89fe7b45-647f-48e8-a08e-b5e3532b2c10",
-      "newsTitle": "'I want to dominate' - Littler takes another step towards greatness",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 45,
-        "reasoning": "While Luke Littler's dominance and second world title at 18 could drive increased viewership interest in darts, the article doesn't specify which 'championship game' the market refers to or provide concrete viewership data. The market question is too vague - it could refer to any sport's championship, not necessarily darts. Without clarity on what championship is being referenced, this news cannot be reliably connected to the market outcome."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:41.763Z"
-    },
-    {
-      "id": "19368f3d-27b4-47e4-bee6-0f6f94eb9609",
-      "newsId": "08b6da47-2046-4a0f-abd8-0596e63e679a",
-      "newsTitle": "How UK plush toy Jellycat conquered China ",
-      "marketId": "mock_election_1",
-      "marketQuestion": "Will there be a major policy announcement this week?",
-      "currentOdds": {
-        "yes": 0.45,
-        "no": 0.55
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "This article about Jellycat plush toys in China has no relevance to whether there will be a major policy announcement this week. The news is about consumer trends and a retail product, not government policy or political developments that would trigger policy announcements."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:46.813Z"
-    },
-    {
-      "id": "23633ede-7ff7-4ac8-a5bb-804f541c78ec",
-      "newsId": "08b6da47-2046-4a0f-abd8-0596e63e679a",
-      "newsTitle": "How UK plush toy Jellycat conquered China ",
-      "marketId": "mock_tech_1",
-      "marketQuestion": "Will major tech company announce new AI product this quarter?",
-      "currentOdds": {
-        "yes": 0.65,
-        "no": 0.35
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "This article about Jellycat plush toys in China has no relevance to whether a major tech company will announce a new AI product this quarter. The news is about consumer goods and retail trends, not technology product announcements. There is no actionable connection between these topics."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:51.465Z"
-    },
-    {
-      "id": "7d7ea241-e2f7-49ec-9438-9f1e700fb19b",
-      "newsId": "08b6da47-2046-4a0f-abd8-0596e63e679a",
-      "newsTitle": "How UK plush toy Jellycat conquered China ",
-      "marketId": "mock_sports_1",
-      "marketQuestion": "Will the championship game exceed viewership records?",
-      "currentOdds": {
-        "yes": 0.52,
-        "no": 0.48
-      },
-      "aiDecision": {
-        "decision": "skip",
-        "confidence": 0,
-        "reasoning": "The news article about Jellycat plush toys in China has no relevance to a championship game viewership market. These are completely unrelated topics - one concerns consumer products in China, the other concerns sports broadcasting metrics. There is no actionable connection between them."
-      },
-      "status": "skipped",
-      "createdAt": "2026-01-04T06:56:56.698Z"
-    },
-    {
-      "id": "c1eafc07-a50a-4c70-8660-922d3c0340c6",
-      "newsId": "6ef1b472-1d49-44e2-a368-02f064734027",
-      "newsTitle": "Venezuela diaspora celebrates Maduro's deposition, wonders what's next - Reuters",
+      "id": "08cb4854-daaa-4bc9-9e38-f79e540b85db",
+      "newsId": "bf0be29d-b581-448d-97df-800b367e0859",
+      "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
       "marketId": "mock_election_1",
       "marketQuestion": "Will there be a major policy announcement this week?",
       "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
@@ -949,18 +493,2512 @@
       },
       "matchedKeywords": [
         "",
-        "venezuela",
-        "diaspora",
-        "celebrates",
-        "maduro"
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "The article discusses Trump's Venezuela policy stance but doesn't indicate whether a formal policy announcement will occur 'this week.' The news is from January 4, 2026, but the market asks about a specific week (unclear which week relative to the article date). Without clarity on timing or confirmation of an imminent announcement, this is speculative rather than actionable."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:20:37.140Z"
+    },
+    {
+      "id": "b933e3d7-c0cc-497e-a2d4-7ef241f88ab7",
+      "newsId": "bf0be29d-b581-448d-97df-800b367e0859",
+      "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "trump",
+        "bet",
+        "regime",
+        "change"
       ],
       "aiDecision": {
         "decision": "skip",
         "confidence": 0,
-        "reasoning": "The news article is from January 3, 2026, but the market ends February 3, 2026 and asks about 'this week' - without knowing the current date, I cannot determine which week is referenced. Additionally, the article is about Venezuela's political situation, but the market question is too vague about what type of 'major policy announcement' and from which entity/country, making relevance unclear."
+        "reasoning": "The news article about Trump's Venezuela policy has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses foreign policy and regime change, which has no connection to tech company product announcements or AI developments."
       },
       "status": "skipped",
-      "createdAt": "2026-01-04T06:58:47.263Z"
+      "createdAt": "2026-01-04T07:20:41.838Z"
+    },
+    {
+      "id": "f857992d-4ea8-4c0f-9620-ada99e4606bc",
+      "newsId": "bf0be29d-b581-448d-97df-800b367e0859",
+      "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Trump's Venezuela policy has no relevance to a sports championship viewership records market. These are completely unrelated topics - one concerns foreign policy while the other concerns television ratings for a sporting event."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:20:46.410Z"
+    },
+    {
+      "id": "aaa0e401-4655-40b8-8f29-9be52cd359ea",
+      "newsId": "89dffeba-69b8-44e7-80c2-fefcb21ae2ff",
+      "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "",
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "The article discusses Trump's Venezuela policy stance but doesn't indicate whether this constitutes a formal 'major policy announcement' or when such an announcement might occur. The article is from January 4, 2026, but the market asks about 'this week' and ends February 3, 2026 - the timing context is unclear. Without confirmation of an actual policy announcement versus just news analysis of Trump's position, this doesn't provide actionable insight."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:21:34.817Z"
+    },
+    {
+      "id": "b3106968-73d9-45a9-bff2-f0431b4a47a2",
+      "newsId": "89dffeba-69b8-44e7-80c2-fefcb21ae2ff",
+      "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Trump's Venezuela policy has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses foreign policy and regime change, which has no connection to tech company product announcements or AI developments."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:21:39.581Z"
+    },
+    {
+      "id": "0545da1a-6f6d-495f-acc6-dabb1d59ecf7",
+      "newsId": "89dffeba-69b8-44e7-80c2-fefcb21ae2ff",
+      "newsTitle": "Trump's bet on regime change in Venezuela is a sharp departure from MAGA agenda - Reuters",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "trump",
+        "bet",
+        "regime",
+        "change"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Trump's Venezuela policy has no relevance to a sports championship game viewership market. These are completely unrelated topics - one concerns foreign policy while the other concerns sports broadcasting metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:21:44.085Z"
+    },
+    {
+      "id": "e94c7831-a5bd-4334-9b83-76a83ca09551",
+      "newsId": "b1559547-a8e5-48fc-8259-61f2f2510bad",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "The article discusses Starmer's confidence about remaining PM and his characterization of May elections, but contains no information about any major policy announcements for the upcoming week. The news is about political positioning rather than policy substance, making it irrelevant to predicting whether a major policy announcement will occur this week."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:24:43.319Z"
+    },
+    {
+      "id": "8023dcaf-e2f3-48c0-b7dc-868149e75792",
+      "newsId": "b1559547-a8e5-48fc-8259-61f2f2510bad",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about UK Prime Minister Starmer discussing upcoming elections and has no relevance to tech companies announcing AI products. The article contains no information about technology, AI, or corporate product announcements that would inform this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:24:48.093Z"
+    },
+    {
+      "id": "b8f513c1-2bde-43b9-a432-c92fd8719cdf",
+      "newsId": "b1559547-a8e5-48fc-8259-61f2f2510bad",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about UK Prime Minister Starmer discussing upcoming May elections and has no relevance to a championship game's viewership records. The article contains no information about sports, television viewership, or any championship event. There is no actionable connection between UK political elections and sports championship viewership."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:24:53.088Z"
+    },
+    {
+      "id": "90f22efe-3869-42c7-b6fb-ceccaca77027",
+      "newsId": "33cff0d7-5ebd-4c71-8ca3-384ff6a68477",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 35,
+        "reasoning": "While a military strike could potentially lead to policy announcements, this appears to be a tactical military operation rather than a major policy shift. The article is from January 4, 2026, but the market ends February 3, 2026, asking about 'this week' - the timing is ambiguous. Military strikes of this nature are typically operational decisions rather than major policy announcements, making this news not clearly actionable for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:24:58.831Z"
+    },
+    {
+      "id": "a66daf43-9722-4eca-b18b-385f9e6fb95b",
+      "newsId": "33cff0d7-5ebd-4c71-8ca3-384ff6a68477",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a military strike on Islamic State in Syria has no relevance to whether a major tech company will announce a new AI product this quarter. The article contains no information about technology companies, AI products, or corporate announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:03.009Z"
+    },
+    {
+      "id": "7dd98ea2-249e-4708-8d82-fc0c70278a7c",
+      "newsId": "33cff0d7-5ebd-4c71-8ca3-384ff6a68477",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a UK-France military strike on ISIS in Syria has no relevance to a sports championship game viewership market. The topics are completely unrelated, and there is no logical connection between military operations and television viewership records for a sporting event."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:07.796Z"
+    },
+    {
+      "id": "d7bae6e4-2ff7-486f-9503-63b4f8d12ea9",
+      "newsId": "b8f27f63-2d2b-41b8-952c-88d25e9c4f9d",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "The article discusses Starmer's statement about being PM next year and May elections, but contains no information about any major policy announcements for the upcoming week. The news is about political positioning rather than policy substance, making it irrelevant to predicting whether a major policy announcement will occur this week."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:14.555Z"
+    },
+    {
+      "id": "0fedd43e-a968-4f54-a052-b2713f96bad1",
+      "newsId": "b8f27f63-2d2b-41b8-952c-88d25e9c4f9d",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about UK Prime Minister Starmer discussing upcoming elections and has no relevance to tech companies or AI product announcements. The article content does not provide any actionable information for a market about major tech company AI product launches."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:19.398Z"
+    },
+    {
+      "id": "aa3919b7-e76e-41bb-ad82-d452b5dd51b9",
+      "newsId": "b8f27f63-2d2b-41b8-952c-88d25e9c4f9d",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about UK Prime Minister Starmer discussing upcoming May elections and has no relevance whatsoever to a sports championship game's viewership records. The article contains no information about sports, viewership, or any championship event."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:24.410Z"
+    },
+    {
+      "id": "1cd9f79f-88e5-4b77-ac6b-9c4e8c7f7508",
+      "newsId": "843f7ea1-5100-4242-9c88-d22249d109cb",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 35,
+        "reasoning": "While a UK-France military strike on IS targets could potentially lead to policy announcements, this appears to be a tactical military operation rather than a policy shift. The article is from January 4, 2026, but the market ends February 3, 2026, asking about 'this week' which is ambiguous. The military action alone doesn't strongly indicate an imminent major policy announcement, and the current odds already reflect moderate uncertainty."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:30.430Z"
+    },
+    {
+      "id": "6585fcb8-25b6-4897-8fc6-e3b29d8ab728",
+      "newsId": "843f7ea1-5100-4242-9c88-d22249d109cb",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a military strike on ISIS in Syria has no relevance to whether a major tech company will announce a new AI product this quarter. The article contains no information about technology companies, AI products, or corporate announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:34.746Z"
+    },
+    {
+      "id": "731b82c9-0ebb-4259-b123-df8cd811b6cb",
+      "newsId": "17c073dd-fdad-489e-910c-46e574dfa403",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "",
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "The article discusses Starmer's confidence about remaining PM and his framing of May elections, but contains no indication of any imminent major policy announcement. The statement is general political positioning rather than a signal of specific policy plans for the coming week. The news is not actionable for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:37.511Z"
+    },
+    {
+      "id": "940c3478-f195-486a-9d28-8f7e6dee08c6",
+      "newsId": "843f7ea1-5100-4242-9c88-d22249d109cb",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a UK-France military strike on ISIS in Syria has no relevance to a sports championship game's viewership records. The topics are completely unrelated, and there is no actionable insight to be gained for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:39.604Z"
+    },
+    {
+      "id": "cd95f0e9-5fbe-496b-a119-64c6e88c731c",
+      "newsId": "17c073dd-fdad-489e-910c-46e574dfa403",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about UK Prime Minister Starmer discussing upcoming elections and has no connection to tech companies or AI product announcements. The news is completely irrelevant to the market question about major tech company AI product launches this quarter."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:42.220Z"
+    },
+    {
+      "id": "564b38fc-2be5-44cf-b370-8691ce8a2f37",
+      "newsId": "17c073dd-fdad-489e-910c-46e574dfa403",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about UK politics and Prime Minister Starmer's statement about elections, which has no relevance to a sports championship game's viewership records. The topics are completely unrelated, so there is no actionable insight for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:47.840Z"
+    },
+    {
+      "id": "8ea1b813-55d1-467b-b6f5-b3dca09ba58e",
+      "newsId": "ae282c79-da66-4f66-b01f-6f1f61eb77a7",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "",
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 35,
+        "reasoning": "While a UK-France military strike on IS targets could potentially lead to policy announcements regarding military operations or counter-terrorism strategy, this appears to be a tactical military action rather than a policy-level event. The article doesn't mention any upcoming policy announcements, and military strikes of this nature don't automatically trigger major policy announcements. The connection is too speculative to warrant a bet."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:53.711Z"
+    },
+    {
+      "id": "05a9eed3-dc9d-43e1-b4f0-9b0b77d49024",
+      "newsId": "ae282c79-da66-4f66-b01f-6f1f61eb77a7",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a UK-France military strike on an ISIS arms bunker in Syria has no relevance to whether a major tech company will announce a new AI product this quarter. The article contains no information about technology companies, AI products, or corporate announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:25:57.929Z"
+    },
+    {
+      "id": "8f1dedec-5563-47a4-b96c-53ac5d443071",
+      "newsId": "ae282c79-da66-4f66-b01f-6f1f61eb77a7",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about UK and France bombing an ISIS arms bunker in Syria has no relevance to a market about championship game viewership records. These are completely unrelated topics - one is about military operations in the Middle East, the other is about sports broadcasting metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:02.703Z"
+    },
+    {
+      "id": "33a3ef27-2987-43b4-a36f-3beb49b73f8b",
+      "newsId": "e953ec66-1be0-4d3b-aff4-45632f4c9b6f",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "",
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "This article is about Starmer discussing future elections and stating the May elections won't be a referendum on his government. It contains no information about any major policy announcements for the upcoming week. The news is not relevant to predicting whether a major policy announcement will occur this week."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:33.506Z"
+    },
+    {
+      "id": "21a0db92-c421-436e-80cc-9f081e4faa67",
+      "newsId": "e953ec66-1be0-4d3b-aff4-45632f4c9b6f",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about UK Prime Minister Starmer discussing upcoming elections and has no relevance to tech companies or AI product announcements. The news content is completely unrelated to the market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:38.152Z"
+    },
+    {
+      "id": "c00741d1-2ea7-4a88-aa9e-d7ac0ff7a404",
+      "newsId": "e953ec66-1be0-4d3b-aff4-45632f4c9b6f",
+      "newsTitle": "'I'll be PM this time next year,' Starmer tells BBC",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "tells",
+        "bbc",
+        "time",
+        "next"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about UK Prime Minister Starmer discussing upcoming May elections and has no relevance to a championship game's viewership records. The article contains no information about sports, television viewership, or any championship event. There is no actionable connection between UK political statements and sports viewership metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:42.858Z"
+    },
+    {
+      "id": "e7a3f7ed-5b97-40a3-9ebf-713328b582ae",
+      "newsId": "59747422-a2aa-43fc-85bc-c287f59fda49",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "marketUrl": "https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "",
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 35,
+        "reasoning": "While a military strike could potentially lead to policy announcements, this appears to be a tactical military operation rather than a policy shift. The article is from January 4, 2026, but the market ends February 3, 2026, asking about 'this week' which is ambiguous. The military action itself doesn't constitute a 'major policy announcement' - it would need to be accompanied by formal policy statements or changes to be relevant."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:48.753Z"
+    },
+    {
+      "id": "8977d28e-3c47-4475-8041-dee96fbb876e",
+      "newsId": "59747422-a2aa-43fc-85bc-c287f59fda49",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "marketUrl": "https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "",
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a UK-France military strike on ISIS in Syria has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses military operations, not technology industry developments."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:53.222Z"
+    },
+    {
+      "id": "a301ba18-116c-49f4-a92f-51ef3e9eb658",
+      "newsId": "59747422-a2aa-43fc-85bc-c287f59fda49",
+      "newsTitle": "UK and France bomb underground IS arms bunker in Syria",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "marketUrl": "https://polymarket.com/event/will-the-championship-game-exceed-viewership-records",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "",
+        "arms",
+        "syria",
+        "france",
+        "bomb"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a UK-France military strike on ISIS in Syria has no relevance to a market about championship game viewership records. The topics are completely unrelated, and there is no logical connection between military operations and sports viewership."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:26:58.255Z"
+    },
+    {
+      "id": "094f6c14-1ecf-447c-9e59-635f94595334",
+      "newsId": "870ba91b-b4f7-48fb-86e2-6bf06679a64b",
+      "newsTitle": "World reacts to US strikes on Venezuela By Reuters - Investing.com",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "world",
+        "reacts",
+        "strikes",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article is from January 3, 2026, but the market ends February 3, 2026 and asks about 'this week' - making the timeframe ambiguous and misaligned. Without knowing the current date or what 'this week' refers to, and given the article only shows a title without substantive content about actual policy announcements, there's insufficient actionable information to make a confident bet."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:30:01.706Z"
+    },
+    {
+      "id": "77c5d68a-bad8-4d93-a070-d5b3e8e74506",
+      "newsId": "870ba91b-b4f7-48fb-86e2-6bf06679a64b",
+      "newsTitle": "World reacts to US strikes on Venezuela By Reuters - Investing.com",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "world",
+        "reacts",
+        "strikes",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about US strikes on Venezuela is completely unrelated to the market question about major tech companies announcing new AI products. There is no connection between military/geopolitical events in Venezuela and AI product announcements from tech companies."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:30:06.150Z"
+    },
+    {
+      "id": "c2c49a4c-05f0-47c5-8d15-dd4586e94f1c",
+      "newsId": "870ba91b-b4f7-48fb-86e2-6bf06679a64b",
+      "newsTitle": "World reacts to US strikes on Venezuela By Reuters - Investing.com",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "world",
+        "reacts",
+        "strikes",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about US strikes on Venezuela has no relevance to a sports championship game viewership market. These are completely unrelated topics - one concerns international military/political events while the other is about sports broadcasting metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-04T07:30:11.057Z"
+    },
+    {
+      "id": "75061ee6-485a-44a8-a078-582b581121f4",
+      "newsId": "53c9c06b-4b71-42a1-bd92-97bff38434d5",
+      "newsTitle": "REUTERS NEWS SCHEDULE AT 10 p.m. GMT/6 a.m. SGT - TradingView — Track All Markets",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "reuters",
+        "news",
+        "schedule",
+        "gmt"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This is merely a Reuters news schedule announcement with no actual content about policy announcements. It provides no actionable information about whether a major policy announcement will occur. The article contains no substantive news that would inform a prediction about policy decisions."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T02:59:57.364Z"
+    },
+    {
+      "id": "56800dbb-6057-4fb2-99e9-5618cbe20ecb",
+      "newsId": "53c9c06b-4b71-42a1-bd92-97bff38434d5",
+      "newsTitle": "REUTERS NEWS SCHEDULE AT 10 p.m. GMT/6 a.m. SGT - TradingView — Track All Markets",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "reuters",
+        "news",
+        "schedule",
+        "gmt"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is merely a Reuters news schedule announcement with no actual content about tech companies or AI products. It provides zero actionable information relevant to whether a major tech company will announce a new AI product this quarter."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:02.407Z"
+    },
+    {
+      "id": "0369a00a-93cc-4f9d-83d9-a5765a727a7b",
+      "newsId": "53c9c06b-4b71-42a1-bd92-97bff38434d5",
+      "newsTitle": "REUTERS NEWS SCHEDULE AT 10 p.m. GMT/6 a.m. SGT - TradingView — Track All Markets",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "reuters",
+        "news",
+        "schedule",
+        "gmt"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is merely a Reuters news schedule announcement with no actual content about any championship game or viewership data. It provides zero actionable information relevant to predicting whether a championship game will exceed viewership records."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:08.291Z"
+    },
+    {
+      "id": "67de1288-acdb-481a-bd00-5f3ce2b6fbc9",
+      "newsId": "3f3b23d1-9c76-497d-9251-fc366b111799",
+      "newsTitle": "OPEC+ keeps oil output steady amid turmoil among members By Reuters - Investing.com",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "opec",
+        "keeps",
+        "oil",
+        "output"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 35,
+        "reasoning": "The article is from January 4, 2026, but the market asks about 'this week' and ends February 4, 2026 - a full month later. The timing misalignment makes it unclear which week is referenced. Additionally, the article describes OPEC+ keeping output steady (not changing policy), which suggests no major announcement occurred. The market definition is too vague without knowing the specific week in question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:15.029Z"
+    },
+    {
+      "id": "a07450fd-a4fe-4362-8e70-0ce90b6efaf1",
+      "newsId": "3f3b23d1-9c76-497d-9251-fc366b111799",
+      "newsTitle": "OPEC+ keeps oil output steady amid turmoil among members By Reuters - Investing.com",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "opec",
+        "keeps",
+        "oil",
+        "output"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about OPEC+ oil production decisions and has no relevance to tech companies announcing AI products. The article discusses energy sector developments, which provides no actionable insight for a market about AI product announcements from major tech companies."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:19.663Z"
+    },
+    {
+      "id": "d0734843-5905-4e41-8d94-c0113b4f9cd1",
+      "newsId": "3f3b23d1-9c76-497d-9251-fc366b111799",
+      "newsTitle": "OPEC+ keeps oil output steady amid turmoil among members By Reuters - Investing.com",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "opec",
+        "keeps",
+        "oil",
+        "output"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about OPEC+ oil production is completely unrelated to a championship game viewership market. The article discusses energy policy and oil output, which has no direct connection to sports viewership records. There is no actionable insight here."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:24.551Z"
+    },
+    {
+      "id": "a9d28bf9-3023-4160-a1f8-cefe0f1ed77d",
+      "newsId": "1a4dfbf4-6494-4103-b82f-7133de9e8903",
+      "newsTitle": "Reuters: Venezuela’s vice president in Russia after U.S. operation - The New Voice of Ukraine",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "reuters",
+        "venezuela",
+        "vice",
+        "president"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 35,
+        "reasoning": "The article title is too vague to assess relevance. It mentions Venezuela's VP in Russia after a U.S. operation, which could potentially lead to policy announcements, but the market asks about 'this week' and the article is from January 4, 2026 while the market ends February 4, 2026 - a timing mismatch. Without the full article content or clarity on what constitutes a 'major policy announcement' and from which government, this is not actionable."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:31.099Z"
+    },
+    {
+      "id": "9b3ef153-4882-4222-98db-b4524231e50b",
+      "newsId": "1a4dfbf4-6494-4103-b82f-7133de9e8903",
+      "newsTitle": "Reuters: Venezuela’s vice president in Russia after U.S. operation - The New Voice of Ukraine",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "reuters",
+        "venezuela",
+        "vice",
+        "president"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Venezuela's vice president visiting Russia has no relevance to whether a major tech company will announce a new AI product this quarter. The geopolitical content is completely unrelated to the technology sector market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:35.278Z"
+    },
+    {
+      "id": "1d3715ce-1e82-440c-808d-a7d367079816",
+      "newsId": "1a4dfbf4-6494-4103-b82f-7133de9e8903",
+      "newsTitle": "Reuters: Venezuela’s vice president in Russia after U.S. operation - The New Voice of Ukraine",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "reuters",
+        "venezuela",
+        "vice",
+        "president"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Venezuela's vice president visiting Russia has no relevance to a sports championship game viewership record market. These are completely unrelated topics with no logical connection between geopolitical events and sports viewership metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:40.372Z"
+    },
+    {
+      "id": "02545766-f227-4ae8-94fb-1f66cabec655",
+      "newsId": "ce97e569-782d-4737-be4c-39c2b1cd1e42",
+      "newsTitle": "World reacts to US strikes on Venezuela By Reuters - Investing.com",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "world",
+        "reacts",
+        "strikes",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While US strikes on Venezuela would typically be significant news that could trigger policy announcements, the article title and content are minimal with no details provided. The market asks about 'this week' but doesn't specify which week, and the market end date is February 2026 while the article is from January 2026. Without knowing the current date or having substantive article content, there's insufficient information to make a confident bet."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:46.384Z"
+    },
+    {
+      "id": "9e8a153b-e839-41c0-b4fc-65d8083c5a91",
+      "newsId": "ce97e569-782d-4737-be4c-39c2b1cd1e42",
+      "newsTitle": "World reacts to US strikes on Venezuela By Reuters - Investing.com",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "world",
+        "reacts",
+        "strikes",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about US strikes on Venezuela has no relevance to whether a major tech company will announce a new AI product this quarter. These are completely unrelated topics - one concerns geopolitical military action while the other concerns corporate technology announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:50.814Z"
+    },
+    {
+      "id": "50453873-d038-4a9d-be60-5f937befe5df",
+      "newsId": "ce97e569-782d-4737-be4c-39c2b1cd1e42",
+      "newsTitle": "World reacts to US strikes on Venezuela By Reuters - Investing.com",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "world",
+        "reacts",
+        "strikes",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about US strikes on Venezuela has no relevance to a sports championship game's viewership records. These are completely unrelated topics - one concerns international military action while the other is about television ratings for a sporting event."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:00:55.621Z"
+    },
+    {
+      "id": "e7dfa75c-63e1-45a9-b576-8f1e803bf460",
+      "newsId": "b62606db-64c9-4a88-ba2d-354338b6d464",
+      "newsTitle": "Trump says second Venezuela strike possible if government does not cooperate - Yahoo News UK",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "trump",
+        "says",
+        "second",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While Trump's statement about a potential Venezuela strike could constitute a major policy announcement, the article is from January 5, 2026, and the market asks about 'this week' but ends February 4, 2026 - a full month later. The timing ambiguity makes it unclear which week is being referenced. Additionally, Trump's statement is conditional ('if government does not cooperate') rather than an actual policy announcement, and current odds already reflect moderate uncertainty."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:01.996Z"
+    },
+    {
+      "id": "014d76af-a4c0-4f9d-bdde-de0923a206c0",
+      "newsId": "b62606db-64c9-4a88-ba2d-354338b6d464",
+      "newsTitle": "Trump says second Venezuela strike possible if government does not cooperate - Yahoo News UK",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "trump",
+        "says",
+        "second",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Trump and Venezuela military strikes is completely unrelated to the market question about major tech companies announcing AI products. There is no connection between geopolitical military actions and tech company AI product announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:06.476Z"
+    },
+    {
+      "id": "154f9bb4-0e93-453c-8628-02234d9b4045",
+      "newsId": "b62606db-64c9-4a88-ba2d-354338b6d464",
+      "newsTitle": "Trump says second Venezuela strike possible if government does not cooperate - Yahoo News UK",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "trump",
+        "says",
+        "second",
+        "venezuela"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Trump's statement on Venezuela has no relevance to a sports championship game viewership market. These are completely unrelated topics - one is geopolitical/military news and the other is about sports television ratings."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:11.620Z"
+    },
+    {
+      "id": "6cf644af-7d0e-496d-9c03-889bfb24acb8",
+      "newsId": "0590ed81-3117-4b8a-8bec-ec44ef83ca5a",
+      "newsTitle": "Can a social app fix the ‘terrible devastation’ of social media?",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "social",
+        "app",
+        "media",
+        "founder"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about a social media startup raising funding, which has no relevance to whether there will be a major policy announcement this week. The news is about private sector business activity, not government or organizational policy announcements. There is no actionable connection between these topics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:16.833Z"
+    },
+    {
+      "id": "19b7527a-1a30-4d0c-a1ce-9acf9f860782",
+      "newsId": "0590ed81-3117-4b8a-8bec-ec44ef83ca5a",
+      "newsTitle": "Can a social app fix the ‘terrible devastation’ of social media?",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "social",
+        "app",
+        "media",
+        "founder"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about a social media app from Twitter and Pinterest co-founders, not about a major tech company announcing a new AI product. While social apps may use AI, the article doesn't mention AI at all, and the funding announcement for a planning-focused social app is not relevant to the specific market question about AI product announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:22.145Z"
+    },
+    {
+      "id": "ec062931-dd21-42dd-a5da-2dabb56a53fa",
+      "newsId": "0590ed81-3117-4b8a-8bec-ec44ef83ca5a",
+      "newsTitle": "Can a social app fix the ‘terrible devastation’ of social media?",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "social",
+        "app",
+        "media",
+        "founder"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article is about a new social media app by Biz Stone and Evan Sharp, which has no relevance to championship game viewership records. The article discusses social media platform development, not sports broadcasting or viewership metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:26.511Z"
+    },
+    {
+      "id": "35b7cb64-d796-4b66-8c5f-0029e90f1987",
+      "newsId": "d0e14065-77e1-4620-9a26-6d86980d50c6",
+      "newsTitle": "DoorDash says it banned driver who seemingly faked a delivery using AI",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "doordash",
+        "driver",
+        "delivery",
+        "using"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "This news about DoorDash banning a driver for using AI to fake a delivery is a company enforcement action, not a major policy announcement. The market asks about policy announcements 'this week' but the article is from January 4, 2026, while the market ends February 4, 2026 - the timing is unclear and the news doesn't indicate any upcoming policy changes."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:31.773Z"
+    },
+    {
+      "id": "0c0934ed-502d-4807-bc47-5fb121385f5f",
+      "newsId": "d0e14065-77e1-4620-9a26-6d86980d50c6",
+      "newsTitle": "DoorDash says it banned driver who seemingly faked a delivery using AI",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "doordash",
+        "driver",
+        "delivery",
+        "using"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "This article is about DoorDash banning a driver who misused AI, not about a major tech company announcing a new AI product. While it involves AI usage, it's a policy enforcement story rather than a product announcement. The news is not relevant to the market question about new AI product announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:37.642Z"
+    },
+    {
+      "id": "ad544fcf-d01c-4242-bd05-06b7159a2cd9",
+      "newsId": "d0e14065-77e1-4620-9a26-6d86980d50c6",
+      "newsTitle": "DoorDash says it banned driver who seemingly faked a delivery using AI",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "doordash",
+        "driver",
+        "delivery",
+        "using"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a DoorDash driver using AI to fake a delivery is completely unrelated to a championship game viewership market. There is no connection between food delivery fraud and sports viewership records, so this provides no actionable insight for the market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:42.418Z"
+    },
+    {
+      "id": "7f09df17-adc9-4436-9148-b953cf2ff064",
+      "newsId": "7232ddce-a200-4e25-8cd0-85063cc3ad97",
+      "newsTitle": "French and Malaysian authorities are investigating Grok for generating sexualized deepfakes",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "grok",
+        "sexualized",
+        "deepfakes",
+        "french"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While investigations into Grok by multiple countries could potentially lead to policy announcements, the article doesn't indicate imminent action. The market asks about 'this week' but the article is dated January 4, 2026, while the market ends February 4, 2026 - creating timing ambiguity. The investigations are just starting and major policy announcements typically require more time to develop. Confidence is too low to warrant a bet."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:48.720Z"
+    },
+    {
+      "id": "ccfd1f13-75bf-4296-9237-bae1eafe6100",
+      "newsId": "7232ddce-a200-4e25-8cd0-85063cc3ad97",
+      "newsTitle": "French and Malaysian authorities are investigating Grok for generating sexualized deepfakes",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "grok",
+        "sexualized",
+        "deepfakes",
+        "french"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "This news is about regulatory investigations into Grok (xAI's chatbot) for deepfake generation, not about new AI product announcements. While it involves a major tech company, it's negative regulatory news rather than a product launch signal. The article doesn't indicate whether this would accelerate or delay new product announcements from major tech companies this quarter."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:54.447Z"
+    },
+    {
+      "id": "b40b31db-12e1-4e51-8a00-36f28cc51055",
+      "newsId": "7232ddce-a200-4e25-8cd0-85063cc3ad97",
+      "newsTitle": "French and Malaysian authorities are investigating Grok for generating sexualized deepfakes",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "grok",
+        "sexualized",
+        "deepfakes",
+        "french"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Grok generating deepfakes is completely unrelated to championship game viewership records. There is no connection between AI deepfake investigations and sports viewership metrics, making this news irrelevant to the market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:01:59.117Z"
+    },
+    {
+      "id": "f8401a8f-d2e0-4e35-8f8f-b48129b3d622",
+      "newsId": "3fe09155-2d6d-436d-8edc-6484155e0714",
+      "newsTitle": "Plaud launches a new AI pin and a desktop meeting notetaker",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "plaud",
+        "desktop",
+        "launches",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about a product launch from Plaud (AI meeting recording technology) and has no relevance to policy announcements. The market is asking about major policy announcements this week, which would typically involve government, regulatory, or corporate governance decisions, not consumer tech product releases."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:04.678Z"
+    },
+    {
+      "id": "1b9eebec-7b0b-48e5-86cd-36876244527c",
+      "newsId": "3fe09155-2d6d-436d-8edc-6484155e0714",
+      "newsTitle": "Plaud launches a new AI pin and a desktop meeting notetaker",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "plaud",
+        "desktop",
+        "launches",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While Plaud is launching AI products, it's unclear if Plaud qualifies as a 'major tech company' - they appear to be a smaller startup. The market likely refers to established major tech companies like Google, Microsoft, Apple, Meta, etc. Without clarity on what constitutes 'major,' this news doesn't provide actionable insight despite being timely (Q1 2026)."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:10.446Z"
+    },
+    {
+      "id": "72adad33-b1f3-4b69-9725-bad5f01d2fab",
+      "newsId": "3fe09155-2d6d-436d-8edc-6484155e0714",
+      "newsTitle": "Plaud launches a new AI pin and a desktop meeting notetaker",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "plaud",
+        "desktop",
+        "launches",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Plaud launching AI meeting recording products is completely unrelated to championship game viewership records. There is no connection between these topics, making this news irrelevant to the market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:15.024Z"
+    },
+    {
+      "id": "e8c14187-8b09-4cd9-bf91-cf2ecc57fb24",
+      "newsId": "62d02b7b-1fd3-4630-8d83-f21294db24e9",
+      "newsTitle": "Subtle releases ear buds with its noise cancelation models",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "subtle",
+        "releases",
+        "ear",
+        "buds"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about a consumer electronics product launch by Subtle (earbuds with noise cancellation and dictation features). It has no relevance to policy announcements, which typically refer to government, regulatory, or major institutional policy decisions. The article is completely unrelated to the market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:20.518Z"
+    },
+    {
+      "id": "3a023ba6-70fa-4821-b430-990f8f9465b9",
+      "newsId": "62d02b7b-1fd3-4630-8d83-f21294db24e9",
+      "newsTitle": "Subtle releases ear buds with its noise cancelation models",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "subtle",
+        "releases",
+        "ear",
+        "buds"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While Subtle's earbuds include dictation features that could be AI-powered, the article doesn't clearly establish this as a 'major tech company' or explicitly describe it as an 'AI product announcement.' The company name 'Subtle' is not widely recognized as a major tech player, and the primary focus appears to be noise cancellation earbuds rather than AI innovation. The ambiguity around both the company's status and whether this qualifies as an AI product makes this insufficient for a confident bet."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:28.074Z"
+    },
+    {
+      "id": "16b2ded8-7006-4687-a73f-19a0466f5dc9",
+      "newsId": "62d02b7b-1fd3-4630-8d83-f21294db24e9",
+      "newsTitle": "Subtle releases ear buds with its noise cancelation models",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "subtle",
+        "releases",
+        "ear",
+        "buds"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Subtle's earbuds release is completely unrelated to championship game viewership records. There is no connection between a consumer electronics product launch and sports viewership metrics, making this news irrelevant to the market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:33.840Z"
+    },
+    {
+      "id": "7a42b0fd-1030-45d5-9814-b937e2542680",
+      "newsId": "029cdaab-50e2-4092-b1d5-6586bdf79d90",
+      "newsTitle": "Trump warns new Venezuelan leader as Maduro set to appear in court",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "trump",
+        "maduro",
+        "warns",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While Trump's warning to Venezuela's interim leader could potentially lead to a policy announcement, this is speculative rather than actionable. The article describes a threat/warning rather than an actual policy announcement, and the market asks about 'this week' but the article is from January 5, 2026 while the market ends February 4, 2026 - the timeframe is unclear. The connection is too indirect and uncertain to warrant a bet above 70% confidence."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:40.728Z"
+    },
+    {
+      "id": "365eb9c1-9663-48ce-b66a-63c92db8d406",
+      "newsId": "029cdaab-50e2-4092-b1d5-6586bdf79d90",
+      "newsTitle": "Trump warns new Venezuelan leader as Maduro set to appear in court",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "trump",
+        "maduro",
+        "warns",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about Venezuelan political leadership and Trump's warnings to Venezuela's interim president. It has no relevance whatsoever to whether a major tech company will announce a new AI product this quarter. The topics are completely unrelated."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:45.360Z"
+    },
+    {
+      "id": "863db9d3-680f-4ef5-8d4d-1527b7c1a939",
+      "newsId": "029cdaab-50e2-4092-b1d5-6586bdf79d90",
+      "newsTitle": "Trump warns new Venezuelan leader as Maduro set to appear in court",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "trump",
+        "maduro",
+        "warns",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Venezuelan politics and Trump's warning to Venezuela's interim president has no relevance to a sports championship game's viewership records. The topics are completely unrelated, so there is no actionable insight for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:50.582Z"
+    },
+    {
+      "id": "0b83b14c-8454-40b7-98d2-18b4e6de4a36",
+      "newsId": "f96d8a5f-ce4b-4cf6-92d3-391ccb652e52",
+      "newsTitle": "Jeremy Bowen: Trump's action could set precedent for authoritarian powers across globe",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "trump",
+        "jeremy",
+        "bowen",
+        "action"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 30,
+        "reasoning": "This article is an opinion piece about Trump's actions setting precedents, but lacks specific details about what action was taken or when. Without concrete information about a specific policy announcement, this is too vague to determine relevance to a market asking about 'this week' (which would be early January 2026). The article doesn't provide actionable intelligence about imminent policy announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:02:56.594Z"
+    },
+    {
+      "id": "b75cbd03-7cf4-47f7-b312-e41387bee4c1",
+      "newsId": "f96d8a5f-ce4b-4cf6-92d3-391ccb652e52",
+      "newsTitle": "Jeremy Bowen: Trump's action could set precedent for authoritarian powers across globe",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "trump",
+        "jeremy",
+        "bowen",
+        "action"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article discusses Trump's actions and their potential impact on authoritarian powers globally, which has no relevance to whether a major tech company will announce a new AI product this quarter. The news content does not provide any actionable information for this specific market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:03.674Z"
+    },
+    {
+      "id": "63eb8885-0f41-44a2-b7ab-4249f28f6691",
+      "newsId": "f96d8a5f-ce4b-4cf6-92d3-391ccb652e52",
+      "newsTitle": "Jeremy Bowen: Trump's action could set precedent for authoritarian powers across globe",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "trump",
+        "jeremy",
+        "bowen",
+        "action"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article about Trump's actions and authoritarian powers is completely unrelated to championship game viewership records. The news provides no information about sports, television ratings, or any championship event. There is no actionable insight for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:08.738Z"
+    },
+    {
+      "id": "57d217a3-89cb-4804-82d2-972632969d87",
+      "newsId": "51658982-60c3-40fc-bd7d-1376dd26bf41",
+      "newsTitle": "Teen girl educated in UK confirmed to have died in Swiss bar fire",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "confirmed",
+        "swiss",
+        "teen",
+        "girl"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about a tragic fire incident in Switzerland and has no relevance to policy announcements. The market asks about major policy announcements this week, but the article contains no information about government policy, regulatory changes, or official announcements of any kind."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:13.652Z"
+    },
+    {
+      "id": "b177256b-0dc7-4969-a825-3e2d5b8aaaf7",
+      "newsId": "51658982-60c3-40fc-bd7d-1376dd26bf41",
+      "newsTitle": "Teen girl educated in UK confirmed to have died in Swiss bar fire",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "confirmed",
+        "swiss",
+        "teen",
+        "girl"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a tragic fire in Switzerland has no relevance to whether a major tech company will announce a new AI product this quarter. The article contains no information about technology, AI, or corporate announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:17.937Z"
+    },
+    {
+      "id": "b97e44eb-93cb-48e4-b8a6-e3aa6e10cdc8",
+      "newsId": "51658982-60c3-40fc-bd7d-1376dd26bf41",
+      "newsTitle": "Teen girl educated in UK confirmed to have died in Swiss bar fire",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "confirmed",
+        "swiss",
+        "teen",
+        "girl"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about a tragic death in a Swiss bar fire has no relevance whatsoever to a sports championship game's viewership records. The two topics are completely unrelated, and there is no actionable insight to be gained for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:22.698Z"
+    },
+    {
+      "id": "b17de4c1-2ca0-4187-801e-ae469d67029c",
+      "newsId": "1163b7ad-d57f-483a-aa99-79b61d3db74d",
+      "newsTitle": "Faisal Islam: What's behind PM's notable shift on closer ties to Europe?",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "faisal",
+        "islam",
+        "behind",
+        "notable"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "The article discusses Starmer's Brexit reset plans but is dated January 4, 2026, while the market asks about 'this week' and ends February 4, 2026. Without knowing the current date or what constitutes a 'major policy announcement' versus details of existing plans, there's insufficient clarity. The article suggests plans are being detailed rather than newly announced, making it unclear if this qualifies as the 'major announcement' the market is asking about."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:29.145Z"
+    },
+    {
+      "id": "e0c4384f-ba6a-4f88-b050-6168dd01e078",
+      "newsId": "1163b7ad-d57f-483a-aa99-79b61d3db74d",
+      "newsTitle": "Faisal Islam: What's behind PM's notable shift on closer ties to Europe?",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "faisal",
+        "islam",
+        "behind",
+        "notable"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article is about UK-Europe relations and Brexit policy under PM Keir Starmer. This has no relevance to whether a major tech company will announce a new AI product this quarter. The topics are completely unrelated."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:33.981Z"
+    },
+    {
+      "id": "a93e2629-0239-49a3-bcad-78dbe91ae947",
+      "newsId": "1163b7ad-d57f-483a-aa99-79b61d3db74d",
+      "newsTitle": "Faisal Islam: What's behind PM's notable shift on closer ties to Europe?",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "faisal",
+        "islam",
+        "behind",
+        "notable"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article is about UK-Europe relations and Brexit policy under PM Keir Starmer, which has no relevance to a sports championship game viewership market. These are completely unrelated topics, so there is no actionable insight to be gained from this article for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:39.056Z"
+    },
+    {
+      "id": "f94c838a-39e4-459e-9ba6-46b9902894bf",
+      "newsId": "54c18c6a-049c-4221-b795-f0cacaf52af8",
+      "newsTitle": "Danish PM tells Trump to stop 'threats' against Greenland",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "danish",
+        "tells",
+        "trump",
+        "stop"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While Trump's threats regarding Greenland could potentially lead to a policy announcement, the article only shows Denmark's response, not any indication of an imminent US policy announcement. The market asks about 'this week' but the article is from January 4, 2026, and the market ends February 4, 2026 - the timing is unclear. The current odds (45% yes) suggest the market is already uncertain, and this news alone doesn't provide strong directional evidence."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:45.711Z"
+    },
+    {
+      "id": "824b1225-a031-40c5-9d70-f6add1725d9b",
+      "newsId": "54c18c6a-049c-4221-b795-f0cacaf52af8",
+      "newsTitle": "Danish PM tells Trump to stop 'threats' against Greenland",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "danish",
+        "tells",
+        "trump",
+        "stop"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about geopolitical tensions between the US, Denmark, and Greenland has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses territorial sovereignty issues, not technology announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:50.685Z"
+    },
+    {
+      "id": "6a17a0a6-8d31-4bae-a98a-966232acb425",
+      "newsId": "54c18c6a-049c-4221-b795-f0cacaf52af8",
+      "newsTitle": "Danish PM tells Trump to stop 'threats' against Greenland",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "danish",
+        "tells",
+        "trump",
+        "stop"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Danish-US diplomatic tensions over Greenland has no relevance to a sports championship game viewership market. The topics are completely unrelated, so there is no actionable insight to be gained from this news for the given market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:03:55.759Z"
+    },
+    {
+      "id": "a3f2ca7f-9757-4b1d-9483-01bbc9e54f61",
+      "newsId": "b13f23e2-f97b-48fe-ae37-0c1e2a600b80",
+      "newsTitle": "Mother and daughter named as sea tragedy victims alongside man who tried to save them",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "keeling",
+        "mother",
+        "daughter",
+        "named"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about a sea tragedy involving fatalities and a missing person search. It has no relevance to policy announcements. The market is asking about major policy announcements this week, and this tragic incident does not provide any actionable insight for that prediction."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:01.063Z"
+    },
+    {
+      "id": "fbd31aa9-74ea-46b1-80c0-216d50a46e2f",
+      "newsId": "b13f23e2-f97b-48fe-ae37-0c1e2a600b80",
+      "newsTitle": "Mother and daughter named as sea tragedy victims alongside man who tried to save them",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "keeling",
+        "mother",
+        "daughter",
+        "named"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about a sea tragedy involving fatalities and a missing person search. It has absolutely no relevance to a prediction market about tech companies announcing AI products. The topics are completely unrelated."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:05.395Z"
+    },
+    {
+      "id": "4c83c971-c4c4-49c3-9020-24b00cd1beee",
+      "newsId": "b13f23e2-f97b-48fe-ae37-0c1e2a600b80",
+      "newsTitle": "Mother and daughter named as sea tragedy victims alongside man who tried to save them",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "keeling",
+        "mother",
+        "daughter",
+        "named"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about a sea tragedy involving victims and a rescue attempt. It has no relevance whatsoever to a championship game's viewership records. The article discusses a completely unrelated tragic event with no connection to sports broadcasting or viewership metrics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:10.275Z"
+    },
+    {
+      "id": "e4d19d67-5cf9-4840-a489-ae9eb2de6c64",
+      "newsId": "f68ee8f7-ce57-4dd1-abee-2a783b30ebc9",
+      "newsTitle": "The myth of willpower - and why some people struggle to lose weight more than others",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "weight",
+        "myth",
+        "willpower",
+        "people"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article about genetic factors in weight loss is completely unrelated to whether there will be a major policy announcement this week. The news provides no information about government actions, policy decisions, or political developments that would inform this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:14.702Z"
+    },
+    {
+      "id": "ba532266-7dbf-4186-bccf-899257618951",
+      "newsId": "f68ee8f7-ce57-4dd1-abee-2a783b30ebc9",
+      "newsTitle": "The myth of willpower - and why some people struggle to lose weight more than others",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "weight",
+        "myth",
+        "willpower",
+        "people"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about weight loss genetics and willpower has no relevance to a prediction market about tech companies announcing AI products. The topics are completely unrelated, so there is no actionable insight to be gained from this article for this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:20.098Z"
+    },
+    {
+      "id": "e32e48a5-fe85-44d7-83b7-3f19ae8c8625",
+      "newsId": "f68ee8f7-ce57-4dd1-abee-2a783b30ebc9",
+      "newsTitle": "The myth of willpower - and why some people struggle to lose weight more than others",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "weight",
+        "myth",
+        "willpower",
+        "people"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about weight loss genetics has no relevance to a sports championship game viewership market. The topics are completely unrelated, making this news non-actionable for the given prediction market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:24.687Z"
+    },
+    {
+      "id": "6950bcda-a114-4597-b15f-b174ff4636eb",
+      "newsId": "e76e6122-e1f3-49bf-a743-4e19f32a889a",
+      "newsTitle": "Steve Coogan on his Roy Keane film - and his part in Posh and Becks' first meeting",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "coogan",
+        "his",
+        "roy",
+        "keane"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about Steve Coogan starring in a film about Roy Keane and Mick McCarthy. It has no relevance to policy announcements of any kind. The content is purely entertainment/sports-related and provides no actionable insight for a market about policy announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:31.044Z"
+    },
+    {
+      "id": "adf5325d-61af-4ead-9c10-3d0930f739d3",
+      "newsId": "e76e6122-e1f3-49bf-a743-4e19f32a889a",
+      "newsTitle": "Steve Coogan on his Roy Keane film - and his part in Posh and Becks' first meeting",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "coogan",
+        "his",
+        "roy",
+        "keane"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about Steve Coogan's film role as Mick McCarthy in a movie about Roy Keane and has no connection to tech companies or AI product announcements. The news is completely irrelevant to the prediction market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:35.734Z"
+    },
+    {
+      "id": "7f3ea052-9372-4fc4-a0e9-9b544462554c",
+      "newsId": "e76e6122-e1f3-49bf-a743-4e19f32a889a",
+      "newsTitle": "Steve Coogan on his Roy Keane film - and his part in Posh and Becks' first meeting",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "coogan",
+        "his",
+        "roy",
+        "keane"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This article is about Steve Coogan's film 'Saipan' regarding Roy Keane and Mick McCarthy, which has no relevance to championship game viewership records. The market appears to be about a sporting event's TV ratings, while the article discusses a movie release. There is no actionable connection between these topics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:42.956Z"
+    },
+    {
+      "id": "11dc2dbd-dd48-4ec7-8d76-d473f1aa987d",
+      "newsId": "6b4b825b-c244-4637-b471-e9a030e5210c",
+      "newsTitle": "More snow and ice warnings take effect as schools due to return",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "return",
+        "snow",
+        "ice",
+        "warnings"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about weather warnings (snow and ice) affecting travel and school returns. It has no relevance to whether there will be a major policy announcement this week. The article contains no information about government policy, political decisions, or any announcements that would inform this market."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:47.814Z"
+    },
+    {
+      "id": "d1e8d200-e5e2-4358-ae8d-9592ab0aea1c",
+      "newsId": "6b4b825b-c244-4637-b471-e9a030e5210c",
+      "newsTitle": "More snow and ice warnings take effect as schools due to return",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "return",
+        "snow",
+        "ice",
+        "warnings"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about weather warnings (snow and ice) affecting travel and school returns in the UK. It has no relevance whatsoever to whether a major tech company will announce a new AI product this quarter. The article contains no information about technology, AI, or corporate announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:52.487Z"
+    },
+    {
+      "id": "8495b2ab-4770-49e5-8a97-3eb550d29863",
+      "newsId": "6b4b825b-c244-4637-b471-e9a030e5210c",
+      "newsTitle": "More snow and ice warnings take effect as schools due to return",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "return",
+        "snow",
+        "ice",
+        "warnings"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about UK weather warnings and school returns is completely unrelated to championship game viewership records. The article discusses snow/ice disruptions, while the market concerns sports viewership. There is no actionable connection between these topics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:04:57.577Z"
+    },
+    {
+      "id": "f9fb07dc-78ad-4405-971f-8e5bd622b8aa",
+      "newsId": "8b4c3531-58e7-4571-8152-aceb725ec7c3",
+      "newsTitle": "New powers to seize phones from migrants come into force",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "new",
+        "powers",
+        "seize",
+        "phones"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "The article describes new powers coming into force on January 4, 2026, which could qualify as a 'major policy announcement.' However, the market asks about announcements 'this week' and ends February 4, 2026 - a full month later. The timing ambiguity makes it unclear if this January 4 news counts toward the market's timeframe. Additionally, without knowing the current date or what constitutes 'major,' this is too uncertain to act on with high confidence."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:05:05.045Z"
+    },
+    {
+      "id": "e3738aef-518f-49d8-ac0f-6b9007e49fbb",
+      "newsId": "8b4c3531-58e7-4571-8152-aceb725ec7c3",
+      "newsTitle": "New powers to seize phones from migrants come into force",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "new",
+        "powers",
+        "seize",
+        "phones"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about government powers to seize phones from migrants for intelligence gathering on smuggling gangs is completely unrelated to whether a major tech company will announce a new AI product this quarter. There is no actionable connection between these topics."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:05:09.379Z"
+    },
+    {
+      "id": "f0b303cf-3346-4933-99d5-186d237e53fe",
+      "newsId": "8b4c3531-58e7-4571-8152-aceb725ec7c3",
+      "newsTitle": "New powers to seize phones from migrants come into force",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "new",
+        "powers",
+        "seize",
+        "phones"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about government powers to seize phones from migrants is completely unrelated to a sports championship game viewership market. There is no connection between immigration enforcement policy and television viewership records for a sporting event."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:05:14.385Z"
+    },
+    {
+      "id": "20e2871c-4752-45c2-99e6-9a6ccaeb1199",
+      "newsId": "6b7ed789-e292-4c91-851d-5f5642f46779",
+      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say By Reuters - Investing.com",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "venezuela",
+        "vice",
+        "president",
+        "rodriguez"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 25,
+        "reasoning": "The article is from January 3, 2026, but the market ends February 4, 2026 and asks about 'this week' without specifying which week. The news about Venezuela's VP visiting Russia is too vague and doesn't clearly indicate an imminent major policy announcement. The timing ambiguity and lack of specific policy details make this non-actionable."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:10:21.016Z"
+    },
+    {
+      "id": "3f297705-4ba7-44aa-9c49-343f8a0453c4",
+      "newsId": "6b7ed789-e292-4c91-851d-5f5642f46779",
+      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say By Reuters - Investing.com",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "venezuela",
+        "vice",
+        "president",
+        "rodriguez"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Venezuela's vice president visiting Russia has no relevance to whether a major tech company will announce a new AI product this quarter. The article discusses geopolitical matters completely unrelated to the technology sector or AI product announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:10:25.284Z"
+    },
+    {
+      "id": "5d7ea825-3ef2-4396-8d79-1a610b860f21",
+      "newsId": "6b7ed789-e292-4c91-851d-5f5642f46779",
+      "newsTitle": "Venezuela vice president Rodriguez in Russia, four sources say By Reuters - Investing.com",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "venezuela",
+        "vice",
+        "president",
+        "rodriguez"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about Venezuela's vice president visiting Russia has no relevance to a sports championship game viewership market. These are completely unrelated topics - one is international diplomacy, the other is sports broadcasting metrics. There is no actionable insight here."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:10:30.144Z"
+    },
+    {
+      "id": "89c48d02-1c2b-47ab-8a2d-047f251cf72b",
+      "newsId": "fec03b89-b768-416c-8c0a-8d49554a4848",
+      "newsTitle": "Trump warns new Venezuelan leader as Maduro set to appear in court",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "trump",
+        "maduro",
+        "warns",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While Trump's warning to Venezuela's interim leader could potentially lead to a policy announcement, this is speculative rather than actionable. The article describes a threat/warning but no actual policy announcement. The market asks about 'this week' but the article is from January 5, 2026, and the market ends February 4, 2026, creating timing ambiguity. The connection is too indirect and uncertain to warrant a bet above the 70% confidence threshold."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:15:21.358Z"
+    },
+    {
+      "id": "cf3f2594-5b7f-4286-abcc-0cf12edf065a",
+      "newsId": "fec03b89-b768-416c-8c0a-8d49554a4848",
+      "newsTitle": "Trump warns new Venezuelan leader as Maduro set to appear in court",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "trump",
+        "maduro",
+        "warns",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Trump's warning to Venezuela's interim president is completely unrelated to the market question about major tech companies announcing new AI products. There is no connection between Venezuelan political developments and tech company AI product announcements."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:15:25.994Z"
+    },
+    {
+      "id": "b710768c-35ca-472d-aaad-4f0ef3bf7494",
+      "newsId": "fec03b89-b768-416c-8c0a-8d49554a4848",
+      "newsTitle": "Trump warns new Venezuelan leader as Maduro set to appear in court",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "trump",
+        "maduro",
+        "warns",
+        "new"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Venezuelan political leadership has no relevance to a sports championship game viewership market. The article discusses Trump's warnings to Venezuela's interim president, which has no connection to TV ratings or viewership records for any championship game."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:15:31.214Z"
+    },
+    {
+      "id": "279e12f3-a054-4214-b90e-67cea333d824",
+      "newsId": "905f36ab-4c51-45f2-a13e-1976296e5b0e",
+      "newsTitle": "L3Harris near deal to sell stake in space propulsion asset - Reuters (LHX:NYSE) - Seeking Alpha",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "l3harris",
+        "near",
+        "deal",
+        "sell"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news about L3Harris selling a stake in a space propulsion asset is a corporate transaction, not a policy announcement. The market asks about major policy announcements (typically government/regulatory decisions), while this is a private business deal. The news is not relevant to the market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:20:21.369Z"
+    },
+    {
+      "id": "acaef7fc-745a-4cca-bf30-78b70c25b492",
+      "newsId": "905f36ab-4c51-45f2-a13e-1976296e5b0e",
+      "newsTitle": "L3Harris near deal to sell stake in space propulsion asset - Reuters (LHX:NYSE) - Seeking Alpha",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "l3harris",
+        "near",
+        "deal",
+        "sell"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article is about L3Harris selling a stake in a space propulsion asset, which is completely unrelated to the market question about major tech companies announcing new AI products. L3Harris is a defense/aerospace company, not a major tech company, and the article discusses a business divestiture rather than an AI product announcement."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:20:25.903Z"
+    },
+    {
+      "id": "cd65f217-6bcb-487e-9fd8-8fe3ec2f3a20",
+      "newsId": "905f36ab-4c51-45f2-a13e-1976296e5b0e",
+      "newsTitle": "L3Harris near deal to sell stake in space propulsion asset - Reuters (LHX:NYSE) - Seeking Alpha",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "l3harris",
+        "near",
+        "deal",
+        "sell"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "The news article about L3Harris selling a stake in a space propulsion asset is completely unrelated to a championship game viewership market. There is no connection between aerospace/defense industry transactions and sports viewership records."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:20:30.572Z"
+    },
+    {
+      "id": "99b6a629-2885-41e2-87ad-c35d08ec25a8",
+      "newsId": "ada1c9f4-05de-4594-acb1-ae112abe0245",
+      "newsTitle": "Danish PM tells Trump to stop 'threats' against Greenland",
+      "marketId": "mock_election_1",
+      "marketQuestion": "Will there be a major policy announcement this week?",
+      "currentOdds": {
+        "yes": 0.45,
+        "no": 0.55
+      },
+      "matchedKeywords": [
+        "danish",
+        "tells",
+        "trump",
+        "stop"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 45,
+        "reasoning": "While this news involves significant diplomatic tension between the US and Denmark over Greenland, the market asks about 'a major policy announcement this week' without specifying what type of policy or from which entity. The article describes a response to Trump's threats rather than announcing a new policy. The market also ends in February 2026 while asking about 'this week', creating timing ambiguity. Without clarity on what constitutes a 'major policy announcement' and which week is referenced, this is not actionable."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:30:21.978Z"
+    },
+    {
+      "id": "76165725-1c12-4718-b62a-77e8134a2c39",
+      "newsId": "ada1c9f4-05de-4594-acb1-ae112abe0245",
+      "newsTitle": "Danish PM tells Trump to stop 'threats' against Greenland",
+      "marketId": "mock_tech_1",
+      "marketQuestion": "Will major tech company announce new AI product this quarter?",
+      "currentOdds": {
+        "yes": 0.65,
+        "no": 0.35
+      },
+      "matchedKeywords": [
+        "danish",
+        "tells",
+        "trump",
+        "stop"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about diplomatic tensions between the US and Denmark regarding Greenland has no relevance to whether a major tech company will announce a new AI product this quarter. The geopolitical content is completely unrelated to the technology market question."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:30:26.449Z"
+    },
+    {
+      "id": "389e3c00-9027-47a4-828d-8fa19d3bbac0",
+      "newsId": "ada1c9f4-05de-4594-acb1-ae112abe0245",
+      "newsTitle": "Danish PM tells Trump to stop 'threats' against Greenland",
+      "marketId": "mock_sports_1",
+      "marketQuestion": "Will the championship game exceed viewership records?",
+      "currentOdds": {
+        "yes": 0.52,
+        "no": 0.48
+      },
+      "matchedKeywords": [
+        "danish",
+        "tells",
+        "trump",
+        "stop"
+      ],
+      "aiDecision": {
+        "decision": "skip",
+        "confidence": 0,
+        "reasoning": "This news article about Danish-US diplomatic tensions over Greenland has no relevance to a sports championship game viewership market. The topics are completely unrelated, and there is no actionable insight to be gained from this geopolitical news for predicting TV viewership records."
+      },
+      "status": "skipped",
+      "createdAt": "2026-01-05T03:30:32.443Z"
     }
   ]
 }

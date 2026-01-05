@@ -4,12 +4,14 @@
   "description": "RAM Monitor - Track product links on NewEgg, BestBuy, and Amazon",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "generate-excel": "node scripts/generateRamPricing.js"
   },
   "keywords": ["monitor", "ram", "newegg", "bestbuy", "amazon"],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "exceljs": "^4.4.0"
   }
 }

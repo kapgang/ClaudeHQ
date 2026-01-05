@@ -111,8 +111,12 @@ function renderMatches(matches) {
     // Highlight matched keywords in the news title
     let highlightedTitle = escapeHtml(match.newsTitle || 'News article');
     if (match.matchedKeywords && match.matchedKeywords.length > 0) {
-      match.matchedKeywords.forEach(keyword => {
-        const regex = new RegExp(`(${keyword})`, 'gi');
+      // Filter out empty keywords and escape special regex characters
+      const validKeywords = match.matchedKeywords.filter(kw => kw && kw.trim().length > 0);
+      validKeywords.forEach(keyword => {
+        // Escape special regex characters
+        const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`\\b(${escapedKeyword})\\b`, 'gi');
         highlightedTitle = highlightedTitle.replace(regex, '<mark class="keyword-highlight">$1</mark>');
       });
     }
@@ -122,13 +126,13 @@ function renderMatches(matches) {
         <div class="news-title">${highlightedTitle}</div>
         <div class="market-question">
           ${escapeHtml(match.marketQuestion)}
-          ${match.marketUrl ? `<a href="${match.marketUrl}" target="_blank" rel="noopener noreferrer" class="market-link" title="View on Polymarket">🔗</a>` : ''}
+          ${match.marketUrl ? `<a href="${match.marketUrl}" target="_blank" rel="noopener noreferrer" class="market-link" title="View on Polymarket">🔗</a>` : '<span class="test-mode-badge" title="Mock market in test mode">TEST</span>'}
         </div>
 
         ${match.matchedKeywords && match.matchedKeywords.length > 0 ? `
           <div class="matched-keywords">
             <span class="keywords-label">Keywords:</span>
-            ${match.matchedKeywords.map(kw => `<span class="keyword-tag">${escapeHtml(kw)}</span>`).join('')}
+            ${match.matchedKeywords.filter(kw => kw && kw.trim().length > 0).map(kw => `<span class="keyword-tag">${escapeHtml(kw)}</span>`).join('')}
           </div>
         ` : ''}
 
@@ -185,7 +189,7 @@ function renderQueue(queue) {
       <div><strong>News:</strong> ${escapeHtml(trade.newsArticle.title)}</div>
       <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         <strong>Market:</strong> ${escapeHtml(trade.market.question)}
-        ${trade.market.url ? `<a href="${trade.market.url}" target="_blank" rel="noopener noreferrer" class="market-link" title="View on Polymarket">🔗</a>` : ''}
+        ${trade.market.url ? `<a href="${trade.market.url}" target="_blank" rel="noopener noreferrer" class="market-link" title="View on Polymarket">🔗</a>` : '<span class="test-mode-badge" title="Mock market in test mode">TEST</span>'}
       </div>
 
       <div style="margin-top: 0.75rem; padding: 0.75rem; background: var(--bg-tertiary); border-radius: 4px;">

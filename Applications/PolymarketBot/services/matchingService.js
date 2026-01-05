@@ -60,7 +60,7 @@ class MatchingService {
             marketQuestion: market.question,
             marketUrl: market.url,
             currentOdds: market.currentOdds,
-            matchedKeywords: keywords,
+            matchedKeywords: keywords.filter(kw => kw && kw.trim().length > 0),
             aiDecision: decision,
             status: decision.decision === 'skip' ? 'skipped' : 'pending_execution',
             createdAt: new Date().toISOString()

@@ -7,6 +7,9 @@ class PolymarketService {
     this.ClobClient = null;
     this.Wallet = null;
     this.initialized = false;
+    this.marketCache = null;
+    this.cacheExpiry = null;
+    this.cacheLifetime = 5 * 60 * 1000;  // 5 minutes
   }
 
   async loadDependencies() {
@@ -61,7 +64,11 @@ class PolymarketService {
       this.client = new this.ClobClient(
         config.clobEndpoint || 'https://clob.polymarket.com',
         137, // Polygon mainnet chain ID
-        wallet
+        wallet,
+        undefined,  // creds
+        undefined,  // signatureType
+        undefined,  // funderAddress
+        config.geoBlockToken || undefined  // geoBlockToken for US access if needed
       );
 
       // Create or derive API credentials
@@ -87,6 +94,25 @@ class PolymarketService {
     }
   }
 
+  async getAllMarkets(forceRefresh = false) {
+    // Check cache validity
+    if (!forceRefresh && this.marketCache && this.cacheExpiry > Date.now()) {
+      console.log(`Using cached markets (${this.marketCache.length} markets)`);
+      return this.marketCache;
+    }
+
+    // Fetch fresh markets from CLOB API
+    console.log('Fetching ALL markets from Polymarket CLOB API...');
+    const markets = await this.client.getMarkets();
+
+    // Cache the results
+    this.marketCache = markets;
+    this.cacheExpiry = Date.now() + this.cacheLifetime;
+
+    console.log(`Cached ${markets.length} markets for 5 minutes`);
+    return markets;
+  }
+
   async searchMarkets(keywords) {
     const config = this.getSettings();
 
@@ -103,32 +129,27 @@ class PolymarketService {
     try {
       await this.ensureInitialized();
 
-      // Convert keywords array to search query
-      const query = Array.isArray(keywords) ? keywords.join(' ') : keywords;
-      console.log(`Searching Polymarket for: ${query}`);
+      // Fetch ALL markets (with caching)
+      const allMarkets = await this.getAllMarkets();
 
-      // Use the SDK's getMarkets method
-      const markets = await this.client.getMarkets();
+      // Convert keywords to searchable terms
+      const keywordArray = Array.isArray(keywords)
+        ? keywords.filter(k => k && k.trim())
+        : [keywords];
 
-      // Filter markets by keyword relevance
-      const filteredMarkets = markets
+      console.log(`Filtering ${allMarkets.length} markets with keywords: ${keywordArray.join(', ')}`);
+
+      // Filter and score markets
+      const scoredMarkets = allMarkets
         .filter(m => {
-          // Check if market question contains any of the keywords
-          const marketText = (m.question || '').toLowerCase();
-          const keywordArray = query.toLowerCase().split(' ');
-          const hasKeyword = keywordArray.some(kw => marketText.includes(kw));
-
-          // Only active markets
+          // Must be active
           if (m.closed || !m.active) return false;
 
-          // Must match keywords
-          if (!hasKeyword) return false;
+          // Liquidity check: > $1000
+          const liquidity = parseFloat(m.liquidity || 0);
+          if (liquidity <= 1000) return false;
 
-          // Minimum volume check
-          const volume = parseFloat(m.volume || 0);
-          if (volume < 100) return false;
-
-          // Check end date (must be at least 7 days away)
+          // Must expire in at least 7 days
           if (m.end_date_iso) {
             const endDate = new Date(m.end_date_iso);
             const daysUntilEnd = (endDate - new Date()) / (1000 * 60 * 60 * 24);
@@ -137,11 +158,30 @@ class PolymarketService {
 
           return true;
         })
-        .slice(0, 3) // Top 3 most relevant
-        .map(m => this.normalizeMarket(m));
+        .map(m => {
+          // Score based on keyword matches
+          const marketText = (m.question + ' ' + (m.description || '')).toLowerCase();
+          let score = 0;
 
-      console.log(`Found ${filteredMarkets.length} relevant markets`);
-      return filteredMarkets;
+          keywordArray.forEach(keyword => {
+            if (marketText.includes(keyword.toLowerCase())) {
+              score += 1;
+              // Bonus if in question (not just description)
+              if (m.question.toLowerCase().includes(keyword.toLowerCase())) {
+                score += 2;
+              }
+            }
+          });
+
+          return { market: m, score };
+        })
+        .filter(item => item.score > 0)  // Only markets with at least 1 match
+        .sort((a, b) => b.score - a.score)  // Sort by score descending
+        .slice(0, 3)  // Top 3 matches
+        .map(item => this.normalizeMarket(item.market));
+
+      console.log(`Found ${scoredMarkets.length} relevant markets`);
+      return scoredMarkets;
 
     } catch (error) {
       console.error('Error searching Polymarket:', error.message);
@@ -157,9 +197,9 @@ class PolymarketService {
   }
 
   normalizeMarket(market) {
-    // Generate Polymarket URL from market slug or ID
-    const slug = market.slug || market.question?.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').slice(0, 60);
-    const url = `https://polymarket.com/event/${slug}`;
+    // Only generate real Polymarket URLs if we have a real slug from the API
+    // Mock markets won't have valid URLs
+    const url = market.slug ? `https://polymarket.com/event/${market.slug}` : null;
 
     return {
       id: market.condition_id || market.id,
@@ -314,8 +354,8 @@ class PolymarketService {
         liquidity: 5000,
         endDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
         active: true,
-        description: 'Market on upcoming policy announcements',
-        url: 'https://polymarket.com/event/will-there-be-a-major-policy-announcement-this-week'
+        description: 'Market on upcoming policy announcements'
+        // No URL for mock markets
       },
       {
         id: 'mock_tech_1',
@@ -326,8 +366,8 @@ class PolymarketService {
         liquidity: 8000,
         endDate: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(),
         active: true,
-        description: 'Technology sector predictions',
-        url: 'https://polymarket.com/event/will-major-tech-company-announce-new-ai-product-this'
+        description: 'Technology sector predictions'
+        // No URL for mock markets
       },
       {
         id: 'mock_sports_1',
@@ -338,8 +378,8 @@ class PolymarketService {
         liquidity: 12000,
         endDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
         active: true,
-        description: 'Sports event predictions',
-        url: 'https://polymarket.com/event/will-the-championship-game-exceed-viewership-records'
+        description: 'Sports event predictions'
+        // No URL for mock markets
       }
     ];
 

@@ -17,6 +17,8 @@
   "polymarket": {
     "privateKey": "",
     "clobEndpoint": "https://clob.polymarket.com",
+    "geoBlockToken": "",
+    "proxyUrl": "",
     "testMode": true,
     "enabled": false
   },
